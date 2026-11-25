@@ -168,6 +168,18 @@ nav.pager button{background:#e9dab8;border-color:#8a6a45;border-radius:3px;color
 .toc-row .tn{flex:none;width:4.5em;font-weight:700}
 .toc-row .tt2{flex:1;min-width:0}
 .toc-row .ts{flex:none;font-size:13px;color:var(--red)}
+/* 書斎(言語ごとの本棚を並べた部屋) */
+.study{width:100%;max-width:1400px;margin:0 auto;align-self:flex-start;display:flex;flex-direction:column;border-radius:4px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.6)}
+.study-wall{padding:16px 24px 0;background-color:#4b3a2a;
+  background-image:var(--noise),repeating-linear-gradient(90deg,rgba(255,235,200,.05) 0 2px,transparent 2px 46px),linear-gradient(#3a2b1e,#55422f 40%,#4b3a2a);
+  box-shadow:inset 0 -30px 40px -20px rgba(0,0,0,.6)}
+.study-title{text-align:center;color:#d9bf86;letter-spacing:.6em;font-size:15px;margin:0 0 14px;text-shadow:0 1px 2px #000}
+.cases{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-end;gap:0 34px}
+.cases .bookcase{max-width:none;width:auto;flex:0 1 auto;min-width:300px;margin:0;align-self:flex-end;border-bottom-width:0;border-radius:4px 4px 0 0}
+.study-floor{height:46px;background:#5b3a20;background-image:var(--noise),repeating-linear-gradient(90deg,rgba(0,0,0,.25) 0 1px,transparent 1px 120px),linear-gradient(#6e4627,#4a2e18);box-shadow:inset 0 8px 12px rgba(0,0,0,.5)}
+.bs-top{height:34px;display:flex;align-items:center;justify-content:center}
+.crest{font-size:13px;letter-spacing:.3em;color:#3a2a10;background:linear-gradient(#e8cf8a,#b8913f);border:1px solid #7a5a20;border-radius:2px;padding:1px 14px;box-shadow:0 1px 2px rgba(0,0,0,.5)}
+@media (max-width:899px){ .study-wall{padding:12px 6px 0} .cases{gap:22px} .cases .bookcase{min-width:0;width:100%} }
 /* 単語のマーク */
 .mk{border:1px solid var(--sub);background:transparent;border-radius:3px;width:30px;height:26px;font-size:14px;color:var(--sub);padding:0}
 .mk.on{background:#7a2f22;border-color:#7a2f22;color:#f3e4c4}
@@ -8358,15 +8370,23 @@ function noteHTML(l){
   return `<button class="spine note-b" data-marks="${l}" title="${LANGNAME[l]}のまだの単語" style="height:180px;width:120px">
     <span class="nl">${LANGNAME[l]}</span><span class="nt">まだの単語</span><span class="nn">${n} 語</span></button>`;
 }
+// 書斎：言語ごとに1つの本棚、棚＝ジャンル。言語・ジャンルが増えると本棚・棚が増える
+const LANG_ORDER = ['ko', 'zh', 'en', 'fr', 'it'];
+const GENRE_ORDER = ['単語', '文法', '長文', '物語', '小説'];
+const ord = (list, x) => { const i = list.indexOf(x); return i < 0 ? 99 : i; };
 function shelfHTML(){
-  const groups = new Map();
-  for (const b of BOOKS.values()){ const g = `${LANGNAME[b.lang]}｜${b.genre}`; if (!groups.has(g)) groups.set(g, []); groups.get(g).push(b); }
-  const langs = [...new Set(WORKS.map(w => w.data.lang))];
+  const byLang = new Map();
+  for (const b of BOOKS.values()){
+    if (!byLang.has(b.lang)) byLang.set(b.lang, new Map());
+    const g = byLang.get(b.lang); if (!g.has(b.genre)) g.set(b.genre, []); g.get(b.genre).push(b);
+  }
   const row = (label, inner) => `<div class="bs-row"><div class="plate">${esc(label)}</div><div class="bs-books">${inner}</div></div>`;
-  return `<div class="bookcase"><div class="bs-top"></div>`
-    + ([...groups].sort((a, c) => a[0].localeCompare(c[0], 'ja')).map(([g, list]) => row(g, list.map(spineHTML).join(''))).join('') || row('（空）', ''))
-    + row('単語帳', langs.map(noteHTML).join(''))
-    + `</div>`;
+  const cases = [...byLang].sort((a, c) => ord(LANG_ORDER, a[0]) - ord(LANG_ORDER, c[0])).map(([l, genres]) =>
+    `<div class="bookcase"><div class="bs-top"><span class="crest">${esc(LANGNAME[l] || l)}</span></div>`
+    + [...genres].sort((a, c) => ord(GENRE_ORDER, a[0]) - ord(GENRE_ORDER, c[0])).map(([g, list]) =>
+        row(g, list.sort((a, c) => a.title.localeCompare(c.title, 'ja', {numeric:true})).map(spineHTML).join(''))).join('')
+    + row('単語帳', noteHTML(l)) + `</div>`).join('');
+  return `<div class="study"><div class="study-wall"><div class="study-title">書斎</div><div class="cases">${cases || '<p class="note">ワークがまだありません。</p>'}</div></div><div class="study-floor"></div></div>`;
 }
 
 // ---------- 描画 ----------
@@ -8380,7 +8400,7 @@ function render(){
     if (view.k === 'test'){ $('#ttl').textContent = 'まだの単語テスト'; main.innerHTML = `<div class="shelf"><div class="page" style="flex:none">${testHTML()}</div></div>`; return; }
     $('#bShelf').textContent = '本棚';
     if (view.k === 'toc'){ $('#ttl').textContent = BOOKS.get(view.book).title; main.innerHTML = `<div class="shelf"><div class="page" style="flex:none">${tocHTML()}</div></div>`; return; }
-    $('#ttl').textContent = 'ワークの本棚';
+    $('#ttl').textContent = '書斎';
     main.innerHTML = shelfHTML();
     return;
   }
