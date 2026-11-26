@@ -352,6 +352,56 @@ tr.marked td{background:rgba(176,50,42,.07)}
 .hall-doors .door{width:140px;height:230px;border-radius:66px 66px 0 0}
 .hall-doors .door .dplate{top:64px;font-size:13px}.hall-doors .door .dknob{top:130px;right:20px}
 /* とびらの数(--n)が増えると、とびら・額・飾りを小さくして1列に入れる。7つ以上は折り返す */
+/* 謎解きの部屋：探偵の机 */
+.dwall{display:flex;justify-content:center;align-items:flex-start;gap:40px;padding:4px 0 18px}
+.dw-map{width:min(300px,46vw);filter:drop-shadow(0 6px 8px rgba(0,0,0,.5))}.dw-keys{width:56px;margin-top:10px}.dw-magni{width:70px;margin-top:40px;transform:rotate(-20deg)}
+.dwall svg{display:block;width:100%;height:auto}
+.ddesk{max-width:980px;margin:0 auto}
+.dd-top{position:relative;display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-end;gap:22px 26px;padding:26px 30px 22px;
+  background:#6a4022;background-image:var(--noise),repeating-linear-gradient(90deg,rgba(0,0,0,.12) 0 2px,transparent 2px 90px),linear-gradient(#7c4c28,#5a341a);
+  border-radius:6px 6px 0 0;box-shadow:inset 0 2px 0 #9a6a3a,0 -2px 0 #3e2410;
+  transform:perspective(900px) rotateX(10deg);transform-origin:bottom}
+.dd-front{height:36px;margin:0 6px;background:linear-gradient(#4e2e16,#3a2010);display:flex;justify-content:center;gap:40%;align-items:center;box-shadow:0 6px 10px rgba(0,0,0,.4)}
+.dd-drawer{width:70px;height:6px;border-radius:3px;background:linear-gradient(#e8c870,#8a6a2a)}
+.dd-legs{display:flex;justify-content:space-between;margin:0 24px;height:34px}.dd-legs i{width:18px;background:linear-gradient(90deg,#3a2010,#5a3418,#3a2010)}
+.dobj{position:relative;border:0;padding:0;cursor:pointer;transition:transform .15s;color:var(--ink)}
+.dobj:hover{transform:translateY(-5px) rotate(-1deg)}
+.cfile{width:150px;height:190px;background:#d8c08a;background-image:var(--noise),linear-gradient(#e2cc96,#c9ad74);border-radius:2px 10px 3px 3px;
+  box-shadow:3px 4px 0 #b89a60,6px 8px 12px rgba(0,0,0,.5);transform:rotate(-3deg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.cf-tab{position:absolute;top:-14px;left:12px;font:700 11px Georgia,serif;letter-spacing:.2em;background:#c9ad74;padding:2px 10px;border-radius:4px 4px 0 0;color:#5a3a1a}
+.cf-t{font-size:20px;font-weight:700;letter-spacing:.1em;border-top:1.5px solid #6b2a1f;border-bottom:1.5px solid #6b2a1f;padding:2px 6px}
+.cf-n{font-size:13px;color:#5a3a1a}
+.cf-str{position:absolute;right:16px;top:50%;width:18px;height:18px;border-radius:50%;border:2px solid #7a3a1a;box-shadow:0 0 0 3px #d8c08a}
+.cf-str::after{content:'';position:absolute;left:6px;top:14px;width:2px;height:30px;background:#7a3a1a;transform:rotate(14deg)}
+.nboard{background:linear-gradient(#a8743e,#7a4e24);padding:10px 10px 6px;border-radius:4px;box-shadow:0 3px 0 #4a2c14,4px 8px 12px rgba(0,0,0,.5);display:flex;flex-direction:column;align-items:center;gap:4px}
+.nb-grid{display:grid;background:#f3e6c4;border:2px solid #3a2010;aspect-ratio:1}
+.nb4 .nb-grid{width:86px}.nb6 .nb-grid{width:112px}.nb9 .nb-grid{width:140px}
+.nb-grid i{font:700 10px Georgia,serif;font-style:normal;display:flex;align-items:center;justify-content:center;border-right:1px solid #c9b48c;border-bottom:1px solid #c9b48c;color:#3a2010}
+.nb4 .nb-grid i{font-size:14px}.nb6 .nb-grid i{font-size:12px}
+.nb-grid i.br{border-right:2px solid #3a2010}.nb-grid i.bb{border-bottom:2px solid #3a2010}
+.nb-t{font-size:12px;color:#f6e6c0;letter-spacing:.08em}
+.pstamp{height:auto;display:block;position:absolute;right:-8px;top:-10px;white-space:nowrap;z-index:2;font-size:14px;font-weight:700;color:#b0322a;border:2.5px solid #b0322a;border-radius:4px;padding:0 6px;transform:rotate(14deg);background:rgba(255,245,225,.6)}
+.clip{position:absolute;right:22px;top:-12px;width:12px;height:32px;border:2.5px solid #c9ced4;border-radius:6px;z-index:2;box-shadow:0 1px 2px rgba(0,0,0,.5)}
+/* 研究室：黒板 */
+.bboard{max-width:1000px;margin:8px auto 0;padding:14px;background:linear-gradient(#7a4e2c,#5a3418);border-radius:4px;box-shadow:0 10px 24px rgba(0,0,0,.55)}
+.bb-face{position:relative;min-height:300px;display:flex;flex-wrap:wrap;justify-content:space-around;align-items:center;gap:24px;padding:30px 24px 50px;
+  background:#2d4434;background-image:var(--noise),radial-gradient(ellipse at 30% 30%,rgba(255,255,255,.08),transparent 60%),linear-gradient(#34503d,#263a2c);box-shadow:inset 0 0 30px rgba(0,0,0,.5)}
+.chalk{border:0;background:transparent;color:#f1efe6;font-family:var(--jp);display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 16px;cursor:pointer;text-shadow:0 0 1px rgba(255,255,255,.6);border-radius:6px}
+.chalk:hover{background:rgba(255,255,255,.06)}
+.ck-t{font-size:28px;letter-spacing:.12em;border-bottom:2px dashed rgba(241,239,230,.6);padding-bottom:2px}
+.ck-f{font-family:Georgia,serif;font-size:20px;color:#f3e7a4}
+.ck-n{font-size:13px;color:#cfe0d2}
+.bb-doodle{position:absolute;right:20px;bottom:12px;font-family:Georgia,serif;font-size:16px;color:rgba(241,239,230,.35)}
+.bb-tray{height:14px;margin:8px -6px 0;background:linear-gradient(#8a5a34,#5a3418);border-radius:2px;display:flex;align-items:flex-start;gap:14px;padding:0 60px}
+.bb-tray i{display:block;height:6px;margin-top:-4px;border-radius:3px}.bb-tray .ck1{width:34px;background:#f4f2ea}.bb-tray .ck2{width:22px;background:#f3d9a0}.bb-tray .eraser{width:60px;height:12px;margin-top:-10px;background:linear-gradient(#4a5a8a 0 60%,#ddd 60%)}
+@media (max-width:899px){ .dwall{gap:14px} .dw-keys{width:36px} .dw-magni{width:46px;margin-top:20px} .dd-top{padding:24px 10px 18px;gap:20px 14px;transform:none} .cfile{width:120px;height:150px} .cf-t{font-size:16px}
+  .nb9 .nb-grid{width:120px} .bb-face{padding:20px 8px 40px;gap:10px;min-height:0} .ck-t{font-size:22px} .ck-f{font-size:16px} }
+/* 声調の聞き分け(レコード棚) */
+.tchoices .ctext{font-family:"Palatino Linotype","Book Antiqua","Times New Roman",serif !important;font-size:24px}
+.tcmp{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.tcb{display:flex;flex-direction:column;align-items:center;min-width:76px;padding:6px 10px;border:1px solid var(--line);border-radius:4px;background:rgba(255,250,235,.6);color:var(--ink)}
+.tcb.on{border:2px solid var(--red)}
+.tcb .tpy{font-family:"Palatino Linotype","Book Antiqua","Times New Roman",serif;font-size:17px}
 .hall-doors{--g:clamp(6px,1.4vw,24px);--dw:min(140px,calc((100vw - 110px - var(--n) * 2 * var(--g)) / (var(--n) * 1.75 + .55)));gap:var(--g);flex-wrap:wrap}
 .hall-doors .door{width:var(--dw);height:calc(var(--dw) * 1.64);flex:none;border-radius:calc(var(--dw) * .48) calc(var(--dw) * .48) 0 0}
 .hall-doors .door .dplate{top:calc(var(--dw) * .46);font-size:clamp(10px,calc(var(--dw) * .095),13px);letter-spacing:.05em;padding:1px 6px}.hall-doors .door .dknob{top:calc(var(--dw) * .93);right:calc(var(--dw) * .14)}
@@ -48545,8 +48595,9 @@ function normalizeEn(w){
 const BOOKS = new Map();
 // 言語以外の部屋(2026-11-26)：パズルの部屋(論理パズル・数独)、数学の部屋(大人の頭の体操)。JSON の room で分ける
 const ROOMK = new Set(['logic', 'grid', 'math']);
-const ROOMS = {puzzle:{name:'パズルの部屋', crest:'パズル', genres:['論理パズル', '数字パズル']},
-  math:{name:'数学の部屋', crest:'数学', genres:['場合の数', '確率', '整数']}};
+// 部屋の名前は書斎に合わせて部屋の種類の名前(2026-11-26 ユーザー)。謎解きの部屋は本棚でなく探偵の机(desk:true)
+const ROOMS = {puzzle:{name:'謎解きの部屋', crest:'謎解き', genres:['論理パズル', '数字パズル'], desk:true},
+  math:{name:'研究室', crest:'数学', genres:['場合の数', '確率', '整数'], board:true}}; // 研究室は黒板(board:true)
 const inRoom = () => W && ROOMK.has(W.kind);
 WORKS.forEach(w => { if (w.src && w.src.startsWith('en-')) normalizeEn(w); });
 // 英語は系列(ファイル名)の順に並べて通し番号にする
@@ -49102,9 +49153,13 @@ function testHTML(){
 // ---------- 本棚(ジャンル=棚、ワーク=本) ----------
 const SPINE = ['#6b2a1f','#2f4a33','#2c3e5c','#5a3a22','#4a2d4f','#7a5a2a','#3d3d3d','#1f4b4b'];
 const GENRE = d => d.genre || '長文';
+function bookProg(b){ // [答え合わせした数, 全部の数]
+  let n = 0, total = 0; for (const i of b.units){ const w = WORKS[i]; if (w.kind === 'story'){ n += readOf(w) ? 1 : 0; total++; } else { n += Object.keys(loadSt(w.id).chk).length; total += totalOf(w); } }
+  return [n, total];
+}
 function spineHTML(b){
   const h = hash(b.key);
-  let n = 0, total = 0; for (const i of b.units){ const w = WORKS[i]; if (w.kind === 'story'){ n += readOf(w) ? 1 : 0; total++; } else { n += Object.keys(loadSt(w.id).chk).length; total += totalOf(w); } }
+  const [n, total] = bookProg(b);
   const per = b.kind === 'story' ? '話' : '回';
   const color = SPINE[h % SPINE.length], ht = Math.max(200 + (h >> 3) % 40, [...b.title].length * 15.5 + 70), wd = 54 + (h >> 7) % 14;
   return `<button class="spine" data-book="${esc(b.key)}" title="${esc(b.title)}（${b.units.length}${per}）" style="--c:${color};height:${ht}px;width:${wd}px">
@@ -49193,7 +49248,49 @@ function hallHTML(){
     <div class="wainscot"></div></div><div class="study-floor hall-floor"><div class="runner"></div></div></div>`;
 }
 // パズルの部屋・数学の部屋：本棚1つ、棚＝ジャンル
+// ---- 謎解きの部屋：探偵の机。論理パズル＝ひもでとじた事件ファイル、数独＝大きさのちがう木の数字盤 ----
+const progMark = b => { const [n, t] = bookProg(b); return n ? (n >= t ? '<span class="pstamp">解決</span>' : '<span class="clip"></span>') : ''; };
+function caseFileHTML(b){
+  return `<button class="dobj cfile" data-book="${esc(b.key)}" title="${esc(b.title)}（${b.units.length}回）"><span class="cf-tab">CASE</span><span class="cf-t">${esc(b.title)}</span><span class="cf-n">全${b.units.length}件</span><span class="cf-str"></span>${progMark(b)}</button>`;
+}
+function numBoardHTML(b){
+  const w = WORKS[b.units[0]], n = w.data.size || 4, g = (w.data.givens || []).join(''), [br, bc] = w.data.box || [2, 2];
+  const cells = Array.from({length:n * n}, (_, k) => { const r = Math.floor(k / n), c = k % n;
+    return `<i class="${(c + 1) % bc === 0 && c < n - 1 ? 'br' : ''}${(r + 1) % br === 0 && r < n - 1 ? ' bb' : ''}">${g[k] && g[k] !== '.' ? g[k] : ''}</i>`; }).join('');
+  return `<button class="dobj nboard nb${n}" data-book="${esc(b.key)}" title="${esc(b.title)}（${b.units.length}回）"><span class="nb-grid" style="grid-template-columns:repeat(${n},1fr)">${cells}</span><span class="nb-t">${esc(b.title)}</span>${progMark(b)}</button>`;
+}
+const MAGNI_SVG = `<svg viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg"><circle cx="34" cy="34" r="24" fill="rgba(200,230,255,.25)" stroke="#c8963a" stroke-width="6"/><circle cx="28" cy="27" r="7" fill="rgba(255,255,255,.35)"/><path d="M52 52 L80 80" stroke="#4a2c14" stroke-width="11" stroke-linecap="round"/><path d="M52 52 L58 58" stroke="#c8963a" stroke-width="9"/></svg>`;
+const KEYS_SVG = `<svg viewBox="0 0 80 110" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="8" r="4" fill="#2a1a08"/><circle cx="40" cy="26" r="15" fill="none" stroke="#b8862e" stroke-width="3"/>
+  <g stroke="#c8963a" stroke-width="3.5" fill="none" stroke-linecap="round"><path d="M30 38 L18 92"/><circle cx="31" cy="38" r="5"/><path d="M18 92 l-7 -2 M20 84 l-6 -1"/>
+  <path d="M42 41 L44 100"/><path d="M44 100 h-8 M44 92 h-6"/><path d="M52 38 L66 86"/><circle cx="51" cy="38" r="5"/><path d="M66 86 l7 -3 M64 79 l6 -2"/></g></svg>`;
+const MAPBOARD_SVG = `<svg viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg"><rect width="200" height="130" rx="3" fill="#7a5530" stroke="#3e2410" stroke-width="5"/><rect x="8" y="8" width="184" height="114" fill="#b08a5a"/>
+  <rect x="18" y="16" width="60" height="44" fill="#efe3c6" transform="rotate(-4 48 38)"/><path d="M26 30 h40 M26 38 h34 M26 46 h38" stroke="#8a7044" stroke-width="2" transform="rotate(-4 48 38)"/>
+  <rect x="118" y="14" width="64" height="50" fill="#e8dcb8" transform="rotate(3 150 39)"/><path d="M124 26 q20 18 50 4 M130 50 q16 -10 40 6" stroke="#6a8a5a" stroke-width="2" fill="none" transform="rotate(3 150 39)"/>
+  <rect x="64" y="72" width="70" height="42" fill="#f2ead2" transform="rotate(2 99 93)"/><circle cx="84" cy="92" r="8" fill="#c9b48c"/><path d="M98 86 h28 M98 96 h22" stroke="#8a7044" stroke-width="2"/>
+  <g stroke="#b0322a" stroke-width="1.6" fill="none"><path d="M44 22 L150 20"/><path d="M48 24 L96 78"/><path d="M150 20 L100 78"/></g>
+  <g fill="#b0322a"><circle cx="44" cy="22" r="4"/><circle cx="150" cy="20" r="4"/><circle cx="98" cy="78" r="4"/></g></svg>`;
+function deskRoomHTML(r){
+  const R = ROOMS[r], books = [...BOOKS.values()].filter(b => b.room === r)
+    .sort((a, c) => ord(R.genres, a.genre) - ord(R.genres, c.genre) || a.title.localeCompare(c.title, 'ja', {numeric:true}));
+  const objs = books.map(b => b.kind === 'grid' ? numBoardHTML(b) : b.kind === 'logic' ? caseFileHTML(b) : spineHTML(b)).join('');
+  return `<div class="study room-${r}"><div class="study-wall"><div class="study-title">${esc(R.name)}</div>
+    <div class="dwall"><div class="dw-keys">${KEYS_SVG}</div><div class="dw-map">${MAPBOARD_SVG}</div><div class="dw-magni">${MAGNI_SVG}</div></div>
+    <div class="ddesk"><div class="dd-top">${objs || '<p class="note" style="color:#d9bf86">まだ問題がありません。</p>'}</div><div class="dd-front"><span class="dd-drawer"></span><span class="dd-drawer"></span></div><div class="dd-legs"><i></i><i></i></div></div>
+    <div class="doors"><button class="door d-back" id="backShelf" title="書斎にもどる"><span class="dplate">書斎へ</span><span class="dknob"></span></button></div></div><div class="study-floor"></div></div>`;
+}
+// ---- 研究室：大きな黒板。冊ごとにチョークで題名と式、押すと目次 ----
+const CHALK = {'場合の数':'₅P₃ = 5×4×3', '確率':'P(A) = 3/8', '整数':'a ≡ b (mod n)'};
+function boardRoomHTML(r){
+  const R = ROOMS[r], books = [...BOOKS.values()].filter(b => b.room === r).sort((a, c) => ord(R.genres, a.genre) - ord(R.genres, c.genre));
+  const items = books.map(b => { const [n, t] = bookProg(b);
+    return `<button class="chalk" data-book="${esc(b.key)}" title="${esc(b.title)}（${b.units.length}回）"><span class="ck-t">${esc(b.title)}</span><span class="ck-f">${esc(CHALK[b.genre] || '')}</span><span class="ck-n">全${b.units.length}回${n ? (n >= t ? '　◎' : '　…') : ''}</span></button>`; }).join('');
+  return `<div class="study room-${r}"><div class="study-wall"><div class="study-title">${esc(R.name)}</div>
+    <div class="bboard"><div class="bb-face">${items || '<p class="note">まだ問題がありません。</p>'}<span class="bb-doodle">∑ ∫ π √2 ≈ 1.414</span></div><div class="bb-tray"><i class="ck1"></i><i class="ck2"></i><i class="eraser"></i></div></div>
+    <div class="doors"><button class="door d-back" id="backShelf" title="書斎にもどる"><span class="dplate">書斎へ</span><span class="dknob"></span></button></div></div><div class="study-floor"></div></div>`;
+}
 function roomHTML(r){
+  if (ROOMS[r].desk) return deskRoomHTML(r);
+  if (ROOMS[r].board) return boardRoomHTML(r);
   const R = ROOMS[r], books = [...BOOKS.values()].filter(b => b.room === r), byG = new Map();
   for (const b of books){ if (!byG.has(b.genre)) byG.set(b.genre, []); byG.get(b.genre).push(b); }
   const rows = [...byG].sort((a, c) => ord(R.genres, a[0]) - ord(R.genres, c[0])).map(([g, list]) =>
@@ -49410,14 +49507,47 @@ const PODS = [{"lang":"ko","title":"ハン検5級 第1回 単語1〜160","desc":
 {"lang":"it","title":"イタリア語C1 第7回 単語1069〜1246","desc":"イタリア語C1の単語 1069-1246 を、単語（女性）→意味→単語（女性）→単語（男性）の順で読みます。","url":"https://po33shibakitaos.github.io/vocab-listen-it/it/c1-07.mp3","guid":"it-c1-ep07","dur":1825},
 {"lang":"it","title":"イタリア語C1 第8回 単語1247〜1424","desc":"イタリア語C1の単語 1247-1424 を、単語（女性）→意味→単語（女性）→単語（男性）の順で読みます。","url":"https://po33shibakitaos.github.io/vocab-listen-it/it/c1-08.mp3","guid":"it-c1-ep08","dur":1589},
 {"lang":"it","title":"イタリア語C1 第9回 単語1425〜1595","desc":"イタリア語C1の単語 1425-1595 を、単語（女性）→意味→単語（女性）→単語（男性）の順で読みます。","url":"https://po33shibakitaos.github.io/vocab-listen-it/it/c1-09.mp3","guid":"it-c1-ep09","dur":1538}];       // 単語の聞き流し(公開済みのポッドキャストの回)
+const TONE = [{"id":"tone_zh_01","data":{
+  "kind": "tone",
+  "lang": "zh",
+  "title": "声調（1字）",
+  "note": "同じ音で声調だけちがう字のグループ。読みが1つにほぼ決まる字（多音字を避ける）だけを使う。py は1声〜4声の順、c は [字, 声調の番号(0=1声〜3=4声), 意味]。1枚＝10問くらい（build が字を並べかえて分ける）。",
+  "sets": [
+    {"py": ["mā", "má", "mǎ", "mà"], "c": [["妈", 0, "お母さん"], ["麻", 1, "あさ・しびれる"], ["马", 2, "うま"], ["骂", 3, "しかる・ののしる"]]},
+    {"py": ["bā", "bá", "bǎ", "bà"], "c": [["八", 0, "8"], ["拔", 1, "ぬく"], ["把", 2, "にぎる・〜を"], ["爸", 3, "お父さん"]]},
+    {"py": ["yī", "yí", "yǐ", "yì"], "c": [["衣", 0, "服"], ["姨", 1, "おば"], ["椅", 2, "いす"], ["意", 3, "意味・気持ち"]]},
+    {"py": ["wū", "wú", "wǔ", "wù"], "c": [["屋", 0, "部屋・家"], ["无", 1, "ない"], ["五", 2, "5"], ["雾", 3, "きり"]]},
+    {"py": ["tāng", "táng", "tǎng", "tàng"], "c": [["汤", 0, "スープ"], ["糖", 1, "砂糖・あめ"], ["躺", 2, "横になる"], ["烫", 3, "（やけどするほど）熱い"]]},
+    {"py": ["shī", "shí", "shǐ", "shì"], "c": [["诗", 0, "詩"], ["十", 1, "10"], ["使", 2, "使う"], ["是", 3, "〜である"]]},
+    {"py": ["tū", "tú", "tǔ", "tù"], "c": [["突", 0, "突然の・つき出る"], ["图", 1, "図・絵"], ["土", 2, "土"], ["兔", 3, "うさぎ"]]},
+    {"py": ["qī", "qí", "qǐ", "qì"], "c": [["七", 0, "7"], ["骑", 1, "（またがって）乗る"], ["起", 2, "起きる"], ["气", 3, "空気・気"]]},
+    {"py": ["wēn", "wén", "wěn", "wèn"], "c": [["温", 0, "あたたかい"], ["文", 1, "文・文字"], ["吻", 2, "キスする"], ["问", 3, "たずねる"]]},
+    {"py": ["yān", "yán", "yǎn", "yàn"], "c": [["烟", 0, "けむり・たばこ"], ["盐", 1, "塩"], ["眼", 2, "目"], ["验", 3, "調べる"]]},
+    {"py": ["yīng", "yíng", "yǐng", "yìng"], "c": [["英", 0, "英（イギリス・すぐれた）"], ["赢", 1, "勝つ"], ["影", 2, "かげ"], ["硬", 3, "かたい"]]},
+    {"py": ["jiē", "jié", "jiě", "jiè"], "c": [["接", 0, "受ける・むかえる"], ["节", 1, "祝日・節"], ["姐", 2, "姉"], ["借", 3, "借りる・貸す"]]},
+    {"py": ["xī", "xí", "xǐ", "xì"], "c": [["西", 0, "西"], ["习", 1, "習う"], ["洗", 2, "洗う"], ["细", 3, "細い"]]},
+    {"py": ["bī", "bí", "bǐ", "bì"], "c": [["逼", 0, "せまる・むりにさせる"], ["鼻", 1, "鼻"], ["笔", 2, "ペン"], ["必", 3, "かならず"]]},
+    {"py": ["zhū", "zhú", "zhǔ", "zhù"], "c": [["猪", 0, "ぶた"], ["竹", 1, "竹"], ["主", 2, "主（おも）な・主人"], ["住", 3, "住む"]]},
+    {"py": ["hū", "hú", "hǔ", "hù"], "c": [["呼", 0, "呼ぶ・息をはく"], ["湖", 1, "湖"], ["虎", 2, "とら"], ["户", 3, "戸・家"]]},
+    {"py": ["chī", "chí", "chǐ", "chì"], "c": [["吃", 0, "食べる"], ["迟", 1, "おそい"], ["尺", 2, "ものさし・尺"], ["翅", 3, "つばさ"]]},
+    {"py": ["fāng", "fáng", "fǎng", "fàng"], "c": [["方", 0, "四角い・方向"], ["房", 1, "家・部屋"], ["访", 2, "たずねる（訪問）"], ["放", 3, "置く・はなす"]]},
+    {"py": ["guō", "guó", "guǒ", "guò"], "c": [["锅", 0, "なべ"], ["国", 1, "国"], ["果", 2, "果物・結果"], ["过", 3, "通る・過ごす"]]},
+    {"py": ["wān", "wán", "wǎn", "wàn"], "c": [["弯", 0, "曲がる"], ["玩", 1, "遊ぶ"], ["晚", 2, "夜・おそい"], ["万", 3, "万"]]},
+    {"py": ["māo", "máo", "mǎo", "mào"], "c": [["猫", 0, "ねこ"], ["毛", 1, "毛"], ["帽", 3, "帽子"]]},
+    {"py": ["gōu", "góu", "gǒu", "gòu"], "c": [["沟", 0, "みぞ"], ["狗", 2, "犬"], ["够", 3, "足りる"]]},
+    {"py": ["tiān", "tián", "tiǎn", "tiàn"], "c": [["天", 0, "天・日"], ["甜", 1, "あまい"], ["舔", 2, "なめる"]]},
+    {"py": ["māi", "mái", "mǎi", "mài"], "c": [["埋", 1, "うめる"], ["买", 2, "買う"], ["卖", 3, "売る"]]}
+  ]
+}}];       // 声調の聞き分け(content\tone_<言語>_NN.json)
 const LVNAME = {
   ko:{k5:'ハン検5級', k4:'ハン検4級', k3:'ハン検3級', k2j:'ハン検準2級', k2:'ハン検2級', t1:'TOPIK1級', t2:'TOPIK2級'},
   zh:{h1:'HSK1級', h2:'HSK2級', h3:'HSK3級', h4:'HSK4級'},
   en:{e5:'英検5級', e4:'英検4級', e3:'英検3級', e2j:'英検準2級', e2jp:'英検準2級プラス', e2:'英検2級', e1j:'英検準1級', e1:'英検1級'},
   fr:{a1:'A1', a2:'A2', b1:'B1', b2:'B2', c1:'C1'}, it:{a1:'A1', a2:'A2', b1:'B1', b2:'B2', c1:'C1'}};
 const CEFR = ['A1','A2','B1','B2','C1','C2'];
-function grpRank(g){ // 棚の中の並び：やさしい級から
+function grpRank(g){ // 棚の中の並び：やさしい級から(声調はいちばん前)
   let m;
+  if (g.startsWith('声調')) return -1;
   if ((m = g.match(/HSK(\d+)級/))) return 100 + +m[1];
   if ((m = g.match(/^(A1|A2|B1|B2|C1|C2)$/))) return 200 + CEFR.indexOf(m[1]);
   if ((m = g.match(/TOPIK(\d+)級/))) return 300 + +m[1];
@@ -49450,12 +49580,24 @@ PODS.forEach((p, i) => {
   const m = p.title.match(/^(.*?)\s*第(\d+)回\s*(.*)$/), id = 'P_' + p.guid;
   RECS.set(id, {...p, id, type:'pod', grp:normGrp(m ? m[1] : p.title), no:m ? +m[2] : i + 1});
 });
+// 声調の聞き分け：字を1つ読み上げて、同じ音の4つの声調から選ぶ。全部の字を決まった順にまぜて10問ずつ1枚
+TONE.forEach(f => {
+  const d = f.data, all = [];
+  d.sets.forEach((s, si) => s.c.forEach(([ch, t, ja]) => all.push({kind:'tone', lines:[{s:'s', t:ch, py:s.py[t], ja}],
+    q:{q:'聞こえた音は？', ch:[s.py[t], ...s.py.filter((_, k) => k !== t)], qja:'', chja:[]}, tone:{ch, t, ja, set:s}})));
+  const qs = shuffled(all, f.id), k = Math.max(1, Math.round(qs.length / 10));
+  for (let j = 0; j < k; j++){
+    const id = `T_${f.id}_${j + 1}`, grp = d.title || '声調';
+    RECS.set(id, {id, type:'q', tone:true, lang:d.lang, grp, no:j + 1, title:`${grp} 第${j + 1}回`,
+      qs:qs.slice(Math.round(qs.length * j / k), Math.round(qs.length * (j + 1) / k))});
+  }
+});
 const recColor = r => { const h = hash(r.lang + r.grp); return {c:SPINE[h % SPINE.length], lc:SPINE[(h >> 5) % SPINE.length]}; };
 const lsLoad = id => JSON.parse(localStorage.getItem('wp-ls-' + id) || '{"ans":{}}');
 const lsSave = (id, s) => localStorage.setItem('wp-ls-' + id, JSON.stringify(s));
 const podLoad = id => JSON.parse(localStorage.getItem('wp-pod-' + id) || '{}');
 const podSave = (id, s) => localStorage.setItem('wp-pod-' + id, JSON.stringify(s));
-const lChoices = (r, i) => { const q = r.qs[i].q; return shuffled(q.ch.map((t, k) => ({t, ja:q.chja[k], ok:k === 0})), r.id + 'c' + i); };
+const lChoices = (r, i) => { const x = r.qs[i], q = x.q; if (x.tone) return x.tone.set.py.map((t, k) => ({t, ok:k === x.tone.t})); /* 声調は1声→4声の順のまま */ return shuffled(q.ch.map((t, k) => ({t, ja:q.chja[k], ok:k === 0})), r.id + 'c' + i); };
 const lOk = (r, s, i) => s.ans[i] !== undefined && lChoices(r, i)[s.ans[i]].ok;
 const fmtT = s => `${Math.floor(s / 60)}分${String(Math.floor(s % 60)).padStart(2, '0')}秒`;
 function nextRec(r){
@@ -49468,7 +49610,7 @@ function sleeveHTML(r){
   if (r.type === 'q'){ const n = Object.keys(lsLoad(r.id).ans).length; if (n) mk = n >= r.qs.length ? 'done' : 'part'; }
   else { const s = podLoad(r.id); mk = s.done ? 'done' : s.t > 5 ? 'part' : ''; }
   return `<button class="sleeve ${r.type === 'q' ? 'lq' : 'pod'}" data-rec="${esc(r.id)}" title="${esc(r.title)}" style="--c:${c};--lc:${lc}"><span class="vinyl"></span>
-    <span class="jacket"><span class="jk-t">${r.type === 'q' ? '問題' : '聞き流し'}</span><span class="jk-n">${r.no}</span><span class="jk-g">${esc(r.grp)}</span></span>${mk ? `<span class="sticker ${mk}"></span>` : ''}</button>`;
+    <span class="jacket"><span class="jk-t">${r.tone ? '声調' : r.type === 'q' ? '問題' : '聞き流し'}</span><span class="jk-n">${r.no}</span><span class="jk-g">${esc(r.grp)}</span></span>${mk ? `<span class="sticker ${mk}"></span>` : ''}</button>`;
 }
 const GRAMO = `<svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg"><defs>
   <linearGradient id="gBrass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6dc8e"/><stop offset=".45" stop-color="#c8963a"/><stop offset="1" stop-color="#6e4c18"/></linearGradient>
@@ -49742,16 +49884,24 @@ function speakSeq(parts, lang, rate){ // 話者 a・s は1つ目の声、b は2�
   });
 }
 function playListen(mul){ const r = RECS.get(view.rec), q = r.qs[view.qi]; if (q) speakSeq(q.lines, r.lang, S.rate * mul); }
-const LKIND = {conv:'会話を聞いて、質問に答えましょう。', msg:'文章を聞いて、質問に答えましょう。', reply:'聞いた文への答えとして、いちばん合うものを選びましょう。'};
+const LKIND = {tone:'字を1つ読み上げます。聞こえた声調を選びましょう。', conv:'会話を聞いて、質問に答えましょう。', msg:'文章を聞いて、質問に答えましょう。', reply:'聞いた文への答えとして、いちばん合うものを選びましょう。'};
 function lqHTML(r){
   const s = lsLoad(r.id), n = r.qs.length, i = view.qi, tl = 'tl ' + lcls(r.lang);
   if (i >= n){
     const got = r.qs.filter((q, k) => lOk(r, s, k)).length, wrong = r.qs.filter((q, k) => s.ans[k] !== undefined && !lOk(r, s, k)).length, nx = nextRec(r);
-    return `<h2>結果</h2><div class="score">${got} / ${n}</div>` + r.qs.map((q, k) => `<button class="toc-row" data-lgo="${k}"><span class="tn">${k + 1}</span><span class="tt2 ${tl}">${esc(q.q.q)}</span><span class="ts">${s.ans[k] === undefined ? 'まだ' : lOk(r, s, k) ? '◯' : '✓'}</span></button>`).join('')
+    return `<h2>結果</h2><div class="score">${got} / ${n}</div>` + r.qs.map((q, k) => `<button class="toc-row" data-lgo="${k}"><span class="tn">${k + 1}</span><span class="tt2 ${tl}">${esc(q.tone ? (s.ans[k] === undefined ? '？' : `${q.tone.ch}　${q.tone.set.py[q.tone.t]}`) : q.q.q)}</span><span class="ts">${s.ans[k] === undefined ? 'まだ' : lOk(r, s, k) ? '◯' : '✓'}</span></button>`).join('')
       + `<div class="btns">${wrong ? `<button class="btn" id="lretry">まちがえた問題をもう一度（${wrong}問）</button>` : ''}${nx ? `<button class="btn" data-rec="${esc(nx.id)}">次のレコードへ（${esc(nx.title)}）</button>` : ''}<button class="btn" id="backShelf">レコード棚にもどる</button></div>`;
   }
   const q = r.qs[i], chs = lChoices(r, i), a = s.ans[i], done = a !== undefined;
   const chHTML = chs.map((c, k) => `<button class="ch${done && c.ok ? ' right' : ''}" data-la="${k}" ${done ? 'disabled' : ''}><span class="num">${a === k ? circle('var(--pencil)', 1.8, (k * 37) % 40 - 20) : ''}${k + 1}</span><span class="ctext ${tl}">${esc(c.t)}${done && c.ja ? `<span class="cja">${esc(c.ja)}</span>` : ''}</span></button>`).join('');
+  // 声調：答えたら、同じ音のグループの字を並べて、押して聞きくらべる(正解の字に印)
+  if (q.tone){
+    const cmp = done ? `<div class="expl"><b>くらべて聞く</b>（押すと読みます）<div class="tcmp">` + q.tone.set.c.map(([c, t, ja]) => `<button class="tcb${t === q.tone.t ? ' on' : ''}" data-say="${esc(c)}" data-lang="${r.lang}"><span class="${tl}" style="font-size:28px">${esc(c)}</span><span class="tpy">${esc(q.tone.set.py[t])}</span><span class="note">${esc(ja)}</span></button>`).join('') + `</div></div>` : '';
+    return `<h2>声調　${i + 1} / ${n}</h2><p class="note" style="margin-top:-6px">${LKIND.tone}</p>
+      <div class="lplay"><button class="btn" data-lplay="1">▶ 再生</button><button class="btn" data-lplay="0.7">ゆっくり</button></div>
+      <div class="q">${done ? (chs[a].ok ? MARK_OK : MARK_NG) : ''}<div class="qn">${i + 1}</div><div class="qtext">${done ? `<span class="${tl}" style="font-size:30px">${esc(q.tone.ch)}</span>　${esc(q.tone.ja)}` : '聞こえた音は？'}</div><div class="choices tchoices">${chHTML}</div>${cmp}</div>
+      <div class="btns" style="flex-direction:row;justify-content:center">${i > 0 ? '<button class="btn" id="lprev">◀ 前へ</button>' : ''}${done ? `<button class="btn" id="lnext">${i + 1 < n ? '次へ ▶' : '結果を見る'}</button>` : ''}</div>`;
+  }
   const script = done ? `<div class="expl"><b>スクリプト</b>` + q.lines.map(x => `<div class="sline"><span class="spk">${x.s === 's' ? '' : x.s.toUpperCase()}</span><span><span class="${tl}" style="font-size:16px">${esc(x.t)}</span><button class="say" data-say="${esc(x.t)}" data-lang="${r.lang}">🔊</button>${x.py ? `<br><span class="note" style="font-family:Georgia,serif">${esc(x.py)}</span>` : ''}<br><span class="note">${esc(x.ja)}</span></span></div>`).join('') + `</div>` : '';
   return `<h2>リスニング　${i + 1} / ${n}</h2><p class="note" style="margin-top:-6px">${LKIND[q.kind] || ''}</p>
     <div class="lplay"><button class="btn" data-lplay="1">▶ 再生</button><button class="btn" data-lplay="0.7">ゆっくり</button></div>
@@ -49768,7 +49918,7 @@ function podHTML(r){
 }
 function recHTML(){
   const r = RECS.get(view.rec), {lc} = recColor(r);
-  return `<div class="lroom"><div class="deck"><div class="platter"><div class="disc${spinning ? ' spin' : ''}" id="disc"><span class="lab" style="background:${lc}">${esc(r.grp)}<br>${r.type === 'q' ? 'リスニング' : '単語の聞き流し'}<br>第${r.no}回</span></div></div>
+  return `<div class="lroom"><div class="deck"><div class="platter"><div class="disc${spinning ? ' spin' : ''}" id="disc"><span class="lab" style="background:${lc}">${esc(r.grp)}<br>${r.tone ? '聞き分け' : r.type === 'q' ? 'リスニング' : '単語の聞き流し'}<br>第${r.no}回</span></div></div>
     <div class="arm${spinning ? ' on' : ''}" id="arm"></div><div class="rinfo">${esc(LANGNAME[r.lang] || r.lang)}｜${esc(r.title)}</div></div>
     <div class="page lr-sheet">${r.type === 'q' ? lqHTML(r) : podHTML(r)}</div></div>`;
 }
