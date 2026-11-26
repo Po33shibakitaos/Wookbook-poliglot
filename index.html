@@ -39,7 +39,18 @@ h2{font-size:19px;margin:0 0 14px;padding-bottom:6px;border-bottom:2px solid var
 h3{font-size:15px;margin:18px 0 6px}
 .tl{font-family:var(--zh)}
 .tl.ko{font-family:var(--ko)}
-.tl.en,.tl.fr,.tl.it{font-family:Georgia,"Times New Roman",serif}
+.tl.en,.tl.fr,.tl.it,.tl.tgl{font-family:Georgia,"Times New Roman",serif}
+.passage p.dlg{text-indent:0}
+.spk-n{display:inline-block;min-width:3.2em;font-family:var(--jp);font-size:14px;color:var(--sub);margin-right:4px}
+.gpts{margin:0 0 10px;padding-left:1.3em}
+.gpts li{margin:0 0 8px}
+.oline{display:flex;flex-wrap:wrap;align-items:center;gap:6px;min-height:46px;margin:8px 0 10px;padding:4px 2px 6px;border-bottom:1.5px dashed var(--sub)}
+.oend{font-size:18px}
+.opool{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+.tcard{font-family:inherit;font-size:17px;padding:4px 12px;border:1px solid #8a6a45;border-radius:4px;background:#f6ecd4;box-shadow:0 2px 0 #b89a68;color:var(--ink)}
+.tcard:hover:not(:disabled){transform:translateY(-1px)}
+.tcard.on{background:#fffaf0}
+.tcard:disabled{cursor:default;opacity:.8}
 .passage p{font-size:19px;line-height:2;margin:0 0 14px;text-indent:2em}
 .passage .ko{text-indent:1em}
 .py{font-family:Arial,sans-serif;color:var(--sub);font-size:13px;line-height:1.5;margin:-8px 0 12px}
@@ -193,19 +204,19 @@ tr.marked td{background:rgba(176,50,42,.07)}
 .w.marked{background:rgba(176,50,42,.14);border-bottom:1.5px solid var(--red)}
 .vfilter{margin:0 0 10px;display:flex;gap:6px;flex-wrap:wrap}
 /* 蓄音機とレコード棚(リスニング) */
-.corner{display:flex;align-items:flex-end;gap:26px;margin-top:30px}
+/* 言語ごとに1つのレコード棚。入りきらない分は下の段へ(段の高さ158px＝レコードの場所140＋棚板18) */
+.corner{display:flex;flex-wrap:wrap;justify-content:center;align-items:flex-end;gap:30px 34px;margin-top:30px}
 .gramo{flex:none;width:200px;margin-bottom:-4px}
 .gramo svg{display:block;width:100%;filter:drop-shadow(0 10px 10px rgba(0,0,0,.55))}
-.reccase{flex:1;min-width:0;background:#4a2f1c;background-image:var(--noise);border:12px solid #5c3b22;border-width:0 12px;border-radius:4px 4px 0 0;box-shadow:0 14px 40px rgba(0,0,0,.6),inset 0 0 40px rgba(0,0,0,.5)}
-.rc-row{position:relative;padding:8px 14px 0;background:linear-gradient(#2a1a0f,#3b2616 30%,#3b2616);box-shadow:inset 0 10px 18px rgba(0,0,0,.6)}
-.rc-row::after{content:"";display:block;height:18px;margin:0 -14px;background:linear-gradient(#80583a,#5c3b22 60%,#3e2715);box-shadow:0 6px 10px rgba(0,0,0,.5)}
-.rc-recs{display:flex;align-items:flex-end;overflow-x:auto;overflow-y:hidden;padding:40px 40px 0 4px;scrollbar-width:thin;scrollbar-color:#8a6a45 transparent}
-.rc-div{flex:none;writing-mode:vertical-rl;white-space:nowrap;height:104px;width:28px;margin:0 8px 0 16px;display:flex;align-items:center;justify-content:center;
-  background:#d8c9a0;background-image:var(--noise);color:var(--ink);font-size:12px;font-weight:700;letter-spacing:.08em;border-radius:7px 7px 0 0;box-shadow:2px 0 4px rgba(0,0,0,.55)}
-.rc-div:first-child{margin-left:0}
-.sleeve + .rc-div{margin-left:46px}
-.sleeve{position:relative;flex:none;width:86px;height:86px;margin-right:-30px;border:none;padding:0;background:none;transition:transform .15s}
-.sleeve:last-child{margin-right:0}
+.reccase{flex:1 1 100%;max-width:1300px;min-width:0;align-self:flex-end;background:#4a2f1c;background-image:var(--noise);border:12px solid #5c3b22;border-width:0 12px;border-radius:4px 4px 0 0;box-shadow:0 14px 40px rgba(0,0,0,.6),inset 0 0 40px rgba(0,0,0,.5)}
+.rc-recs{display:flex;flex-wrap:wrap;align-items:flex-start;align-content:flex-start;padding:0 30px 0 12px;
+  background:repeating-linear-gradient(#1f130b 0,#3b2616 36px,#3b2616 140px,#80583a 140px,#6a4529 150px,#3e2715 158px)}
+.rc-div{position:relative;z-index:3;flex:none;writing-mode:vertical-rl;white-space:nowrap;height:104px;width:28px;margin:36px 8px 18px 10px;display:flex;align-items:center;justify-content:center;
+  background:#d8c9a0;background-image:var(--noise);color:var(--ink);font-size:12px;font-weight:700;letter-spacing:.08em;border-radius:7px 7px 0 0;box-shadow:2px 0 4px rgba(0,0,0,.55),-2px 0 4px rgba(0,0,0,.35)}
+.rc-g{display:flex;flex:none;margin-right:-30px}
+.rc-g .sleeve{margin-right:0}
+.rc-recs>.rc-g:first-child .rc-div{margin-left:0}
+.sleeve{position:relative;flex:none;width:86px;height:86px;margin:54px -30px 18px 0;border:none;padding:0;background:none;transition:transform .15s}
 .sleeve:hover{transform:translateY(-6px) rotate(-2deg);z-index:5}
 .sleeve .vinyl{position:absolute;left:8px;top:-20px;width:70px;height:70px;border-radius:50%;transition:top .2s;
   background:radial-gradient(circle,#ead9ae 0 2px,var(--lc) 2.5px 13px,#0d0d0d 13.5px 15px,#202020 16px,#111 20px,#262626 24px,#121212 28px,#242424 32px,#0e0e0e 35px)}
@@ -243,9 +254,10 @@ tr.marked td{background:rgba(176,50,42,.07)}
 .sline{display:flex;gap:10px;margin:6px 0}
 .sline .spk{flex:none;width:1.4em;font-weight:700;color:var(--sub)}
 @media (max-width:899px){
-  .corner{flex-direction:column;align-items:center;gap:10px}
+  .corner{flex-direction:column;align-items:center;gap:22px}
   .gramo{width:150px}
-  .reccase{width:100%;border-width:0 8px}
+  .reccase{width:100%;flex:none;max-width:none;border-width:0 8px}
+  .rc-recs{padding:0 30px 0 8px}
   .lroom{flex-direction:column;align-items:center;gap:14px}
   .deck{transform:scale(.8);margin:-30px 0 -36px}
   .lr-sheet{width:100%}
@@ -11761,6 +11773,304 @@ const WORKS = [{"id":"fr_delfa1_01","src":"app","data":{
       "basis": "④の文",
       "expl": "④「以前は孤立していると感じていたお年寄りが、今ではそこに来る」が根拠。isolated を lonely と言いかえている。"
     }
+  ]
+}},
+{"id":"tl_a1_01","src":"app","data":{
+  "lang": "tl", "kind": "lesson", "genre": "レッスン", "title": "タガログ語A1ワーク", "exam": "", "level": "A1",
+  "topic": "発音①（はい・いいえ・ありがとう）",
+  "words": [
+    { "word": "oo", "meaning": "はい" },
+    { "word": "hindi", "meaning": "いいえ・〜ない" },
+    { "word": "po / opo", "meaning": "ていねいにする語／はい（ていねい）" },
+    { "word": "salamat", "meaning": "ありがとう" },
+    { "word": "walang anuman", "meaning": "どういたしまして" },
+    { "word": "pasensya na", "meaning": "ごめんなさい" }
+  ],
+  "grammar": {
+    "points": [
+      "母音は a・e・i・o・u の5つ。ローマ字と同じように読めばだいたい通じる（salamat＝サラマット）。",
+      "ng は英語 sing の ng と同じ、鼻にぬける1つの音［ŋ］。「ン・グ」と2つに分けない。mga は「マンガ」と読む。",
+      "hindi のように、語の終わりで息をのどで止める音（声門閉鎖音）がある語がある。辞書では hindî のように記号で示される。音声で聞いて確かめる。",
+      "po は目上の人やお店の人に、ていねいに話すときに入れる語。決まり文句なら最後につければよい（Salamat po. / Walang anuman po. / Pasensya na po.）。文の先頭には置かない。",
+      "目上の人への「はい」は oo ではなく opo。"
+    ],
+    "examples": [
+      { "t": "Salamat po.", "ja": "ありがとうございます。" },
+      { "t": "Opo.", "ja": "はい。（ていねい）" },
+      { "t": "Hindi po.", "ja": "いいえ。（ていねい）" }
+    ]
+  },
+  "grammarQs": [
+    { "q": "Salamat ___.（ありがとうございます。ていねいに）", "correct": { "t": "po" }, "wrong": [ { "t": "oo" }, { "t": "na" }, { "t": "hindi" } ], "expl": "ていねいにするときは po。決まり文句の最後につけます。" },
+    { "q": "先生に「はい」とていねいに答えるときは？", "correct": { "t": "Opo." }, "wrong": [ { "t": "Oo." }, { "t": "Hindi po." }, { "t": "Salamat." } ], "expl": "目上の人への「はい」は opo。oo はふつうの「はい」です。" },
+    { "q": "ng の読み方として正しいのは？", "correct": { "t": "英語 sing の ng のような、鼻にぬける1つの音" }, "wrong": [ { "t": "「ン」と「グ」をはっきり2つ読む" }, { "t": "「ナ」と同じ音" }, { "t": "読まない" } ], "expl": "ng は1つの音［ŋ］です。mga は「マンガ」。" },
+    { "q": "po を入れる場所として正しい文は？", "correct": { "t": "Hindi po." }, "wrong": [ { "t": "Po hindi." }, { "t": "Po salamat." }, { "t": "Salamat oo po." } ], "expl": "po は文の先頭には置きません。決まり文句の後ろにつけます。" }
+  ],
+  "speakers": [ "Ken", "Ana", "Ken", "Ana" ],
+  "paragraphs": [ "Pasensya na po.", "Hindi. Salamat.", "Salamat po!", "Walang anuman." ],
+  "ja": [ "ごめんなさい。（ぶつかってしまって）", "いいえ（だいじょうぶ）。ありがとう。", "ありがとうございます！", "どういたしまして。" ],
+  "questions": [
+    { "q": "Ken が最初に言った「Pasensya na po.」の意味は？", "correct": { "t": "ごめんなさい" }, "wrong": [ { "t": "ありがとうございます" }, { "t": "どういたしまして" }, { "t": "はい" } ], "basis": "Pasensya na po.", "expl": "pasensya na は「ごめんなさい」。po があるので、ていねいな言い方です。" },
+    { "q": "Ana の「Walang anuman.」は、どんなときに言うことば？", "correct": { "t": "「ありがとう」と言われたとき" }, "wrong": [ { "t": "あやまるとき" }, { "t": "別れるとき" }, { "t": "何かを頼むとき" } ], "basis": "Walang anuman.", "expl": "Salamat（ありがとう）への返事が Walang anuman（どういたしまして）です。" },
+    { "q": "ていねいに話しているのはだれ？", "correct": { "t": "Ken（po を使っている）" }, "wrong": [ { "t": "Ana（po を使っている）" }, { "t": "2人とも po を使っている" }, { "t": "2人とも po を使っていない" } ], "basis": "Salamat po!", "expl": "Ken は Pasensya na po・Salamat po と、po を入れて話しています。" }
+  ],
+  "compose": [
+    { "type": "listen", "say": "salamat", "correct": { "t": "salamat" }, "wrong": [ { "t": "pasensya na" }, { "t": "hindi" }, { "t": "walang anuman" } ] },
+    { "type": "listen", "say": "walang anuman", "correct": { "t": "walang anuman" }, "wrong": [ { "t": "salamat" }, { "t": "pasensya na" }, { "t": "opo" } ] },
+    { "type": "listen", "say": "pasensya na", "correct": { "t": "pasensya na" }, "wrong": [ { "t": "salamat" }, { "t": "hindi" }, { "t": "oo" } ] },
+    { "type": "order", "ja": "どういたしまして。（ていねいに）", "answer": [ "Walang", "anuman", "po" ], "extra": [ "na" ], "end": ".", "expl": "po は最後に。Walang anuman po." },
+    { "type": "choice", "ja": "いいえ。（ていねいに）", "correct": { "t": "Hindi po." }, "wrong": [ { "t": "Po hindi." }, { "t": "Opo." }, { "t": "Oo po." } ], "expl": "hindi＝いいえ。po を後ろにつけてていねいに。" }
+  ],
+  "cebuano": [
+    { "t": "Salamat", "ja": "ありがとう（タガログ語と同じ）" },
+    { "t": "Dili", "ja": "いいえ（タガログ語は hindi）" }
+  ]
+}},
+{"id":"tl_a1_02","src":"app","data":{
+  "lang": "tl", "kind": "lesson", "genre": "レッスン", "title": "タガログ語A1ワーク", "exam": "", "level": "A1",
+  "topic": "あいさつ（おはよう・こんにちは・元気？）",
+  "words": [
+    { "word": "magandang umaga", "meaning": "おはよう" },
+    { "word": "magandang hapon", "meaning": "こんにちは（午後）" },
+    { "word": "magandang gabi", "meaning": "こんばんは" },
+    { "word": "kumusta", "meaning": "元気？・調子はどう？" },
+    { "word": "mabuti", "meaning": "良い・元気だ" },
+    { "word": "paalam", "meaning": "さようなら" }
+  ],
+  "grammar": {
+    "points": [
+      "あいさつは「Magandang ＋ 時間帯」。maganda（よい）に ng がついて、次の語につながる形。",
+      "時間帯：umaga＝朝、tanghali＝昼（12時ごろ）、hapon＝午後、gabi＝夜。昼のあいさつは Magandang tanghali。",
+      "ていねいに言うときは最後に po（Magandang umaga po.）。",
+      "「元気？」は Kumusta ka?（ka＝あなた）。ていねいには Kumusta po? 答えは Mabuti po.（元気です）。",
+      "Magandang gabi は「こんばんは」にも、夜の別れぎわの「おやすみなさい・よい夜を」にも使える。"
+    ],
+    "examples": [
+      { "t": "Magandang umaga po.", "ja": "おはようございます。" },
+      { "t": "Kumusta ka?", "ja": "元気？" },
+      { "t": "Mabuti po. Salamat.", "ja": "元気です。ありがとう。" }
+    ]
+  },
+  "grammarQs": [
+    { "q": "朝8時。「おはようございます」は Magandang ___ po.", "correct": { "t": "umaga" }, "wrong": [ { "t": "hapon" }, { "t": "gabi" }, { "t": "tanghali" } ], "expl": "umaga＝朝。Magandang umaga po." },
+    { "q": "夜7時に先生に会った。何と言う？", "correct": { "t": "Magandang gabi po." }, "wrong": [ { "t": "Magandang umaga po." }, { "t": "Magandang hapon po." }, { "t": "Magandang tanghali po." } ], "expl": "gabi＝夜。" },
+    { "q": "昼12時ごろのあいさつは？", "correct": { "t": "Magandang tanghali po." }, "wrong": [ { "t": "Magandang hapon po." }, { "t": "Magandang gabi po." }, { "t": "Magandang umaga po." } ], "expl": "tanghali＝昼（正午ごろ）。午後になったら hapon。" },
+    { "q": "「Kumusta po?」と聞かれて、「元気です」とていねいに答えるときは？", "correct": { "t": "Mabuti po." }, "wrong": [ { "t": "Paalam po." }, { "t": "Walang anuman po." }, { "t": "Pasensya na po." } ], "expl": "mabuti＝良い・元気だ。" }
+  ],
+  "speakers": [ "Ken", "Ana", "Ken", "Ana", "Ken" ],
+  "paragraphs": [ "Magandang umaga po.", "Magandang umaga. Kumusta ka?", "Mabuti po. Salamat po.", "Paalam, Ken!", "Paalam po!" ],
+  "ja": [ "おはようございます。", "おはよう。元気？", "元気です。ありがとうございます。", "さようなら、Ken！", "さようなら！" ],
+  "questions": [
+    { "q": "2人が会ったのはいつごろ？", "correct": { "t": "朝" }, "wrong": [ { "t": "昼" }, { "t": "午後" }, { "t": "夜" } ], "basis": "Magandang umaga po.", "expl": "Magandang umaga＝おはよう。" },
+    { "q": "Ana に「Kumusta ka?」と聞かれて、Ken は何と答えた？", "correct": { "t": "元気です、ありがとう" }, "wrong": [ { "t": "ごめんなさい" }, { "t": "どういたしまして" }, { "t": "さようなら" } ], "basis": "Mabuti po. Salamat po.", "expl": "Mabuti po＝元気です。Salamat po＝ありがとうございます。" },
+    { "q": "最後に2人は何をした？", "correct": { "t": "さようならを言った" }, "wrong": [ { "t": "お礼を言った" }, { "t": "あやまった" }, { "t": "夜のあいさつをした" } ], "basis": "Paalam po!", "expl": "paalam＝さようなら。" }
+  ],
+  "compose": [
+    { "type": "order", "ja": "こんにちは。（午後・ていねいに）", "answer": [ "Magandang", "hapon", "po" ], "extra": [ "umaga" ], "end": ".", "expl": "午後は hapon。" },
+    { "type": "order", "ja": "元気？", "answer": [ "Kumusta", "ka" ], "extra": [ "po" ], "end": "?", "expl": "ka＝あなた。友達には po をつけない。" },
+    { "type": "choice", "ja": "夜、先生に「こんばんは」。", "correct": { "t": "Magandang gabi po." }, "wrong": [ { "t": "Gabi magandang po." }, { "t": "Magandang gabi ka." }, { "t": "Po magandang gabi." } ], "expl": "Magandang ＋ 時間帯 ＋ po の順。" },
+    { "type": "listen", "say": "magandang hapon", "correct": { "t": "magandang hapon" }, "wrong": [ { "t": "magandang umaga" }, { "t": "magandang gabi" }, { "t": "paalam" } ] }
+  ],
+  "cebuano": [
+    { "t": "Maayong buntag", "ja": "おはよう" },
+    { "t": "Kumusta", "ja": "元気？（タガログ語と同じ）" }
+  ]
+}},
+{"id":"tl_a1_03","src":"app","data":{
+  "lang": "tl", "kind": "lesson", "genre": "レッスン", "title": "タガログ語A1ワーク", "exam": "", "level": "A1",
+  "topic": "これは何？（ito・iyan・iyon）",
+  "words": [
+    { "word": "ito", "meaning": "これ" },
+    { "word": "iyan", "meaning": "それ（相手の近く）" },
+    { "word": "iyon", "meaning": "あれ（遠く）" },
+    { "word": "ano", "meaning": "何" },
+    { "word": "tubig", "meaning": "水" },
+    { "word": "kanin", "meaning": "ご飯" }
+  ],
+  "grammar": {
+    "points": [
+      "タガログ語は「何なのか（述語）」が文の先頭に来る。Tubig ito.＝水です、これは → 「これは水です」。",
+      "質問も同じ形：Ano ito?＝何、これは？ → 「これは何？」。",
+      "ito＝自分の近く、iyan＝相手の近く、iyon＝2人から遠く。",
+      "ang を使うと「〜が」を強める言い方になる：Ito ang tubig.＝これが水です。（ang はくわしくは第4回）",
+      "ていねいな質問は Ano po ito?（po は最初の語の後ろ）。"
+    ],
+    "examples": [
+      { "t": "Ano ito? — Tubig ito.", "ja": "これは何？ — これは水です。" },
+      { "t": "Ano iyon? — Kanin iyon.", "ja": "あれは何？ — あれはご飯です。" },
+      { "t": "Ito ang tubig.", "ja": "これが水です。" }
+    ]
+  },
+  "grammarQs": [
+    { "q": "「これは水です。」はどれ？", "correct": { "t": "Tubig ito." }, "wrong": [ { "t": "Tubig iyon." }, { "t": "Kanin ito." }, { "t": "Ano ito?" } ], "expl": "述語（tubig）が先頭、そのあとに ito。" },
+    { "q": "遠くにあるものを指して「あれは何？」は？", "correct": { "t": "Ano iyon?" }, "wrong": [ { "t": "Ano ito?" }, { "t": "Ano iyan?" }, { "t": "Iyon ano?" } ], "expl": "遠くは iyon。疑問の ano が先頭。" },
+    { "q": "「Ano iyan?」の意味は？", "correct": { "t": "それは何？" }, "wrong": [ { "t": "これは何？" }, { "t": "あれは何？" }, { "t": "これは水？" } ], "expl": "iyan＝それ（相手の近く）。" },
+    { "q": "「これがご飯です。」は？", "correct": { "t": "Ito ang kanin." }, "wrong": [ { "t": "Ito ang tubig." }, { "t": "Ang ito kanin." }, { "t": "Iyon ang kanin." } ], "expl": "Ito ang ＋ 名詞＝これが〜です。" }
+  ],
+  "speakers": [ "Ken", "Ana", "Ken", "Ana", "Ken" ],
+  "paragraphs": [ "Ano po ito?", "Tubig ito.", "Ano po iyon?", "Kanin iyon.", "Salamat po!" ],
+  "ja": [ "これは何ですか。", "これは水です。", "あれは何ですか。", "あれはご飯です。", "ありがとうございます！" ],
+  "questions": [
+    { "q": "Ana が最初に答えたものは？", "correct": { "t": "水" }, "wrong": [ { "t": "ご飯" }, { "t": "お茶" }, { "t": "わからない" } ], "basis": "Tubig ito.", "expl": "tubig＝水。" },
+    { "q": "ご飯はどこにある？", "correct": { "t": "2人から遠いところ" }, "wrong": [ { "t": "Ken の手の近く" }, { "t": "Ana の手の近く" }, { "t": "ない" } ], "basis": "Kanin iyon.", "expl": "iyon＝あれ（遠く）。" },
+    { "q": "Ken はどんな話し方をしている？", "correct": { "t": "po をつけて、ていねいに" }, "wrong": [ { "t": "po をつけずに、くだけて" }, { "t": "ずっと質問だけしている" }, { "t": "ずっとあやまっている" } ], "basis": "Ano po ito?", "expl": "Ano po ito? Ano po iyon? Salamat po!" }
+  ],
+  "compose": [
+    { "type": "order", "ja": "それは何？", "answer": [ "Ano", "iyan" ], "extra": [ "ito" ], "end": "?", "expl": "相手の近くは iyan。" },
+    { "type": "order", "ja": "あれはご飯です。", "answer": [ "Kanin", "iyon" ], "extra": [ "ang" ], "end": ".", "expl": "述語（kanin）が先頭。" },
+    { "type": "choice", "ja": "これが水です。", "correct": { "t": "Ito ang tubig." }, "wrong": [ { "t": "Ang ito tubig." }, { "t": "Tubig ang ito ang." }, { "t": "Iyan ang tubig." } ], "expl": "Ito ang ＋ 名詞。" },
+    { "type": "order", "ja": "これは何ですか。（ていねいに）", "answer": [ "Ano", "po", "ito" ], "extra": [ "iyon" ], "end": "?", "expl": "po は最初の語（ano）のすぐ後ろ。" }
+  ],
+  "cebuano": [
+    { "t": "Unsa ni?", "ja": "これは何？（要確認）" }
+  ]
+}},
+{"id":"tl_a1_04","src":"app","data":{
+  "lang": "tl", "kind": "lesson", "genre": "レッスン", "title": "タガログ語A1ワーク", "exam": "", "level": "A1",
+  "topic": "標識 ang・ng・sa 入門（ここ・そこ・あそこ）",
+  "words": [
+    { "word": "dito", "meaning": "ここ" },
+    { "word": "diyan", "meaning": "そこ（相手の近く）" },
+    { "word": "doon", "meaning": "あそこ（遠く）" },
+    { "word": "mga", "meaning": "（名詞の前で）〜たち・複数" }
+  ],
+  "grammar": {
+    "points": [
+      "名詞の前には「標識」という小さな語がつく。役わりは3つ。",
+      "ang ＝ 文の主役（〜は・〜が）。Dito ang tubig.＝水はここです。",
+      "ng ＝ 〜の・〜を（目的や持ち主）。読み方は「ナン」。（くわしくは第6回・第12回）",
+      "sa ＝ 場所や方向（〜に・〜で・〜へ）。",
+      "dito（ここ）・diyan（そこ）・doon（あそこ）は ito・iyan・iyon と同じ距離の分け方。",
+      "mga は複数のしるし。読み方は「マンガ」。ang mga ＋ 名詞＝〜たち。"
+    ],
+    "examples": [
+      { "t": "Dito ang tubig.", "ja": "水はここです。" },
+      { "t": "Doon ang kanin.", "ja": "ご飯はあそこです。" },
+      { "t": "Diyan ang mga tubig.", "ja": "（何本かの）水はそこです。" }
+    ]
+  },
+  "grammarQs": [
+    { "q": "「水はここです。」は？", "correct": { "t": "Dito ang tubig." }, "wrong": [ { "t": "Doon ang tubig." }, { "t": "Diyan ang tubig." }, { "t": "Dito ang kanin." } ], "expl": "dito＝ここ。" },
+    { "q": "文の主役（〜は・〜が）を示す標識は？", "correct": { "t": "ang" }, "wrong": [ { "t": "ng" }, { "t": "sa" }, { "t": "mga" } ], "expl": "ang＝主役。ng＝〜の・〜を、sa＝場所。" },
+    { "q": "場所や方向（〜に・〜へ）を示す標識は？", "correct": { "t": "sa" }, "wrong": [ { "t": "ang" }, { "t": "ng" }, { "t": "po" } ], "expl": "sa＝場所・方向。" },
+    { "q": "mga の読み方は？", "correct": { "t": "マンガ" }, "wrong": [ { "t": "マガ" }, { "t": "ムガ" }, { "t": "エムジーエー" } ], "expl": "ng は1つの音［ŋ］なので「マンガ」。" },
+    { "q": "相手の手元にある水を指して「水はそこです」は？", "correct": { "t": "Diyan ang tubig." }, "wrong": [ { "t": "Dito ang tubig." }, { "t": "Doon ang tubig." }, { "t": "Diyan ng tubig." } ], "expl": "相手の近くは diyan。主役の tubig には ang。" }
+  ],
+  "speakers": [ "Ken", "Ana", "Ken", "Ana", "Ken" ],
+  "paragraphs": [ "Ano po iyon?", "Kanin iyon. Doon ang kanin.", "Ano po ito?", "Tubig ito. Dito ang tubig.", "Salamat po!" ],
+  "ja": [ "あれは何ですか。", "あれはご飯です。ご飯はあそこです。", "これは何ですか。", "これは水です。水はここです。", "ありがとうございます！" ],
+  "questions": [
+    { "q": "ご飯はどこ？", "correct": { "t": "あそこ（遠く）" }, "wrong": [ { "t": "ここ" }, { "t": "そこ（Ken の近く）" }, { "t": "ない" } ], "basis": "Kanin iyon. Doon ang kanin.", "expl": "doon＝あそこ。" },
+    { "q": "水はどこ？", "correct": { "t": "ここ（近く）" }, "wrong": [ { "t": "あそこ（遠く）" }, { "t": "ご飯のとなり" }, { "t": "ない" } ], "basis": "Tubig ito. Dito ang tubig.", "expl": "dito＝ここ。" },
+    { "q": "「Doon ang kanin.」の ang がついている語は？", "correct": { "t": "kanin（主役）" }, "wrong": [ { "t": "doon（場所）" }, { "t": "どれにもついていない" }, { "t": "両方についている" } ], "basis": "Kanin iyon. Doon ang kanin.", "expl": "ang は主役の kanin の前。" }
+  ],
+  "compose": [
+    { "type": "order", "ja": "ご飯はあそこです。", "answer": [ "Doon", "ang", "kanin" ], "extra": [ "dito" ], "end": ".", "expl": "場所（doon）が先頭、主役は ang kanin。" },
+    { "type": "choice", "ja": "水はそこ（あなたの近く）です。", "correct": { "t": "Diyan ang tubig." }, "wrong": [ { "t": "Diyan ng tubig." }, { "t": "Ang diyan tubig." }, { "t": "Doon ang tubig." } ], "expl": "主役の tubig には ang。" },
+    { "type": "order", "ja": "水はここです。", "answer": [ "Dito", "ang", "tubig" ], "extra": [ "sa" ], "end": ".", "expl": "Dito ang tubig." }
+  ],
+  "cebuano": [
+    { "t": "Diri", "ja": "ここ（要確認）" },
+    { "t": "Didto", "ja": "あそこ（要確認）" }
+  ]
+}},
+{"id":"tl_a1_05","src":"app","data":{
+  "lang": "tl", "kind": "lesson", "genre": "レッスン", "title": "タガログ語A1ワーク", "exam": "", "level": "A1",
+  "topic": "読解の回（第1〜4回のまとめ）",
+  "review": true,
+  "words": [
+    { "word": "salamat", "meaning": "ありがとう" },
+    { "word": "kumusta", "meaning": "元気？・調子はどう？" },
+    { "word": "mabuti", "meaning": "良い・元気だ" },
+    { "word": "ano", "meaning": "何" },
+    { "word": "doon", "meaning": "あそこ（遠く）" },
+    { "word": "walang anuman", "meaning": "どういたしまして" }
+  ],
+  "grammar": {
+    "title": "復習",
+    "points": [
+      "新しい項目はなし。第1〜4回の復習。",
+      "あいさつ：Magandang ＋ umaga／tanghali／hapon／gabi。",
+      "「これは何？」：Ano ito? — Tubig ito.（述語が先頭）",
+      "場所：Dito／Diyan／Doon ang ＋ 名詞。",
+      "ていねいに：po（文の先頭には置かない）。"
+    ],
+    "examples": [
+      { "t": "Magandang hapon po. Kumusta po?", "ja": "こんにちは。お元気ですか。" },
+      { "t": "Doon ang kanin.", "ja": "ご飯はあそこです。" }
+    ]
+  },
+  "grammarQs": [
+    { "q": "午後3時のあいさつは？", "correct": { "t": "Magandang hapon po." }, "wrong": [ { "t": "Magandang umaga po." }, { "t": "Magandang gabi po." }, { "t": "Magandang tanghali po." } ], "expl": "hapon＝午後。" },
+    { "q": "「それは何ですか。」（ていねいに）は？", "correct": { "t": "Ano po iyan?" }, "wrong": [ { "t": "Po ano iyan?" }, { "t": "Ano po iyon?" }, { "t": "Iyan po ano?" } ], "expl": "iyan＝それ。po は ano のすぐ後ろ。" },
+    { "q": "「ご飯はここです。」は？", "correct": { "t": "Dito ang kanin." }, "wrong": [ { "t": "Doon ang kanin." }, { "t": "Dito ng kanin." }, { "t": "Kanin dito ang." } ], "expl": "dito＝ここ。主役に ang。" }
+  ],
+  "speakers": [ "Ken", "Ana", "Ken", "Ana", "Ken", "Ana" ],
+  "paragraphs": [ "Magandang hapon po!", "Magandang hapon. Kumusta ka?", "Mabuti po. Ano po ito?", "Tubig ito. Doon ang kanin.", "Salamat po!", "Walang anuman." ],
+  "ja": [ "こんにちは！", "こんにちは。元気？", "元気です。これは何ですか。", "これは水です。ご飯はあそこです。", "ありがとうございます！", "どういたしまして。" ],
+  "questions": [
+    { "q": "2人が会ったのはいつごろ？", "correct": { "t": "午後" }, "wrong": [ { "t": "朝" }, { "t": "昼（12時ごろ）" }, { "t": "夜" } ], "basis": "Magandang hapon po!", "expl": "hapon＝午後。" },
+    { "q": "Ken の調子は？", "correct": { "t": "元気" }, "wrong": [ { "t": "疲れている" }, { "t": "おなかがすいている" }, { "t": "書かれていない" } ], "basis": "Mabuti po. Ano po ito?", "expl": "Mabuti po＝元気です。" },
+    { "q": "Ken が「これは何？」と聞いたものは？", "correct": { "t": "水" }, "wrong": [ { "t": "ご飯" }, { "t": "コーヒー" }, { "t": "パン" } ], "basis": "Tubig ito. Doon ang kanin.", "expl": "Tubig ito＝これは水です。" },
+    { "q": "ご飯はどこにある？", "correct": { "t": "あそこ（遠く）" }, "wrong": [ { "t": "ここ" }, { "t": "Ana の手の中" }, { "t": "ない" } ], "basis": "Tubig ito. Doon ang kanin.", "expl": "doon＝あそこ。" }
+  ],
+  "compose": [
+    { "type": "choice", "ja": "Ana に「Walang anuman.」と言われた。帰るときにていねいに「さようなら」。", "correct": { "t": "Paalam po." }, "wrong": [ { "t": "Po paalam." }, { "t": "Salamat paalam." }, { "t": "Magandang umaga po." } ], "expl": "paalam＝さようなら。" },
+    { "type": "order", "ja": "ご飯はここです。", "answer": [ "Dito", "ang", "kanin" ], "extra": [ "doon" ], "end": ".", "expl": "dito＝ここ。" },
+    { "type": "order", "ja": "こんばんは。お元気ですか。（ていねいに）", "answer": [ "Magandang", "gabi", "po.", "Kumusta", "po" ], "extra": [ "ka" ], "end": "?", "expl": "Magandang gabi po. Kumusta po?（ていねいなので ka は使わない）" }
+  ],
+  "cebuano": [
+    { "t": "Salamat", "ja": "ありがとう（復習）" },
+    { "t": "Maayong buntag", "ja": "おはよう（復習）" },
+    { "t": "Unsa ni?", "ja": "これは何？（復習・要確認）" }
+  ]
+}},
+{"id":"tl_a1_06","src":"app","data":{
+  "lang": "tl", "kind": "lesson", "genre": "レッスン", "title": "タガログ語A1ワーク", "exam": "", "level": "A1",
+  "topic": "お願い・すみません（Pakiabot po ng ___.）",
+  "words": [
+    { "word": "paumanhin", "meaning": "すみません（呼びかけ・おわび）" },
+    { "word": "sandali lang", "meaning": "ちょっと待って" },
+    { "word": "sige", "meaning": "いいですよ・OK" },
+    { "word": "pakiusap", "meaning": "お願い（します）" },
+    { "word": "paki-", "meaning": "〜してください（語の前につける）" },
+    { "word": "abot", "meaning": "渡す・取る" }
+  ],
+  "grammar": {
+    "points": [
+      "頼むときは「Paki ＋ 動作の語」：paki ＋ abot（渡す）→ Pakiabot（取ってください・渡してください）。",
+      "何を頼むかは ng ＋ 物：Pakiabot po ng tubig.＝水を取ってください。（ng は「〜を」）",
+      "po は pakiabot のすぐ後ろ。",
+      "返事：Sige po.＝いいですよ。Sandali lang po.＝少々お待ちください。",
+      "Paumanhin po.＝すみません（人に声をかけるとき・あやまるとき）。Pakiusap は「お願いします」とさらに頼むとき。"
+    ],
+    "examples": [
+      { "t": "Paumanhin po. Pakiabot po ng tubig.", "ja": "すみません。水を取ってください。" },
+      { "t": "Sige po. Sandali lang po.", "ja": "いいですよ。少々お待ちください。" }
+    ]
+  },
+  "grammarQs": [
+    { "q": "「水を取ってください。」（ていねいに）は？", "correct": { "t": "Pakiabot po ng tubig." }, "wrong": [ { "t": "Pakiabot po ang tubig." }, { "t": "Pakiabot po sa tubig." }, { "t": "Abot po paki ng tubig." } ], "expl": "頼む物の前は ng。" },
+    { "q": "Pakiabot po ___ kanin.（ご飯を取ってください）", "correct": { "t": "ng" }, "wrong": [ { "t": "ang" }, { "t": "sa" }, { "t": "mga" } ], "expl": "「〜を」は ng。" },
+    { "q": "「ちょっと待って。」は？", "correct": { "t": "Sandali lang." }, "wrong": [ { "t": "Sige." }, { "t": "Pakiusap." }, { "t": "Paumanhin." } ], "expl": "sandali lang＝ちょっと待って。" },
+    { "q": "頼まれて「いいですよ」とていねいに答えるときは？", "correct": { "t": "Sige po." }, "wrong": [ { "t": "Paumanhin po." }, { "t": "Pakiusap po." }, { "t": "Hindi po." } ], "expl": "sige＝いいですよ・OK。" }
+  ],
+  "speakers": [ "Ken", "Ana", "Ana", "Ken", "Ana" ],
+  "paragraphs": [ "Paumanhin po. Pakiabot po ng tubig.", "Sige. Sandali lang.", "Ito ang tubig.", "Salamat po! Pakiabot po ng kanin.", "Sige!" ],
+  "ja": [ "すみません。水を取ってください。", "いいよ。ちょっと待ってね。", "はい、これが水です。", "ありがとうございます！ご飯も取ってください。", "いいよ！" ],
+  "questions": [
+    { "q": "Ken が最初に頼んだものは？", "correct": { "t": "水" }, "wrong": [ { "t": "ご飯" }, { "t": "メニュー" }, { "t": "何も頼んでいない" } ], "basis": "Paumanhin po. Pakiabot po ng tubig.", "expl": "Pakiabot po ng tubig＝水を取ってください。" },
+    { "q": "Ana の「Sandali lang.」の意味は？", "correct": { "t": "ちょっと待ってね" }, "wrong": [ { "t": "ごめんなさい" }, { "t": "いいえ" }, { "t": "さようなら" } ], "basis": "Sige. Sandali lang.", "expl": "sandali lang＝ちょっと待って。" },
+    { "q": "Ken が2回目に頼んだものは？", "correct": { "t": "ご飯" }, "wrong": [ { "t": "水" }, { "t": "水をもう1杯" }, { "t": "何も頼んでいない" } ], "basis": "Salamat po! Pakiabot po ng kanin.", "expl": "kanin＝ご飯。" }
+  ],
+  "compose": [
+    { "type": "order", "ja": "ご飯を取ってください。（ていねいに）", "answer": [ "Pakiabot", "po", "ng", "kanin" ], "extra": [ "ang" ], "end": ".", "expl": "Paki＋abot、po、ng＋物。" },
+    { "type": "choice", "ja": "少々お待ちください。（ていねいに）", "correct": { "t": "Sandali lang po." }, "wrong": [ { "t": "Sige po." }, { "t": "Pakiusap po." }, { "t": "Paumanhin po." } ], "expl": "sandali lang＝ちょっと待って。" },
+    { "type": "order", "ja": "水を取って。（友達に）", "answer": [ "Pakiabot", "ng", "tubig" ], "extra": [ "sa" ], "end": ".", "expl": "友達には po なし。" },
+    { "type": "order", "ja": "すみません。水を取ってください。（ていねいに）", "answer": [ "Paumanhin", "po.", "Pakiabot", "po", "ng", "tubig" ], "extra": [ "ang" ], "end": ".", "expl": "Paumanhin po. Pakiabot po ng tubig." }
+  ],
+  "cebuano": [
+    { "t": "Palihug", "ja": "お願いします" }
   ]
 }},
 {"id":"vocab_cw_g3_1","src":"en-vocab","dict":{"harbor":"港","highway":"幹線道路","jungle":"ジャングル","valley":"谷","tunnel":"トンネル","palace":"宮殿","lighthouse":"灯台","journey":"旅","suitcase":"スーツケース","downtown":"中心街"},"data":{
@@ -37098,7 +37408,8 @@ const WORKS = [{"id":"fr_delfa1_01","src":"app","data":{
   ]
 }}];
 // ---------- 本(同じ言語・級・形式のワーク＝1冊。ファイル名の連番を除いた部分でまとめる) ----------
-const LANGNAME = {zh:'中国語', ko:'韓国語', en:'英語', fr:'フランス語', it:'イタリア語'};
+const LANGNAME = {zh:'中国語', ko:'韓国語', en:'英語', fr:'フランス語', it:'イタリア語', tl:'タガログ語'};
+const JP = /[぀-ヿ一-鿿]/; // 日本語の文(タガログ語ワークの質問・選択肢)
 const plainTarget = s => String(s).replace(/\[[A-Za-z]+:([^\]]*)\]/g, '$1');
 const CIRCLED = '①②③④⑤⑥⑦⑧';
 // 英語のワーク(make-vocab.ps1 / make-reading.ps1 の形)をアプリの形にそろえる
@@ -37138,14 +37449,15 @@ WORKS.forEach((w, i) => {
   w.kind = d.kind || 'reading';
   if (!w.no) w.no = +((w.id.match(/_(\d+)$/) || [0, 1])[1]);
   if (!w.bookKey) w.bookKey = w.id.replace(/_\d+$/, '');
-  if (w.kind === 'vocab') d.vocab = (d.words || []).map(x => ({word:x.word, info:x.py || x.info || '', meaning:x.meaning, level:''}));
+  if (w.kind === 'lesson' && d.title) w.bookTitle = d.title;
+  if (w.kind === 'vocab' || w.kind === 'lesson') d.vocab =(d.words || []).map(x => ({word:x.word, info:x.py || x.info || '', meaning:x.meaning, level:''}));
   if (!BOOKS.has(w.bookKey)) BOOKS.set(w.bookKey, {key:w.bookKey, lang:d.lang, kind:w.kind, genre:d.genre || (w.kind === 'vocab' ? '単語' : '長文'),
     title:w.bookTitle || `${String(d.exam).replace(/^新/, '')}${d.level}${w.kind === 'vocab' ? '単語' : '長文'}ワーク`, exam:d.exam, level:d.level, units:[]});
   w.book = BOOKS.get(w.bookKey); w.book.units.push(i);
 });
 for (const b of BOOKS.values()) b.units.sort((a, c) => WORKS[a].no - WORKS[c].no);
 const unitName = w => `第${w.no}回`;
-const totalOf = w => w.kind === 'vocab' ? (w.data.words || []).length + (w.data.questions || []).length : (w.data.questions || []).length + (w.data.expressions || []).length;
+const totalOf = w => w.kind === 'lesson' ? ['words','grammarQs','questions','compose'].reduce((n, k) => n + (w.data[k] || []).length, 0) : w.kind === 'vocab' ? (w.data.words || []).length + (w.data.questions || []).length : (w.data.questions || []).length + (w.data.expressions || []).length;
 
 // ---------- 設定・保存 ----------
 const SKEY = 'wp-settings';
@@ -37159,8 +37471,9 @@ const $ = s => document.querySelector(s);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const isWide = () => matchMedia('(min-width:900px)').matches;
 const L = () => W.data.lang;
-const LANGCODE = {zh:'zh-CN', ko:'ko-KR', en:'en-US', fr:'fr-FR', it:'it-IT'};
-const tlc = () => 'tl ' + L();
+const LANGCODE = {zh:'zh-CN', ko:'ko-KR', en:'en-US', fr:'fr-FR', it:'it-IT', tl:'fil-PH'};
+const lcls = l => l === 'tl' ? 'tgl' : l; // タガログ語の文字の class(「tl」は「訳つきの外国語」の class と重なるので tgl)
+const tlc = () => 'tl ' + lcls(L());
 
 // ---------- 読み上げ ----------
 let voices = [];
@@ -37191,7 +37504,7 @@ function vocabMap(){
   if (!W._vm){
     W._vm = new Map();
     for (const v of W.data.vocab || []) W._vm.set(v.word, v);
-    W._vlist = [...W._vm.keys()].sort((a,b) => b.length - a.length);
+    W._vlist = [...W._vm.keys()].filter(w => !/[\/-]$|\//.test(w)).sort((a,b) => b.length - a.length); // 「po / opo」「paki-」は本文では探さない
   }
   return W._vm;
 }
@@ -37205,15 +37518,17 @@ function segPlain(text){
 function tokens(text){
   vocabMap();
   const out = []; let buf = '', i = 0;
+  const tl = L() === 'tl', low = tl ? text.toLowerCase() : text, isL = c => /\p{L}/u.test(c || '');
   while (i < text.length){
-    const hit = L() === 'zh' && W._vlist.find(w => text.startsWith(w, i));
-    if (hit){ if (buf) out.push(...segPlain(buf)); buf = ''; out.push({t:hit, w:true, v:true}); i += hit.length; }
+    // 中国語：単語集の語をいちばん長く一致。タガログ語：大文字小文字を区別せず、語の切れ目で一致(magandang umaga など2語の語も)
+    const hit = (L() === 'zh' || tl) && W._vlist.find(w => tl ? low.startsWith(w.toLowerCase(), i) && !isL(low[i - 1]) && !isL(low[i + w.length]) : text.startsWith(w, i));
+    if (hit){ if (buf) out.push(...segPlain(buf)); buf = ''; out.push({t:text.slice(i, i + hit.length), key:hit, w:true, v:true}); i += hit.length; }
     else { buf += text[i]; i++; }
   }
   if (buf) out.push(...segPlain(buf));
   return out;
 }
-const tokHTML = text => tokens(text).map(k => k.w ? `<span class="w${k.v?' vocab':''}${isMarked(k.t)?' marked':''}" data-w="${esc(k.t)}">${esc(k.t)}</span>` : esc(k.t)).join('');
+const tokHTML = text => tokens(text).map(k => k.w ? `<span class="w${k.v?' vocab':''}${isMarked(k.key || k.t)?' marked':''}" data-w="${esc(k.key || k.t)}">${esc(k.t)}</span>` : esc(k.t)).join('');
 
 // ---------- 「まだ」マーク(覚えていない語)。言語ごとに保存し、ほかのワークにも引きつぐ ----------
 // 保存の形: { 語: {info, meaning, level, work, streak} }  streak=テストの連続正解数。2回連続で印が外れる
@@ -37264,10 +37579,10 @@ function shuffled(arr, seed){ // いつも同じ順になる並べ替え
 function items(){
   if (W._items) return W._items;
   const d = W.data, list = [];
-  if (W.kind === 'vocab'){ // 始める前に覚える単語(5語ずつ、そのブロックの意味から選ぶ)
-    const ws = d.words || [];
-    for (let b = 0; b < ws.length; b += 5){
-      const blk = ws.slice(b, b + 5);
+  if (W.kind === 'vocab' || W.kind === 'lesson'){ // 始める前に覚える単語(5語ずつ、そのブロックの意味から選ぶ。レッスンは均等に分ける：6語→3＋3)
+    const ws = d.words || [], nb = Math.ceil(ws.length / 5), per = W.kind === 'lesson' && nb ? Math.ceil(ws.length / nb) : 5;
+    for (let b = 0; b < ws.length; b += per){
+      const blk = ws.slice(b, b + per);
       blk.forEach((x, k) => list.push({id:'m-'+(b+k), step:1, n:b+k+1, src:x,
         choices: shuffled(blk.map(y => ({t:y.meaning, ok:y.word === x.word})), W.id+'m'+b)}));
     }
@@ -37281,32 +37596,43 @@ function items(){
     list.push({id:'b-'+i, step:2, n:b.k, src:{...b, text:d.summaries[b.si].text, target:(d._targets||[])[b.si]},
       choices: shuffled([{t:b.v, ok:true}, ...others.map(o => ({t:o.v}))], W.id+'b'+i)});
   });
-  (d.questions || []).forEach((q, i) => list.push({id:'s3-'+i, step:(d.expressions || allBlanks.length) ? 3 : 2, n:i+1, src:q,
+  (d.grammarQs || []).forEach((q, i) => list.push({id:'g-'+i, step:2, n:i+1, src:q,
+    choices: shuffled([{...q.correct, ok:true}, ...q.wrong], W.id+'g'+i)}));
+  (d.questions || []).forEach((q, i) => list.push({id:'s3-'+i, step:(W.kind === 'lesson' || d.expressions || allBlanks.length) ? 3 : 2, n:i+1, src:q,
     choices: shuffled([{...q.correct, ok:true}, ...q.wrong], W.id+'s3'+i)}));
+  // 自作文(レッスン)：order＝語カードを並べる、choice＝正しい文を選ぶ、listen＝聞こえた語を選ぶ
+  (d.compose || []).forEach((c, i) => {
+    if (c.type === 'order') list.push({id:'o-'+i, step:4, n:i+1, src:c, order:true, cards:shuffled([...c.answer, ...(c.extra || [])], W.id+'o'+i)});
+    else list.push({id:(c.type === 'listen' ? 'h-' : 'c-')+i, step:4, n:i+1, src:c, choices:shuffled([{...c.correct, ok:true}, ...c.wrong], W.id+'c'+i)});
+  });
   return W._items = list;
 }
-const okOf = it => st.chk[it.id] && it.choices[st.ans[it.id]]?.ok;
+const orderOk = (it, a) => Array.isArray(a) && a.map(k => it.cards[k]).join(' ') === it.src.answer.join(' ');
+const answered = it => it.order ? (st.ans[it.id] || []).length === it.src.answer.length : st.ans[it.id] !== undefined;
+const okOf = it => st.chk[it.id] && (it.order ? orderOk(it, st.ans[it.id]) : it.choices[st.ans[it.id]]?.ok);
 
 // ---------- ページ ----------
 function pages(){
   const its = items(), ps = [{k:'cover'}];
   let textAdded = isWide();
   for (const step of [...new Set(its.map(i => i.step))]){
-    const g = its.filter(i => i.step === step), kind = g[0].id.slice(0,2), per = kind === 'm-' ? 5 : kind === 'b-' ? 4 : 2;
-    if (!textAdded && kind !== 'm-'){ ps.push({k:'text'}); textAdded = true; }
+    const g = its.filter(i => i.step === step), kind = g[0].id.slice(0,2), per = kind === 'm-' ? (W.kind === 'lesson' ? 6 : 5) : kind === 'b-' ? 4 : kind === 'g-' ? 3 : 2;
+    if (kind === 'g-' && W.data.grammar) ps.push({k:'gram'});
+    if (!textAdded && kind !== 'm-' && kind !== 'g-'){ ps.push({k:'text'}); textAdded = true; }
     for (let i = 0; i < g.length; i += per) ps.push({k:'q', step, list:g.slice(i, i+per), kind});
   }
+  if ((W.data.cebuano || []).length) ps.push({k:'ceb'});
   if ((W.data.vocab || []).length || W.data.expressions) ps.push({k:'vocab'});
   ps.push({k:'result'});
   return ps;
 }
-const stepName = (kind, step) => kind === 'm-' ? '始める前に覚える単語！' : kind === 'b-' ? `Step ${step}　意味を確認しよう` : W.kind === 'vocab' ? '読んでみよう！　内容に関する問題'
+const stepName = (kind, step) => W.kind === 'lesson' ? `${step}. ${{'m-':W.data.review ? '単語の復習' : '単語', 'g-':W.data.grammar?.title || '文法', 's3':'ミニ読解'}[kind] || '自作文'}` : kind === 'm-' ? '始める前に覚える単語！' : kind === 'b-' ? `Step ${step}　意味を確認しよう` : W.kind === 'vocab' ? '読んでみよう！　内容に関する問題'
   : kind === 's2' ? `Step ${step}　表現を確認しよう` : `Step ${step}　内容に関する問題`;
 
 function passageHTML(){
   const d = W.data;
-  return `<h2>${W.kind === 'vocab' ? '読んでみよう！' : 'Step 1　本文'}</h2><div class="passage">` + d.paragraphs.map((p, i) =>
-    `<p class="${tlc()}"><button class="say" data-say="${esc(p)}" title="段落を読む">🔊</button>${sentences(p).map(s => { const ti = (d._targets || []).findIndex(x => s.trim().length > 8 && x.startsWith(s.trim().slice(0, 25)));
+  return `<h2>${W.kind === 'vocab' ? '読んでみよう！' : W.kind === 'lesson' ? 'ミニ読解' : 'Step 1　本文'}</h2><div class="passage">` + d.paragraphs.map((p, i) =>
+    `<p class="${tlc()}${d.speakers ? ' dlg' : ''}"><button class="say" data-say="${esc(p)}" title="段落を読む">🔊</button>${d.speakers ? `<b class="spk-n">${esc(d.speakers[i] || '')}</b>` : ''}${sentences(p).map(s => { const ti = (d._targets || []).findIndex(x => s.trim().length > 8 && x.startsWith(s.trim().slice(0, 25)));
       return `${ti >= 0 ? `<b class="tno">${CIRCLED[ti]}</b>` : ''}<span class="s" data-sent="${esc(s)}">${tokHTML(s)}</span>`; }).join('')}</p>`
     + (S.py && d.pinyin ? `<div class="py">${esc(d.pinyin[i])}</div>` : '')
     + (S.ja && d.ja ? `<div class="ja">${esc(d.ja[i])}</div>` : '')).join('') + `</div>
@@ -37321,8 +37647,23 @@ const MARK_NG = `<svg class="mark" viewBox="0 0 54 54"><path d="M10 26 L22 40 L4
 
 function qHTML(it){
   const s = it.src, chk = st.chk[it.id], a = st.ans[it.id];
-  let head; const isM = it.id.startsWith('m-'), isB = it.id.startsWith('b-');
-  if (isB){
+  if (it.order){ // 語カードを並べる
+    const sel = a || [], used = new Set(sel), ans = s.answer.join(' ') + (s.end || '');
+    const line = sel.map((k, p) => `<button class="tcard on" data-ou="${it.id}" data-p="${p}" ${chk ? 'disabled' : ''}>${esc(it.cards[k])}</button>`).join('');
+    const pool = it.cards.map((t, k) => used.has(k) ? '' : `<button class="tcard" data-oc="${it.id}" data-k="${k}" ${chk ? 'disabled' : ''}>${esc(t)}</button>`).join('');
+    return `<div class="q">${chk ? (okOf(it) ? MARK_OK : MARK_NG) : ''}<div class="qn">${it.n}</div><div class="qtext">${esc(s.ja)}</div>
+      <div class="note">語をクリックして正しい順に並べましょう${(s.extra || []).length ? '（使わない語もあります）' : ''}。並べた語をクリックすると戻せます。</div>
+      <div class="oline ${tlc()}">${line || '<span class="note">ここに並びます</span>'}<span class="oend">${esc(s.end || '')}</span></div><div class="opool ${tlc()}">${pool}</div>
+      ${chk ? `<div class="expl">正解　<span class="${tlc()}" style="font-size:17px">${esc(ans)}</span><button class="say" data-say="${esc(ans)}">🔊</button>${s.expl ? `<br>${esc(s.expl)}` : ''}</div>` : ''}</div>`;
+  }
+  let head; const isM = it.id.startsWith('m-'), isB = it.id.startsWith('b-'), isH = it.id.startsWith('h-'), isC = it.id.startsWith('c-');
+  if (isH){
+    head = `<div class="qtext"><button class="btn" data-say="${esc(s.say)}">🔊 聞く</button>　<span class="note">聞こえた語を選びましょう</span></div>`;
+  } else if (isC){
+    head = `<div class="qtext">${esc(s.ja)}</div><div class="note">日本語に合う文を選びましょう</div>`;
+  } else if (L() === 'tl' && JP.test(s.q || '')){
+    head = `<div class="qtext">${esc(s.q)}</div>`;
+  } else if (isB){
     const txt = esc(s.text).replace(/\{([A-Z])\}/g, (_, k) => k === s.k ? `<span class="blank">&nbsp;${k}&nbsp;</span>` : `&nbsp;${k}&nbsp;`);
     head = `<div class="note tl en" style="font-size:15px;margin-bottom:4px">${CIRCLED[s.si]} ${esc(s.target || '')}</div><div class="qtext" style="font-size:16px">${txt}</div>`;
   } else if (isM){
@@ -37343,7 +37684,7 @@ function qHTML(it){
     const ring = sel ? circle('var(--pencil)', 1.8, (k*37)%40-20) : '';
     const extra = chk ? (c.py && L()==='zh' ? `<span class="cpy">${esc(c.py)}</span>` : '') + (c.ja ? `<span class="cja">${esc(c.ja)}</span>` : '') : '';
     return `<button class="ch${chk && c.ok ? ' right' : ''}" data-q="${it.id}" data-k="${k}" ${chk?'disabled':''}>
-      <span class="num">${ring}${k+1}</span><span class="ctext ${isM || isB ? '' : tlc()}">${esc(c.t)}${extra}</span></button>`;
+      <span class="num">${ring}${k+1}</span><span class="ctext ${isM || isB || JP.test(c.t) && L() !== 'zh' ? '' : tlc()}">${esc(c.t)}${extra}</span></button>`;
   }).join('');
   let ex = '';
   if (chk && !isM && !isB){
@@ -37359,20 +37700,29 @@ function pageHTML(p){
   const d = W.data;
   if (p.k === 'cover') return `<div class="cover"><div class="ex">${esc(W.book.title)}</div><div class="tt">${unitName(W)}</div>
     <div class="tp">${esc(d.topic||'')}</div>
-    <div class="tips">・選択肢の番号をクリックすると○がつきます<br>・ページの下の「答え合わせ」で丸つけ<br>・本文の語をクリックすると読み上げ${L()==='zh'?'<br>・上の「ピンイン」「訳」で表示を切りかえ':''}<br>・←→キーでもページをめくれます</div></div>`;
+    <div class="tips">・選択肢の番号をクリックすると○がつきます<br>・ページの下の「答え合わせ」で丸つけ<br>・本文の語をクリックすると読み上げ${L()==='zh'?'<br>・上の「ピンイン」「訳」で表示を切りかえ':''}${L()==='tl'?'<br>・タガログ語の声はEdgeの「Filipino」の声。ない環境では別の言語の声で読まれます':''}<br>・←→キーでもページをめくれます</div></div>`;
   if (p.k === 'text') return passageHTML();
   if (p.k === 'q'){
-    const all = p.list.every(it => st.ans[it.id] !== undefined), done = p.list.every(it => st.chk[it.id]);
-    return `<h2>${stepName(p.kind, p.step)}</h2>${p.kind === 'm-' ? '<p class="note" style="margin:-6px 0 14px">単語の意味を選ぼう</p>' : '<button class="chip mobile-only" data-drawer="1" style="margin-bottom:14px">📖 本文を見る</button>'}`
+    const all = p.list.every(answered), done = p.list.every(it => st.chk[it.id]);
+    return `<h2>${stepName(p.kind, p.step)}</h2>${p.kind === 'm-' ? '<p class="note" style="margin:-6px 0 14px">単語の意味を選ぼう</p>' : p.kind === 's3' || W.kind !== 'lesson' ? '<button class="chip mobile-only" data-drawer="1" style="margin-bottom:14px">📖 本文を見る</button>' : ''}`
       + p.list.map(qHTML).join('')
       + (done ? '' : `<button class="check" data-check="${p.list.map(i=>i.id).join(',')}" ${all?'':'disabled'}>答え合わせ</button>${all?'':'<p class="note" style="text-align:center">全部選ぶと答え合わせできます</p>'}`);
+  }
+  if (p.k === 'gram'){
+    const g = d.grammar;
+    return `<h2>${esc(g.title || '文法')}</h2><ul class="gpts">${(g.points || []).map(t => `<li>${esc(t)}</li>`).join('')}</ul>`
+      + ((g.examples || []).length ? `<h3>例文</h3>` + g.examples.map(e => `<p class="${tlc()}" style="font-size:18px;margin:6px 0 0" data-sent="${esc(e.t)}">${tokHTML(e.t)}<button class="say" data-say="${esc(e.t)}">🔊</button></p><div class="ja" style="margin:4px 0 10px">${esc(e.ja)}</div>`).join('') : '');
+  }
+  if (p.k === 'ceb'){
+    return `<h2>セブアノ語フレーズ</h2><p class="note" style="margin:-6px 0 12px">セブで使われる言葉の紹介です。「要確認」のものは、現地の先生や辞書で確かめてから使ってください。</p>
+      <table><tr><th>セブアノ語</th><th>意味</th></tr>${d.cebuano.map(c => `<tr><td class="tl tgl" style="font-size:17px">${esc(c.t)}</td><td>${esc(c.ja)}</td></tr>`).join('')}</table>`;
   }
   if (p.k === 'vocab'){
     const isZh = L()==='zh';
     const vs = (d.vocab||[]).filter(v => !vOnly || isMarked(v.word)), nm = (d.vocab||[]).filter(v => isMarked(v.word)).length;
     let h = `<h2>単語集</h2><div class="vfilter"><button class="chip${vOnly?'':' on'}" data-vf="0">全部（${(d.vocab||[]).length}）</button><button class="chip${vOnly?' on':''}" data-vf="1">まだだけ（${nm}）</button></div>
       <p class="note" style="margin:0 0 8px">覚えていない語は「まだ」を押す。本文でも赤くなり、本棚の「まだの単語」で一覧とテストができます。</p>
-      <table><tr><th>まだ</th><th>単語</th><th>${isZh?'ピンイン（品詞）':'漢字・品詞'}</th><th>意味</th></tr>`
+      <table><tr><th>まだ</th><th>単語</th><th>${isZh?'ピンイン（品詞）':L()==='tl'?'メモ':'漢字・品詞'}</th><th>意味</th></tr>`
       + vs.map(v => `<tr class="${isMarked(v.word)?'marked':''}"><td><button class="mk${isMarked(v.word)?' on':''}" data-mk="${esc(v.word)}">${isMarked(v.word)?'✓':''}</button></td><td class="${tlc()}"><span class="w" data-w="${esc(v.word)}">${esc(v.word)}</span><br><span class="note" style="font-family:var(--jp);font-size:11px">${esc(v.level)}</span></td><td>${esc(v.info)}</td><td>${esc(v.meaning)}</td></tr>`).join('')
       + (vs.length ? '' : '<tr><td colspan="4" class="note">「まだ」の語はありません</td></tr>') + '</table>';
     if (d.expressions) h += `<h3>Step 2の表現</h3><table><tr><th>表現</th><th>意味</th><th>例文</th></tr>` + d.expressions.map(e =>
@@ -37400,7 +37750,7 @@ function tocHTML(){
 }
 
 // ---------- まだの単語：一覧とテスト ----------
-const fontOf = l => `tl ${l}`;
+const fontOf = l => `tl ${lcls(l)}`;
 function marksHTML(){
   const l = view.lang, m = getMarks(l), ws = Object.keys(m);
   return `<h2>${LANGNAME[l]}のまだの単語（${ws.length}語）</h2>
@@ -37475,8 +37825,8 @@ function noteHTML(l){
     <span class="nl">${LANGNAME[l]}</span><span class="nt">まだの単語</span><span class="nn">${n} 語</span></button>`;
 }
 // 書斎：言語ごとに1つの本棚、棚＝ジャンル。言語・ジャンルが増えると本棚・棚が増える
-const LANG_ORDER = ['ko', 'zh', 'en', 'fr', 'it'];
-const GENRE_ORDER = ['単語', '文法', '長文', '物語', '小説'];
+const LANG_ORDER = ['ko', 'zh', 'en', 'fr', 'it', 'tl'];
+const GENRE_ORDER = ['レッスン', '単語', '文法', '長文', '物語', '小説'];
 // やさしい級から順に並べる(英検・ハン検は 5級→1級、HSK は 1級→9級)
 const LEVELS = ['5級', '4級', '3級', '準2級', '準2級プラス', '2級', '準1級', '1級'];
 const levelRank = b => /HSK/.test(b.exam) ? parseInt(b.level) || 0 : (LEVELS.indexOf(b.level) + 1 || 50);
@@ -37780,12 +38130,13 @@ function recordCornerHTML(){
   const all = [...RECS.values()];
   if (!all.length) return '';
   const langs = [...new Set(all.map(r => r.lang))].sort((a, c) => ord(LANG_ORDER, a) - ord(LANG_ORDER, c));
-  const rows = langs.map(l => {
+  const cases = langs.map(l => {
     const rs = all.filter(r => r.lang === l), grps = [...new Set(rs.map(r => r.grp))].sort((a, c) => grpRank(a) - grpRank(c));
-    return `<div class="rc-row"><div class="plate">${esc(LANGNAME[l] || l)}</div><div class="rc-recs">` + grps.map(g => `<span class="rc-div">${esc(g)}</span>`
-      + rs.filter(r => r.grp === g).sort((a, c) => (a.type === 'q' ? 0 : 1) - (c.type === 'q' ? 0 : 1) || a.no - c.no).map(sleeveHTML).join('')).join('') + `</div></div>`;
+    return `<div class="reccase"><div class="bs-top"><span class="crest">${esc(LANGNAME[l] || l)}のレコード</span></div><div class="rc-recs">` + grps.map(g => { // 仕切り札と最初の1枚は離さない(段の終わりに札だけ残らないように)
+        const h = rs.filter(r => r.grp === g).sort((a, c) => (a.type === 'q' ? 0 : 1) - (c.type === 'q' ? 0 : 1) || a.no - c.no).map(sleeveHTML);
+        return `<span class="rc-g"><span class="rc-div">${esc(g)}</span>${h[0]}</span>` + h.slice(1).join(''); }).join('') + `</div></div>`;
   }).join('');
-  return `<div class="corner"><div class="gramo" title="蓄音機">${GRAMO}</div><div class="reccase"><div class="bs-top"><span class="crest">レコード棚</span></div>${rows}</div></div>`;
+  return `<div class="corner"><div class="gramo" title="蓄音機">${GRAMO}</div>${cases}</div>`;
 }
 
 // 再生の画面
@@ -37809,7 +38160,7 @@ function speakSeq(parts, lang, rate){ // 話者 a・s は1つ目の声、b は2�
 function playListen(mul){ const r = RECS.get(view.rec), q = r.qs[view.qi]; if (q) speakSeq(q.lines, r.lang, S.rate * mul); }
 const LKIND = {conv:'会話を聞いて、質問に答えましょう。', msg:'文章を聞いて、質問に答えましょう。', reply:'聞いた文への答えとして、いちばん合うものを選びましょう。'};
 function lqHTML(r){
-  const s = lsLoad(r.id), n = r.qs.length, i = view.qi, tl = 'tl ' + r.lang;
+  const s = lsLoad(r.id), n = r.qs.length, i = view.qi, tl = 'tl ' + lcls(r.lang);
   if (i >= n){
     const got = r.qs.filter((q, k) => lOk(r, s, k)).length, wrong = r.qs.filter((q, k) => s.ans[k] !== undefined && !lOk(r, s, k)).length, nx = nextRec(r);
     return `<h2>結果</h2><div class="score">${got} / ${n}</div>` + r.qs.map((q, k) => `<button class="toc-row" data-lgo="${k}"><span class="tn">${k + 1}</span><span class="tt2 ${tl}">${esc(q.q.q)}</span><span class="ts">${s.ans[k] === undefined ? 'まだ' : lOk(r, s, k) ? '◯' : '✓'}</span></button>`).join('')
@@ -37928,6 +38279,8 @@ $('#main').addEventListener('click', e => {
   if (t.id === 'toToc'){ view = {k:'toc', book:W.bookKey}; W = null; render(); return; }
   const say = t.closest('[data-say]'); if (say){ speak(say.dataset.say, say.dataset.lang || (W ? L() : 'zh')); return; }
   const mk = t.closest('[data-mk]'); if (mk){ toggleMark(mk.dataset.mk); render(); return; }
+  const oc = t.closest('[data-oc]'); if (oc){ if (!oc.disabled){ st.ans[oc.dataset.oc] = [...(st.ans[oc.dataset.oc] || []), +oc.dataset.k]; saveSt(); render(); } return; }
+  const ou = t.closest('[data-ou]'); if (ou){ if (!ou.disabled){ st.ans[ou.dataset.ou].splice(+ou.dataset.p, 1); saveSt(); render(); } return; }
   const vf = t.closest('[data-vf]'); if (vf){ vOnly = vf.dataset.vf === '1'; render(); return; }
   const ml = t.closest('[data-marks]'); if (ml){ view = {k:'marks', lang:ml.dataset.marks}; render(); return; }
   const um = t.closest('[data-unmark]'); if (um){ const m = getMarks(view.lang); delete m[um.dataset.unmark]; setMarks(view.lang, m); render(); return; }
