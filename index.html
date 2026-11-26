@@ -20,7 +20,8 @@
 html,body{margin:0;height:100%}
 body{background:var(--desk);color:var(--ink);font-family:var(--jp);font-size:16px;line-height:1.7;display:flex;flex-direction:column}
 button{font-family:inherit;font-size:inherit;cursor:pointer}
-.bar{display:flex;align-items:center;gap:8px;padding:8px 14px;background:#f4efe4;border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:8px;padding:8px 14px;background:#f4efe4;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+body.free{height:auto;min-height:100%} /* 書斎・部屋・廊下は画面ごとスクロール(上のバーは残る)。ワークを開いているときはページの中でスクロール */
 .bar h1{font-size:15px;font-weight:600;margin:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:3px 12px;font-size:13px;color:var(--ink)}
 .chip.on{background:var(--accent);border-color:var(--accent);color:#fff}
@@ -345,11 +346,33 @@ tr.marked td{background:rgba(176,50,42,.07)}
 .gpad{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:14px auto 4px;max-width:460px}
 .gn{min-width:44px;height:44px;border:1px solid var(--line);background:#fffaf0;border-radius:4px;font-family:Georgia,serif;font-size:20px;color:var(--ink)}
 .gn.gx{font-family:var(--jp);font-size:14px;padding:0 12px}
+.door.d-study{background:var(--noise),repeating-linear-gradient(90deg,rgba(0,0,0,.18) 0 2px,transparent 2px 27px),linear-gradient(#7a4a26,#4a2c14)}
+.hall .study-wall{padding-top:22px;background-color:#5a4632;background-image:var(--noise),repeating-linear-gradient(90deg,rgba(255,235,200,.06) 0 3px,transparent 3px 70px),linear-gradient(#3e2f20,#6a543b 45%,#5a4632)}
+.hall-doors{gap:60px;padding:40px 10px 0;min-height:min(60vh,420px);align-items:flex-end}
+.hall-doors .door{width:140px;height:230px;border-radius:66px 66px 0 0}
+.hall-doors .door .dplate{top:64px;font-size:13px}.hall-doors .door .dknob{top:130px;right:20px}
+/* とびらの数(--n)が増えると、とびら・額・飾りを小さくして1列に入れる。7つ以上は折り返す */
+.hall-doors{--g:clamp(6px,1.4vw,24px);--dw:min(140px,calc((100vw - 110px - var(--n) * 2 * var(--g)) / (var(--n) * 1.75 + .55)));gap:var(--g);flex-wrap:wrap}
+.hall-doors .door{width:var(--dw);height:calc(var(--dw) * 1.64);flex:none;border-radius:calc(var(--dw) * .48) calc(var(--dw) * .48) 0 0}
+.hall-doors .door .dplate{top:calc(var(--dw) * .46);font-size:clamp(10px,calc(var(--dw) * .095),13px);letter-spacing:.05em;padding:1px 6px}.hall-doors .door .dknob{top:calc(var(--dw) * .93);right:calc(var(--dw) * .14)}
+.h-pier{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:calc(var(--dw) * .18);align-self:stretch;padding:6px 0 calc(var(--dw) * .28);width:calc(var(--dw) * .75);flex:none}
+.h-frame{width:88%;filter:drop-shadow(0 5px 6px rgba(0,0,0,.55))}.h-frame svg,.h-sconce svg,.h-deco svg{display:block;width:100%;height:auto}
+.h-sconce{width:calc(var(--dw) * .27)}
+.hflame{transform-origin:20px 26px;animation:flick 1.6s ease-in-out infinite alternate}
+.h-plant{width:calc(var(--dw) * .6);margin-bottom:-4px;flex:none}.h-table{width:calc(var(--dw) * .66);margin-bottom:-4px;flex:none}
+.hall-floor{position:relative;height:70px}
+.runner{position:absolute;left:8%;right:8%;top:12px;bottom:12px;border-radius:3px;background:#6b1f1a;
+  background-image:repeating-linear-gradient(90deg,transparent 0 22px,rgba(232,196,110,.35) 22px 24px,transparent 24px 46px),linear-gradient(#7a2620,#5a1712);
+  box-shadow:inset 0 0 0 4px #4a120e,inset 0 0 0 6px #c9a052,inset 0 0 0 9px #4a120e,0 3px 6px rgba(0,0,0,.5)}
+.wainscot{height:34px;margin:0 -24px;background:linear-gradient(#4a301a,#2e1d0f);border-top:3px solid #8a6a3a}
+@media (max-width:899px){ .h-deco,.h-frame{display:none} .h-pier{width:calc(var(--dw) * .22);padding-bottom:calc(var(--dw) * .7)} .h-sconce{width:100%} .hall-floor{height:50px} .runner{left:4%;right:4%;top:8px;bottom:8px} }
+@media (max-width:899px){ .hall-doors{--g:4px;--dw:min(100px,calc((100vw - 40px - min(var(--n),3) * 2 * var(--g)) / (min(var(--n),3) * 1.25)));min-height:0;padding-top:24px;gap:22px var(--g) !important} .hall-doors .door{border-radius:calc(var(--dw) * .48) calc(var(--dw) * .48) 0 0} .wainscot{margin:0 -6px} }
 @media (max-width:899px){ .door{width:92px;height:146px} .door .dknob{top:82px} .doors{gap:22px;padding-bottom:4px} }
 </style>
 </head>
 <body>
 <div class="bar">
+  <button class="chip" id="bHall" title="ほかの部屋へ">🚪 廊下へ</button>
   <button class="chip" id="bShelf">本棚</button>
   <h1 id="ttl">言語の本棚</h1>
   <button class="chip" id="bPy">ピンイン</button>
@@ -49121,6 +49144,54 @@ function doorsHTML(){
   if (!rooms.length) return '';
   return `<div class="doors">${rooms.map(r => `<button class="door d-${r}" data-room="${r}" title="${esc(ROOMS[r].name)}へ"><span class="dplate">${esc(ROOMS[r].name)}</span><span class="dknob"></span></button>`).join('')}</div>`;
 }
+// 廊下：上のバーの「廊下へ」からいつでも来られる。部屋ごとのとびら(書斎＋本がある部屋)
+// 部屋(ROOMS)が増えると、とびらも自動で増える。とびらの間には額とかべのランプ、はしに植木ばちと花びんの台、床にじゅうたん
+const SCONCE_SVG = `<svg viewBox="0 0 40 92" xmlns="http://www.w3.org/2000/svg"><defs>
+  <radialGradient id="hsGlow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffd98a" stop-opacity=".6"/><stop offset="1" stop-color="#ffd98a" stop-opacity="0"/></radialGradient>
+  <linearGradient id="hsBr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6dc8e"/><stop offset=".5" stop-color="#c8963a"/><stop offset="1" stop-color="#6e4c18"/></linearGradient></defs>
+  <circle cx="20" cy="20" r="20" fill="url(#hsGlow)"/>
+  <g class="hflame"><path d="M20 10 C25 18 25 24 20 27 C15 24 15 18 20 10 Z" fill="#ffcf5a"/><path d="M20 16 C22 20 22 23 20 25 C18 23 18 20 20 16 Z" fill="#fff4c8"/></g>
+  <rect x="16.5" y="27" width="7" height="20" rx="1" fill="#efe3c6" stroke="#c9b48c" stroke-width=".6"/>
+  <path d="M12 47 h16 l-3 5 h-10 Z" fill="url(#hsBr)" stroke="#6e4c18" stroke-width=".6"/>
+  <path d="M20 52 v8 q0 8 -8 10" fill="none" stroke="url(#hsBr)" stroke-width="2.6" stroke-linecap="round"/>
+  <ellipse cx="10" cy="72" rx="5" ry="14" fill="url(#hsBr)" stroke="#6e4c18" stroke-width=".7"/><circle cx="10" cy="72" r="2" fill="#6e4c18"/></svg>`;
+const STILL_SVG = `<svg viewBox="0 0 110 130" xmlns="http://www.w3.org/2000/svg"><defs>
+  <linearGradient id="hfG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3d98a"/><stop offset=".5" stop-color="#b8862e"/><stop offset="1" stop-color="#6e4c18"/></linearGradient>
+  <radialGradient id="hfBg" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#5a4a33"/><stop offset="1" stop-color="#1e1710"/></radialGradient></defs>
+  <rect x="0" y="0" width="110" height="130" rx="3" fill="url(#hfG)"/><rect x="7" y="7" width="96" height="116" fill="#3a2a14"/><rect x="10" y="10" width="90" height="110" fill="url(#hfBg)"/>
+  <rect x="10" y="92" width="90" height="28" fill="#3b2a1a"/><path d="M10 92 h90" stroke="#5a4028" stroke-width="1.5"/>
+  <path d="M42 54 q-6 -20 8 -30 q14 10 8 30 Z" fill="#7a8a5a" opacity=".9"/><path d="M38 56 h28 l-3 36 h-22 Z" fill="#8a5a3a"/><path d="M40 62 h24" stroke="#c9a85a" stroke-width="1"/>
+  <circle cx="74" cy="84" r="9" fill="#a8322a"/><circle cx="71" cy="81" r="2.5" fill="#d86a5a" opacity=".7"/><path d="M74 75 q2 -4 5 -4" stroke="#4a3a1a" stroke-width="1.2" fill="none"/>
+  <circle cx="86" cy="88" r="6.5" fill="#d8a030"/><circle cx="28" cy="87" r="7" fill="#6a7a2a"/>
+  <rect x="44" y="123" width="22" height="5" rx="1" fill="#2a1a08"/></svg>`;
+const PLANT_SVG = `<svg viewBox="0 0 90 190" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#3f6a3a" stroke="#23401f" stroke-width=".8">
+    <path d="M45 120 C20 100 8 70 14 40 C30 60 40 90 45 120 Z"/><path d="M45 120 C70 100 84 72 78 42 C62 62 50 92 45 120 Z"/>
+    <path d="M45 120 C40 80 42 40 50 10 C58 40 54 82 45 120 Z" fill="#4c7c44"/><path d="M45 122 C25 115 6 110 2 92 C20 92 36 104 45 122 Z" fill="#355c30"/>
+    <path d="M45 122 C65 115 84 110 88 92 C70 92 54 104 45 122 Z" fill="#355c30"/></g>
+  <path d="M45 120 v8" stroke="#3a2a14" stroke-width="2"/>
+  <path d="M20 128 h50 l-6 54 h-38 Z" fill="#9a5a34" stroke="#5a3018" stroke-width="1"/><rect x="17" y="124" width="56" height="9" rx="2" fill="#b06a3c" stroke="#5a3018"/>
+  <path d="M26 150 h38" stroke="#7a4426" stroke-width="1.2"/><rect x="24" y="182" width="42" height="5" rx="1" fill="#3a2010"/></svg>`;
+const TABLE_SVG = `<svg viewBox="0 0 100 190" xmlns="http://www.w3.org/2000/svg"><defs>
+  <linearGradient id="htV" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2c4a6a"/><stop offset=".45" stop-color="#5a84aa"/><stop offset="1" stop-color="#1e3450"/></linearGradient></defs>
+  <g stroke-width="1.6" stroke-linecap="round"><path d="M50 62 q-14 -24 -24 -30" stroke="#4c7c44" fill="none"/><path d="M50 62 q4 -30 2 -44" stroke="#4c7c44" fill="none"/><path d="M50 62 q16 -20 26 -24" stroke="#4c7c44" fill="none"/></g>
+  <circle cx="25" cy="31" r="7" fill="#c2443a"/><circle cx="52" cy="17" r="7" fill="#e6c24a"/><circle cx="77" cy="37" r="7" fill="#d47a9a"/><circle cx="38" cy="40" r="5" fill="#f2efe0"/><circle cx="64" cy="30" r="5" fill="#f2efe0"/>
+  <path d="M42 62 h16 q2 6 8 12 q6 10 0 22 h-32 q-6 -12 0 -22 q6 -6 8 -12 Z" fill="url(#htV)" stroke="#16283c" stroke-width=".8"/><path d="M36 84 h28" stroke="#d8c48a" stroke-width="1"/>
+  <rect x="6" y="96" width="88" height="10" rx="2" fill="#7a4a26" stroke="#3e2410"/><rect x="12" y="106" width="76" height="16" fill="#5a3418" stroke="#3e2410"/><circle cx="50" cy="114" r="2" fill="#d8b860"/>
+  <path d="M16 122 l-4 64 M84 122 l4 64 M30 122 l-1 60 M70 122 l1 60" stroke="#4a2c14" stroke-width="5" stroke-linecap="round"/></svg>`;
+function hallHTML(){
+  const rooms = [['study', '書斎'], ...Object.keys(ROOMS).filter(r => [...BOOKS.values()].some(b => b.room === r)).map(r => [r, ROOMS[r].name])];
+  const pics = [PAINT_SVG, STILL_SVG];
+  const parts = [`<div class="h-deco h-plant">${PLANT_SVG}</div>`];
+  rooms.forEach(([r, name], i) => {
+    if (i) parts.push(`<div class="h-pier"><div class="h-frame">${pics[(i - 1) % pics.length]}</div><div class="h-sconce">${SCONCE_SVG}</div></div>`);
+    parts.push(`<button class="door d-${r}" data-room="${r}" title="${esc(name)}へ"><span class="dplate">${esc(name)}</span><span class="dknob"></span></button>`);
+  });
+  parts.push(`<div class="h-deco h-table">${TABLE_SVG}</div>`);
+  return `<div class="study hall"><div class="study-wall"><div class="study-title">廊下</div>
+    <div class="doors hall-doors" style="--n:${Math.min(rooms.length, 6)}">${parts.join('')}</div>
+    <div class="wainscot"></div></div><div class="study-floor hall-floor"><div class="runner"></div></div></div>`;
+}
 // パズルの部屋・数学の部屋：本棚1つ、棚＝ジャンル
 function roomHTML(r){
   const R = ROOMS[r], books = [...BOOKS.values()].filter(b => b.room === r), byG = new Map();
@@ -49729,6 +49800,8 @@ function autoPlay(r){ // 問題が出たら1回自動で再生
 function render(){
   $('#pop').style.display = 'none';
   const main = $('#main'), pg = $('#pager');
+  $('#bHall').classList.toggle('on', !W && view.k === 'hall');
+  document.body.classList.toggle('free', !W);
   if (view.k !== 'rec' && spinning){ speechSynthesis.cancel(); spinning = false; }
   if (!W){
     pg.style.visibility = 'hidden';
@@ -49754,6 +49827,7 @@ function render(){
     $('#bShelf').textContent = '本棚';
     if (view.k === 'toc'){ $('#ttl').textContent = BOOKS.get(view.book).title; main.innerHTML = `<div class="shelf"><div class="page" style="flex:none">${tocHTML()}</div></div>`; return; }
     if (view.k === 'room'){ $('#ttl').textContent = ROOMS[view.room].name; main.innerHTML = roomHTML(view.room); return; }
+    if (view.k === 'hall'){ $('#ttl').textContent = '廊下'; main.innerHTML = hallHTML(); return; }
     $('#ttl').textContent = '言語の本棚';
     main.innerHTML = shelfHTML(); placeDecor();
     return;
@@ -49833,7 +49907,7 @@ $('#main').addEventListener('click', e => {
   const ts = t.closest('[data-test]'); if (ts){ startTest(view.lang, ts.dataset.test); return; }
   const ta = t.closest('[data-ta]'); if (ta){ answerTest(+ta.dataset.ta); return; }
   if (t.id === 'tNext'){ view.i++; render(); return; }
-  const rm = t.closest('[data-room]'); if (rm){ W = null; view = {k:'room', room:rm.dataset.room}; render(); scrollTo(0, 0); return; }
+  const rm = t.closest('[data-room]'); if (rm){ W = null; view = rm.dataset.room === 'study' ? {k:'shelf'} : {k:'room', room:rm.dataset.room}; render(); scrollTo(0, 0); return; }
   const gc = t.closest('[data-gc]'); if (gc){ gSel = +gc.dataset.gc; render(); return; }
   const gn = t.closest('[data-gn]'); if (gn){ gridInput(gn.dataset.gn); return; }
   if (t.closest('#backShelf')){ const fromRec = view.k === 'rec' && view.rec; view = {k:'shelf'}; render();
@@ -49855,6 +49929,7 @@ $('#main').addEventListener('click', e => {
 });
 $('#drawer').addEventListener('click', e => { const say = e.target.closest('[data-say]'); if (say) speak(say.dataset.say); if (e.target.id === 'drawer') $('#drawer').style.display = 'none'; });
 $('#prev').onclick = () => go(-1); $('#next').onclick = () => go(1);
+$('#bHall').onclick = () => { W = null; view = {k:'hall'}; render(); scrollTo(0, 0); };
 $('#bShelf').onclick = () => { const room = view.k === 'toc' && BOOKS.get(view.book)?.room;
   view = W ? {k:'toc', book:W.bookKey} : room ? {k:'room', room} : {k:'shelf'}; W = null; render(); };
 document.addEventListener('keydown', e => { if (!W || e.target.matches('input,select')) return;
