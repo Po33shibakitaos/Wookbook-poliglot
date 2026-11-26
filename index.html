@@ -304,6 +304,7 @@ tr.marked td{background:rgba(176,50,42,.07)}
   <h1 id="ttl">言語の本棚</h1>
   <button class="chip" id="bPy">ピンイン</button>
   <button class="chip" id="bJa">訳</button>
+  <button class="chip" id="bDeep" title="長文で、意味・表現を確認する問題(Step 2)を出すかどうか">詳しく読み解く</button>
   <button class="chip" id="bSet">⚙</button>
 </div>
 <main id="main"></main>
@@ -10605,6 +10606,1266 @@ const WORKS = [{"id":"fr_delfa1_01","src":"app","data":{
     }
   ]
 }},
+{"id":"reading_3_a","src":"en-reading","data":{
+  "title": "長文ワーク 3級 ①",
+  "level": "3級",
+  "topic": "夏休みに祖父母の農場で手伝いをして、野菜づくりの大変さと楽しさを知った中学生の話",
+  "category": "くらし・農業",
+  "grade": "中学生",
+  "levelFile": "e3",
+  "ignore": [],
+  "notes": [],
+  "paragraphs": [
+    "Takumi is a junior high school student. Last summer, he stayed with his grandparents in the countryside for two weeks. Because his grandfather hurt his leg in June, Takumi decided to help on their farm instead of going to the ocean with his friends. He was curious about farm work. Actually, he had never worked on a farm.",
+    "On the first day, Takumi went outside with his grandmother. She showed him how to pick tomatoes and plant seeds in the soil. The work that he did under the hot sun was much harder than he imagined. By noon, he was so tired that he could not eat much lunch. His grandmother noticed it and let him sit in the shade.",
+    "After several days, Takumi got used to the work and became quicker. He also received a lot of information from his grandmother. When she told him that fresh vegetables need water and care every day, he finally understood why farmers work so hard. In the evening, they boiled the vegetables from the garden, and the food tasted fantastic.",
+    "On his last day, his grandfather said, \"Thank you, Takumi. You were a big help.\" Takumi was pleased. If he has time next summer, he wants to visit the farm again and grow his own vegetables there. Now he never leaves food on his plate. He also promised to send letters to his grandparents twice a month."
+  ],
+  "targets": [
+    { "marked": "Because his grandfather hurt his leg in June, Takumi decided to help on their farm instead of going to the ocean with his friends." },
+    { "marked": "The work that he did under the hot sun was much harder than he imagined." },
+    { "marked": "When she told him that fresh vegetables need water and care every day, he finally understood why farmers work so hard." },
+    { "marked": "If he has time next summer, he wants to visit the farm again and grow his own vegetables there." }
+  ],
+  "summaries": [
+    { "text": "（{A}）ので、タクミは友だちと海へ行くかわりに、（{B}）ことにした。", "blanks": { "A": "祖父が6月に脚をけがした", "B": "農場を手伝う" } },
+    { "text": "暑い日ざしの下での仕事は、（{C}）。", "blanks": { "C": "想像していたよりずっと大変だった" } },
+    { "text": "新鮮な野菜には毎日（{D}）が必要だと聞いて、タクミはついに（{E}）がわかった。", "blanks": { "D": "水と世話", "E": "農家の人がなぜ一生けんめい働くのか" } },
+    { "text": "来年の夏に時間があれば、タクミは農場をまたおとずれて、（{F}）たいと思っている。", "blanks": { "F": "自分の野菜を育て" } }
+  ],
+  "ja": [
+    "タクミは中学生です。この前の夏、彼はいなかにある祖父母の家に2週間とまりました。祖父が6月に脚をけがしたので、タクミは友だちと海へ行くかわりに、農場を手伝うことにしました。彼は農場の仕事に興味がありました。実は、彼は農場で働いたことが一度もありませんでした。（①は3番目の文）",
+    "初日、タクミは祖母といっしょに外へ出ました。祖母はトマトのとり方や、土に種をまく方法を見せてくれました。暑い日ざしの下での仕事は、想像していたよりずっと大変でした。お昼には、とてもつかれていたので、昼ごはんをあまり食べられませんでした。祖母はそれに気づいて、彼を日かげにすわらせてくれました。（②は3番目の文）",
+    "何日かたつと、タクミは仕事になれて、手早くなりました。彼は祖母からたくさんの情報ももらいました。新鮮な野菜には毎日、水と世話が必要だと祖母に言われたとき、彼はついに、なぜ農家の人がそんなに一生けんめい働くのかがわかりました。夕方には、二人で畑の野菜をゆでて、その料理はとてもおいしかったです。（③は3番目の文）",
+    "最後の日、祖父は「ありがとう、タクミ。とても助かったよ」と言いました。タクミはうれしく思いました。来年の夏に時間があれば、彼はまた農場をおとずれて、そこで自分の野菜を育てたいと思っています。今では、彼はお皿に食べ物を残すことがありません。祖父母に月に2回手紙を送ることも約束しました。（④は3番目の文）"
+  ],
+  "questions": [
+    {
+      "q": "Why did Takumi help on his grandparents' farm?",
+      "qja": "タクミはなぜ祖父母の農場を手伝ったのですか。",
+      "correct": { "en": "Because his grandfather hurt his leg.", "ja": "祖父が脚をけがしたから。" },
+      "wrong": [
+        { "en": "Because his school told him to do it.", "ja": "学校にそうするように言われたから。" },
+        { "en": "Because he wanted to sell vegetables.", "ja": "野菜を売りたかったから。" },
+        { "en": "Because his grandmother was sick.", "ja": "祖母が病気だったから。" }
+      ],
+      "basis": "①の文",
+      "expl": "①の Because his grandfather hurt his leg in June が理由になっている。"
+    },
+    {
+      "q": "How was the work on the first day?",
+      "qja": "初日の仕事はどうでしたか。",
+      "correct": { "en": "It was harder than Takumi thought.", "ja": "タクミが思っていたより大変だった。" },
+      "wrong": [
+        { "en": "It was easier than his homework.", "ja": "宿題より簡単だった。" },
+        { "en": "It was finished before breakfast.", "ja": "朝食の前に終わった。" },
+        { "en": "It was done inside the house.", "ja": "家の中でおこなわれた。" }
+      ],
+      "basis": "②の文",
+      "expl": "②の much harder than he imagined が、harder than Takumi thought に言いかえられている。"
+    },
+    {
+      "q": "What did Takumi's grandmother tell him?",
+      "qja": "タクミの祖母は彼に何と言いましたか。",
+      "correct": { "en": "Fresh vegetables need water and care every day.", "ja": "新鮮な野菜には毎日、水と世話が必要だ。" },
+      "wrong": [
+        { "en": "Farmers do not have to work hard.", "ja": "農家の人は一生けんめい働く必要はない。" },
+        { "en": "Tomatoes grow well without water.", "ja": "トマトは水がなくてもよく育つ。" },
+        { "en": "He should go back home soon.", "ja": "彼はすぐに家へ帰るべきだ。" }
+      ],
+      "basis": "③の文",
+      "expl": "③の she told him that fresh vegetables need water and care every day が答えになる。"
+    },
+    {
+      "q": "What does Takumi want to do next summer?",
+      "qja": "タクミは来年の夏に何をしたいと思っていますか。",
+      "correct": { "en": "He wants to grow his own vegetables on the farm.", "ja": "農場で自分の野菜を育てたい。" },
+      "wrong": [
+        { "en": "He wants to travel to a foreign country.", "ja": "外国へ旅行したい。" },
+        { "en": "He wants to open a restaurant in his town.", "ja": "自分の町でレストランを開きたい。" },
+        { "en": "He wants to buy a new farm with his friends.", "ja": "友だちと新しい農場を買いたい。" }
+      ],
+      "basis": "④の文",
+      "expl": "④の he wants to visit the farm again and grow his own vegetables there が答えになる。"
+    }
+  ]
+}},
+{"id":"reading_3_b","src":"en-reading","data":{
+  "title": "長文ワーク 3級 ②",
+  "level": "3級",
+  "topic": "カナダから来た留学生と料理部で、おたがいの国の料理を作って教え合った話",
+  "category": "国際交流・学校生活",
+  "grade": "中学生",
+  "levelFile": "e3",
+  "ignore": [],
+  "notes": [],
+  "paragraphs": [
+    "Mika is a member of the cooking club at her local junior high school. Last April, a tall girl, Emma, came to the school from Canada as an exchange student. It was her first time in a foreign country, and she was curious about everything. Because Emma was interested in Japanese food, she joined the cooking club on her first week.",
+    "At first, Emma was quite quiet and felt uncomfortable. One day, the club members made rice balls for lunch. The rice balls that Emma made were too big and had too much salt, so everyone laughed. Emma laughed too, and after that she felt comfortable with the other members.",
+    "In June, Emma offered to introduce a traditional dish from her country. She received some maple syrup from her cousin and showed the club how to bake pancakes. Actually, it was her grandmother's secret recipe. Soon there was a sweet smell everywhere in the room. When the members tasted the pancakes with the sweet syrup, they were surprised at the wonderful flavor. That day, Mika asked Emma many questions about the customs and traditions of Canada.",
+    "Emma will go back to Canada next March. Before she leaves, the club is planning to hold a party for her, and Mika is going to bake some honey cookies for her. Mika thinks it will certainly be a fantastic party. Mika hopes that she can visit Emma in Canada someday because she wants to see the places Emma talked about. She now studies English harder than before, and someday she wants to attend a university in Canada."
+  ],
+  "targets": [
+    { "marked": "Because Emma was interested in Japanese food, she joined the cooking club on her first week." },
+    { "marked": "The rice balls that Emma made were too big and had too much salt, so everyone laughed." },
+    { "marked": "When the members tasted the pancakes with the sweet syrup, they were surprised at the wonderful flavor." },
+    { "marked": "Mika hopes that she can visit Emma in Canada someday because she wants to see the places Emma talked about." }
+  ],
+  "summaries": [
+    { "text": "エマは（{A}）ので、最初の週に（{B}）。", "blanks": { "A": "日本の食べ物に興味があった", "B": "料理部に入った" } },
+    { "text": "エマが作ったおにぎりは（{C}）ので、みんなが笑った。", "blanks": { "C": "大きすぎて、塩が多すぎた" } },
+    { "text": "あまいシロップをかけたパンケーキを食べた部員たちは、（{D}）におどろいた。", "blanks": { "D": "そのすばらしい味" } },
+    { "text": "ミカは、（{E}）ので、いつかカナダの（{F}）と思っている。", "blanks": { "E": "エマが話した場所を見てみたい", "F": "エマをたずねたい" } }
+  ],
+  "ja": [
+    "ミカは、地元の中学校の料理部の部員です。この前の4月、エマという背の高い女の子が交換留学生としてカナダからその学校にやって来ました。外国に来たのは初めてで、彼女はあらゆることに興味しんしんでした。エマは日本の食べ物に興味があったので、最初の週に料理部に入りました。（①は4番目の文）",
+    "はじめ、エマはとても静かで、居心地が悪そうでした。ある日、部員たちは昼ごはんにおにぎりを作りました。エマが作ったおにぎりは大きすぎて、塩も多すぎたので、みんなが笑いました。エマも笑い、それからは、ほかの部員たちといっしょにいても気楽にすごせるようになりました。（②は3番目の文）",
+    "6月に、エマは自分の国の伝統的な料理を紹介したいと申し出ました。彼女はいとこからメープルシロップを受け取り、部のみんなにパンケーキの焼き方を見せました。実は、それは彼女のおばあさんのひみつのレシピでした。すぐに、部屋じゅうにあまいにおいがしました。部員たちはあまいシロップをかけたパンケーキを食べて、そのすばらしい味におどろきました。その日、ミカはエマにカナダの習慣や伝統についてたくさん質問しました。（③は5番目の文）",
+    "エマは来年の3月にカナダへ帰ります。彼女が帰る前に、料理部はパーティーを開く計画を立てていて、ミカは彼女のためにハチミツのクッキーを焼くつもりです。ミカは、きっとすばらしいパーティーになると思っています。ミカは、エマが話してくれた場所を見てみたいので、いつかカナダのエマをたずねられたらいいなと思っています。今、彼女は前よりも一生けんめい英語を勉強していて、いつかカナダの大学に通いたいと思っています。（④は4番目の文）"
+  ],
+  "questions": [
+    {
+      "q": "Why did Emma join the cooking club?",
+      "qja": "エマはなぜ料理部に入ったのですか。",
+      "correct": { "en": "Because she was interested in Japanese food.", "ja": "日本の食べ物に興味があったから。" },
+      "wrong": [
+        { "en": "Because Mika asked her to join it.", "ja": "ミカに入るようにたのまれたから。" },
+        { "en": "Because she wanted to open a restaurant.", "ja": "レストランを開きたかったから。" },
+        { "en": "Because there were no other clubs.", "ja": "ほかの部がなかったから。" }
+      ],
+      "basis": "①の文",
+      "expl": "①の Because Emma was interested in Japanese food が理由になっている。"
+    },
+    {
+      "q": "Why did everyone laugh one day?",
+      "qja": "ある日、なぜみんなは笑ったのですか。",
+      "correct": { "en": "Emma's rice balls were very big and had a lot of salt.", "ja": "エマのおにぎりがとても大きくて、しょっぱかったから。" },
+      "wrong": [
+        { "en": "Emma told a funny story about Canada.", "ja": "エマがカナダについておもしろい話をしたから。" },
+        { "en": "Mika dropped the rice on the floor.", "ja": "ミカがごはんを床に落としたから。" },
+        { "en": "The teacher forgot to bring the salt.", "ja": "先生が塩を持ってくるのをわすれたから。" }
+      ],
+      "basis": "②の文",
+      "expl": "②の The rice balls that Emma made were too big and had too much salt, so everyone laughed が答えになる。"
+    },
+    {
+      "q": "How did the club members feel when they ate Emma's pancakes?",
+      "qja": "部員たちはエマのパンケーキを食べたとき、どう感じましたか。",
+      "correct": { "en": "They were surprised because the pancakes tasted so good.", "ja": "パンケーキがとてもおいしかったのでおどろいた。" },
+      "wrong": [
+        { "en": "They were sad because the pancakes were too sweet.", "ja": "パンケーキがあますぎたので悲しかった。" },
+        { "en": "They were angry because Emma used too much salt.", "ja": "エマが塩を使いすぎたので怒った。" },
+        { "en": "They were tired because they made too many pancakes.", "ja": "パンケーキをたくさん作りすぎたのでつかれた。" }
+      ],
+      "basis": "③の文",
+      "expl": "③の they were surprised at the wonderful flavor が答えになる。"
+    },
+    {
+      "q": "Why does Mika want to go to Canada someday?",
+      "qja": "ミカはなぜいつかカナダへ行きたいのですか。",
+      "correct": { "en": "She wants to see the places Emma told her about.", "ja": "エマが話してくれた場所を見たいから。" },
+      "wrong": [
+        { "en": "She wants to teach Japanese cooking there.", "ja": "そこで日本の料理を教えたいから。" },
+        { "en": "She wants to buy a lot of maple syrup.", "ja": "メープルシロップをたくさん買いたいから。" },
+        { "en": "She wants to join a party at Emma's school.", "ja": "エマの学校のパーティーに参加したいから。" }
+      ],
+      "basis": "④の文",
+      "expl": "④の because she wants to see the places Emma talked about が答えになる。"
+    }
+  ]
+}},
+{"id":"reading_3_c","src":"en-reading","data":{
+  "title": "長文ワーク 3級 ③",
+  "level": "3級",
+  "topic": "地震のテレビ番組を見た家族が、非常用のかばんを用意し、避難所までの道を歩いて確かめた話",
+  "category": "くらし・防災",
+  "grade": "中学生",
+  "levelFile": "e3",
+  "ignore": [],
+  "notes": [],
+  "paragraphs": [
+    "Japan has many earthquakes and strong typhoons every year. Last September, Riku's family watched a TV program about a big earthquake. Because the program showed people who had no food or electricity for many days, Riku's family decided to prepare for an emergency.",
+    "That weekend, the family went to a local store and bought several things. They chose water, food that can be kept for a long time, a flashlight, and some batteries. The bag that Riku packed for himself was so heavy that he could not carry it easily. His father told him to take out some of his comic books. The things for the emergency bags were not cheap, but his parents said they were worth the cost.",
+    "Next, the family checked a map of their town. They found the nearest shelter, a junior high school about ten minutes from their house, behind a hospital. When they walked there together, they noticed that one road was narrow and dangerous. They decided to use a wider road in an emergency. They also learned that the shelter keeps a supply of water.",
+    "Riku learned that it is necessary to get ready before a disaster happens. Now his family checks the bags twice a year and changes the old food. If a big earthquake happens someday, Riku believes that his family will be able to protect themselves. He also told his friends and neighbors about what his family did."
+  ],
+  "targets": [
+    { "marked": "Because the program showed people who had no food or electricity for many days, Riku's family decided to prepare for an emergency." },
+    { "marked": "The bag that Riku packed for himself was so heavy that he could not carry it easily." },
+    { "marked": "When they walked there together, they noticed that one road was narrow and dangerous." },
+    { "marked": "If a big earthquake happens someday, Riku believes that his family will be able to protect themselves." }
+  ],
+  "summaries": [
+    { "text": "何日も（{A}）人々を番組で見たので、リクの家族は（{B}）ことにした。", "blanks": { "A": "食べ物や電気がない", "B": "非常時にそなえる" } },
+    { "text": "リクが自分用につめたかばんは、（{C}）。", "blanks": { "C": "重すぎて、かんたんには運べなかった" } },
+    { "text": "家族で（{D}）とき、（{E}）ことに気づいた。", "blanks": { "D": "いっしょに避難所まで歩いた", "E": "一本の道がせまくて危ない" } },
+    { "text": "いつか大きな地震が起きても、リクは家族が（{F}）と信じている。", "blanks": { "F": "自分たちの身を守れる" } }
+  ],
+  "ja": [
+    "日本では毎年、地震や強い台風がたくさんあります。この前の9月、リクの家族は大きな地震についてのテレビ番組を見ました。その番組で、何日も食べ物や電気がない人々が映っていたので、リクの家族は非常時にそなえることにしました。（①は3番目の文）",
+    "その週末、家族は地元の店へ行き、いくつかの物を買いました。水、長い間とっておける食べ物、懐中電灯、そして電池を選びました。リクが自分用につめたかばんは重すぎて、かんたんには運べませんでした。父は彼に、マンガを何冊か出すように言いました。非常用のかばんの物は安くはありませんでしたが、両親は、お金をかける価値があると言いました。（②は3番目の文）",
+    "次に、家族は町の地図を確かめました。いちばん近い避難所は、家から10分ほどの、病院のうらにある中学校だとわかりました。いっしょにそこまで歩いてみると、一本の道がせまくて危ないことに気づきました。家族は、非常時にはもっと広い道を使うことに決めました。また、避難所には水のたくわえがあることも知りました。（③は3番目の文）",
+    "リクは、災害が起きる前に準備しておくことが必要だと学びました。今では、家族は1年に2回かばんを確かめ、古い食べ物を取りかえています。いつか大きな地震が起きても、家族は自分たちの身を守れるとリクは信じています。彼は、家族がしたことを友だちや近所の人にも話しました。（④は3番目の文）"
+  ],
+  "questions": [
+    {
+      "q": "Why did Riku's family decide to prepare for an emergency?",
+      "qja": "リクの家族はなぜ非常時にそなえることにしたのですか。",
+      "correct": { "en": "They saw people without food or electricity on TV.", "ja": "食べ物や電気がない人々をテレビで見たから。" },
+      "wrong": [
+        { "en": "Their house was broken by a typhoon.", "ja": "家が台風でこわれたから。" },
+        { "en": "Riku's teacher told them to do it.", "ja": "リクの先生にそうするように言われたから。" },
+        { "en": "A store near their house had a big sale.", "ja": "家の近くの店で大売り出しがあったから。" }
+      ],
+      "basis": "①の文",
+      "expl": "①の Because the program showed people who had no food or electricity for many days が理由になっている。"
+    },
+    {
+      "q": "What was the problem with Riku's bag?",
+      "qja": "リクのかばんの問題は何でしたか。",
+      "correct": { "en": "It was too heavy for him to carry easily.", "ja": "重すぎて、かんたんに運べなかった。" },
+      "wrong": [
+        { "en": "It was too small for the water.", "ja": "水を入れるには小さすぎた。" },
+        { "en": "It had no flashlight in it.", "ja": "懐中電灯が入っていなかった。" },
+        { "en": "It was broken when they bought it.", "ja": "買ったときにこわれていた。" }
+      ],
+      "basis": "②の文",
+      "expl": "②の so heavy that he could not carry it easily が答えになる。"
+    },
+    {
+      "q": "What did the family notice when they walked to the shelter?",
+      "qja": "家族は避難所まで歩いたとき、何に気づきましたか。",
+      "correct": { "en": "One of the roads was not safe.", "ja": "道の一本が安全ではなかった。" },
+      "wrong": [
+        { "en": "The shelter was closed on weekends.", "ja": "避難所は週末は閉まっていた。" },
+        { "en": "The school was very far from their house.", "ja": "学校は家からとても遠かった。" },
+        { "en": "There were many new stores on the way.", "ja": "とちゅうに新しい店がたくさんあった。" }
+      ],
+      "basis": "③の文",
+      "expl": "③の they noticed that one road was narrow and dangerous が答えになる。dangerous が not safe に言いかえられている。"
+    },
+    {
+      "q": "What does Riku believe?",
+      "qja": "リクは何を信じていますか。",
+      "correct": { "en": "His family can protect themselves in a big earthquake.", "ja": "大きな地震のとき、家族は自分たちの身を守れる。" },
+      "wrong": [
+        { "en": "Big earthquakes will never happen in his town.", "ja": "彼の町で大きな地震は決して起こらない。" },
+        { "en": "His friends do not need to prepare for disasters.", "ja": "友だちは災害にそなえる必要がない。" },
+        { "en": "The food in the bags will be good for many years.", "ja": "かばんの食べ物は何年もだいじょうぶだ。" }
+      ],
+      "basis": "④の文",
+      "expl": "④の Riku believes that his family will be able to protect themselves が答えになる。"
+    }
+  ]
+}},
+{"id":"reading_3_d","src":"en-reading","data":{
+  "title": "長文ワーク 3級 ④",
+  "level": "3級",
+  "topic": "盲導犬が子犬のころから訓練を受けて働くまでと、街で盲導犬に会ったときに気をつけること",
+  "category": "社会・動物",
+  "grade": "中学生",
+  "levelFile": "e3",
+  "ignore": [],
+  "notes": [],
+  "paragraphs": [
+    "Guide dogs help people who are blind. They walk with their owners and lead them safely along roads and through crowds. Because guide dogs have to stay calm in noisy places, they need special training for a long time. For a blind person, a guide dog is necessary in daily life.",
+    "A guide dog's life starts with a volunteer family. When a puppy is about two months old, it begins to live with the family for about one year. The family that takes care of the puppy teaches it to be gentle and to trust people. They also take it to many places, such as stations and supermarkets. The puppy also learns to stay silent near strangers.",
+    "After that, the dog goes to a training center. There, it learns to stop in front of steps and to walk around things on the road. If the dog finds something dangerous, it must not move forward even when its owner tells it to go. The dogs also learn to handle trains and buses. The rules there are strict, and the training is tough. Only some of the dogs succeed.",
+    "Today, there are about eight hundred guide dogs in Japan, but more people need them. Some shops and restaurants still do not accept guide dogs. When people learn that a guide dog is working, not playing, they will understand why they should not touch it or give it food. Everyone can support guide dogs in small ways. Some people donate money to training centers."
+  ],
+  "targets": [
+    { "marked": "Because guide dogs have to stay calm in noisy places, they need special training for a long time. For a blind person, a guide dog is necessary in daily life." },
+    { "marked": "The family that takes care of the puppy teaches it to be gentle and to trust people." },
+    { "marked": "If the dog finds something dangerous, it must not move forward even when its owner tells it to go." },
+    { "marked": "When people learn that a guide dog is working, not playing, they will understand why they should not touch it or give it food." }
+  ],
+  "summaries": [
+    { "text": "盲導犬は（{A}）ので、長い間（{B}）が必要だ。", "blanks": { "A": "うるさい場所でも落ち着いていなければならない", "B": "特別な訓練" } },
+    { "text": "子犬の世話をする家族は、子犬に（{C}）ことを教える。", "blanks": { "C": "やさしくして、人を信頼する" } },
+    { "text": "危ないものを見つけたら、犬は（{D}）、前に進んではいけない。", "blanks": { "D": "飼い主に「進め」と言われても" } },
+    { "text": "盲導犬が（{E}）と知れば、人々は（{F}）理由がわかるだろう。", "blanks": { "E": "遊んでいるのではなく働いている", "F": "さわったり食べ物をあげたりしてはいけない" } }
+  ],
+  "ja": [
+    "盲導犬は、目の見えない人を助けます。飼い主といっしょに歩き、道や人ごみの中を安全に案内します。盲導犬はうるさい場所でも落ち着いていなければならないので、長い間、特別な訓練が必要です。目の見えない人にとって、盲導犬はふだんの生活に欠かせません。（①は3番目の文）",
+    "盲導犬の一生は、ボランティアの家族のところから始まります。子犬は生まれて2か月ほどになると、その家族と1年ほどいっしょにくらし始めます。子犬の世話をする家族は、子犬にやさしくすることと、人を信頼することを教えます。駅やスーパーなど、いろいろな場所にも連れて行きます。子犬は、知らない人のそばでも静かにしていることを学びます。（②は3番目の文）",
+    "そのあと、犬は訓練センターへ行きます。そこでは、段差の前で止まることや、道にある物をよけて歩くことを学びます。もし危ないものを見つけたら、犬は飼い主に「進め」と言われても、前に進んではいけません。犬は、電車やバスにうまく対応することも学びます。そこの決まりはきびしく、訓練もつらいものです。合格できるのは一部の犬だけです。（③は3番目の文）",
+    "今、日本には約800頭の盲導犬がいますが、もっと多くの人が盲導犬を必要としています。店やレストランの中には、まだ盲導犬を受け入れないところもあります。盲導犬が遊んでいるのではなく働いているのだと知れば、人々は、なぜさわったり食べ物をあげたりしてはいけないのかがわかるでしょう。だれでも小さなことで盲導犬を支えることができます。訓練センターにお金を寄付する人もいます。（④は3番目の文）"
+  ],
+  "questions": [
+    {
+      "q": "Why do guide dogs need special training for a long time?",
+      "qja": "盲導犬はなぜ長い間、特別な訓練が必要なのですか。",
+      "correct": { "en": "They must keep calm even in loud places.", "ja": "うるさい場所でも落ち着いていなければならないから。" },
+      "wrong": [
+        { "en": "They have to learn how to play with children.", "ja": "子どもと遊ぶ方法を学ばなければならないから。" },
+        { "en": "They must learn to find food by themselves.", "ja": "自分で食べ物を見つけることを学ばなければならないから。" },
+        { "en": "They have to run faster than other dogs.", "ja": "ほかの犬より速く走らなければならないから。" }
+      ],
+      "basis": "①の文",
+      "expl": "①の Because guide dogs have to stay calm in noisy places が理由になっている。stay calm in noisy places が keep calm even in loud places に言いかえられている。"
+    },
+    {
+      "q": "What does the volunteer family teach the puppy?",
+      "qja": "ボランティアの家族は子犬に何を教えますか。",
+      "correct": { "en": "To be gentle and to trust people.", "ja": "やさしくすることと、人を信頼すること。" },
+      "wrong": [
+        { "en": "To stop in front of steps.", "ja": "段差の前で止まること。" },
+        { "en": "To walk to the station alone.", "ja": "一人で駅まで歩くこと。" },
+        { "en": "To find dangerous things on the road.", "ja": "道で危ないものを見つけること。" }
+      ],
+      "basis": "②の文",
+      "expl": "②の teaches it to be gentle and to trust people が答えになる。段差の前で止まるのは訓練センターで学ぶこと。"
+    },
+    {
+      "q": "What must a guide dog do when it finds something dangerous?",
+      "qja": "盲導犬は危ないものを見つけたとき、どうしなければなりませんか。",
+      "correct": { "en": "It must not go forward, even if its owner says, \"Go.\"", "ja": "飼い主が「進め」と言っても、前に進んではいけない。" },
+      "wrong": [
+        { "en": "It must bark loudly to tell other people.", "ja": "大きな声でほえて、ほかの人に知らせなければならない。" },
+        { "en": "It must run back to the training center.", "ja": "訓練センターへ走って帰らなければならない。" },
+        { "en": "It must walk forward quickly with its owner.", "ja": "飼い主といっしょにすばやく前へ歩かなければならない。" }
+      ],
+      "basis": "③の文",
+      "expl": "③の it must not move forward even when its owner tells it to go が答えになる。"
+    },
+    {
+      "q": "Why should people not touch a guide dog?",
+      "qja": "人々はなぜ盲導犬にさわってはいけないのですか。",
+      "correct": { "en": "Because the dog is doing its job.", "ja": "その犬は仕事をしているから。" },
+      "wrong": [
+        { "en": "Because the dog may get angry and bite.", "ja": "犬が怒ってかむかもしれないから。" },
+        { "en": "Because the dog is still a puppy.", "ja": "犬がまだ子犬だから。" },
+        { "en": "Because the dog is playing with its owner.", "ja": "犬が飼い主と遊んでいるから。" }
+      ],
+      "basis": "④の文",
+      "expl": "④の a guide dog is working, not playing が答えになる。working が doing its job に言いかえられている。"
+    }
+  ]
+}},
+{"id":"reading_3_e","src":"en-reading","data":{
+  "title": "長文ワーク 3級 ⑤",
+  "level": "3級",
+  "topic": "兄妹が公園のフリーマーケットで古いおもちゃや本を売り、売上を子ども病院に寄付した話",
+  "category": "地域・くらし",
+  "grade": "中学生",
+  "levelFile": "e3",
+  "ignore": [],
+  "notes": [],
+  "paragraphs": [
+    "Last month, there was a flea market in a local park. Yuto and his younger sister, Hana, decided to join it. It was their first time to sell things, so they were curious. Because their room was full of old toys and books that they did not use anymore, their mother told them to sell those things there.",
+    "The day before the flea market, Yuto and Hana chose about thirty things and discussed the prices. Hana wanted to sell her toys at a high price, but Yuto said that cheap things are easier to sell, and that is a common rule at flea markets. The price that they finally decided on for most things was fifty or one hundred yen. They also washed the dirty toys and designed a sign for their table.",
+    "On the day of the flea market, the park was full of visitors. At first, nobody stopped at their table, and Hana looked quite worried. When Yuto began to explain each toy to the visitors with a smile, people started to buy things. Several customers came back twice. A tiny boy was happy to get Hana's old toy train.",
+    "By the end of the day, they sold almost everything and got three thousand yen. Because they wanted to help sick children, they decided to donate the money to a children's hospital in their city. Their mother was pleased to hear about their decision. Hana said, \"I'm glad that my toys found new friends.\" The hospital later sent them a letter. Yuto and Hana want to join the flea market again next year, and they will probably sell their old clothes too."
+  ],
+  "targets": [
+    { "marked": "Because their room was full of old toys and books that they did not use anymore, their mother told them to sell those things there." },
+    { "marked": "The price that they finally decided on for most things was fifty or one hundred yen." },
+    { "marked": "When Yuto began to explain each toy to the visitors with a smile, people started to buy things." },
+    { "marked": "Because they wanted to help sick children, they decided to donate the money to a children's hospital in their city." }
+  ],
+  "summaries": [
+    { "text": "部屋が（{A}）でいっぱいだったので、母は（{B}）ように言った。", "blanks": { "A": "もう使わない古いおもちゃや本", "B": "それらをフリーマーケットで売る" } },
+    { "text": "ほとんどの品物の値段は、最後に（{C}）に決まった。", "blanks": { "C": "50円か100円" } },
+    { "text": "ユウトが（{D}）始めると、（{E}）。", "blanks": { "D": "笑顔でおもちゃを一つずつ説明し", "E": "人々が品物を買い始めた" } },
+    { "text": "二人は（{F}）ので、お金を（{G}）ことにした。", "blanks": { "F": "病気の子どもたちを助けたかった", "G": "市の子ども病院に寄付する" } }
+  ],
+  "ja": [
+    "先月、地元の公園でフリーマーケットがありました。ユウトと妹のハナは、それに参加することにしました。物を売るのは初めてだったので、二人は興味しんしんでした。二人の部屋は、もう使わない古いおもちゃや本でいっぱいだったので、母はそれらをそこで売るように言いました。（①は4番目の文）",
+    "フリーマーケットの前の日、ユウトとハナは30個ほどの品物を選び、値段について話し合いました。ハナはおもちゃを高い値段で売りたがりましたが、ユウトは、安い物のほうが売りやすく、それはフリーマーケットでよくある決まりだと言いました。最後に二人が決めた、ほとんどの品物の値段は、50円か100円でした。二人はよごれたおもちゃを洗い、テーブルに出す看板もデザインしました。（②は3番目の文）",
+    "フリーマーケットの日、公園はたくさんのお客さんでいっぱいでした。はじめはだれも二人のテーブルに立ち止まらず、ハナはかなり心配そうでした。ユウトが笑顔でおもちゃを一つずつお客さんに説明し始めると、人々が品物を買い始めました。2回もどって来たお客さんも何人かいました。小さな男の子は、ハナの古いおもちゃの電車を手に入れて喜びました。（③は3番目の文）",
+    "その日の終わりまでに、二人はほとんど全部を売り、3,000円を手に入れました。病気の子どもたちを助けたかったので、二人はそのお金を市の子ども病院に寄付することにしました。母は二人が決めたことを聞いて喜びました。ハナは「わたしのおもちゃに新しい友だちができてうれしいな」と言いました。あとで、病院から二人に手紙がとどきました。ユウトとハナは、来年もまたフリーマーケットに参加したいと思っていて、たぶん古い服も売るでしょう。（④は2番目の文）"
+  ],
+  "questions": [
+    {
+      "q": "Why did Yuto and Hana sell things at the flea market?",
+      "qja": "ユウトとハナはなぜフリーマーケットで物を売ったのですか。",
+      "correct": { "en": "They had many old things that they did not use.", "ja": "使っていない古い物がたくさんあったから。" },
+      "wrong": [
+        { "en": "They wanted to buy a new toy train.", "ja": "新しいおもちゃの電車を買いたかったから。" },
+        { "en": "Their friends asked them to come.", "ja": "友だちに来るようにたのまれたから。" },
+        { "en": "Their mother needed money for a trip.", "ja": "母が旅行のお金を必要としていたから。" }
+      ],
+      "basis": "①の文",
+      "expl": "①の Because their room was full of old toys and books that they did not use anymore が理由になっている。"
+    },
+    {
+      "q": "How much were most of the things at their table?",
+      "qja": "二人のテーブルのほとんどの品物はいくらでしたか。",
+      "correct": { "en": "Fifty or one hundred yen.", "ja": "50円か100円。" },
+      "wrong": [
+        { "en": "Thirty yen.", "ja": "30円。" },
+        { "en": "Three thousand yen.", "ja": "3,000円。" },
+        { "en": "Five hundred yen.", "ja": "500円。" }
+      ],
+      "basis": "②の文",
+      "expl": "②の The price that they finally decided on for most things was fifty or one hundred yen が答えになる。30は品物の数、3,000円は売れたお金の合計。"
+    },
+    {
+      "q": "What happened after Yuto started to explain the toys?",
+      "qja": "ユウトがおもちゃの説明を始めたあと、何が起こりましたか。",
+      "correct": { "en": "People began to buy things at their table.", "ja": "人々が二人のテーブルで品物を買い始めた。" },
+      "wrong": [
+        { "en": "Hana went home early.", "ja": "ハナが早く家に帰った。" },
+        { "en": "It began to rain in the park.", "ja": "公園で雨がふり始めた。" },
+        { "en": "A little boy gave Yuto a toy train.", "ja": "小さな男の子がユウトにおもちゃの電車をくれた。" }
+      ],
+      "basis": "③の文",
+      "expl": "③の When Yuto began to explain each toy ..., people started to buy things が答えになる。"
+    },
+    {
+      "q": "What did Yuto and Hana do with the money?",
+      "qja": "ユウトとハナはお金をどうしましたか。",
+      "correct": { "en": "They gave it to a hospital for children.", "ja": "子どものための病院にあげた。" },
+      "wrong": [
+        { "en": "They bought new toys and books.", "ja": "新しいおもちゃと本を買った。" },
+        { "en": "They gave it to their mother.", "ja": "母にわたした。" },
+        { "en": "They saved it for next year's flea market.", "ja": "来年のフリーマーケットのためにためておいた。" }
+      ],
+      "basis": "④の文",
+      "expl": "④の they decided to donate the money to a children's hospital が答えになる。donate が gave に言いかえられている。"
+    }
+  ]
+}},
+{"id":"reading_4_a","src":"en-reading","data":{
+  "title": "長文ワーク 4級 ①",
+  "level": "4級",
+  "topic": "中学生が祖母に料理を習い、父の誕生日にひとりで夕食を作った話",
+  "category": "家族・料理",
+  "grade": "中学生",
+  "levelFile": "e4",
+  "ignore": ["mika", "miso"],
+  "notes": [],
+  "paragraphs": [
+    "Mika is a junior high school student. She lives with her parents and her grandmother. Her grandmother is a great cook, and her miso soup is popular in the family. One day last month, Mika wanted to do something special because her father's birthday was coming soon. Then she had a good plan.",
+    "Mika asked her grandmother, \"Can you teach me how to cook? I want to make dinner for Dad.\" Her grandmother laughed and said, \"Of course.\" Every day after school, they cooked in the kitchen, and her grandmother explained each step. When Mika cut vegetables for the first time, she was very slow. Her grandmother told her to cut them carefully and not to hurry.",
+    "On her father's birthday, Mika got up early and went shopping. She bought fish, eggs, and a little sugar at the supermarket and brought them home. In the evening, she cooked rice, miso soup, and fish. Her grandmother only watched her this time. The dinner that Mika made without any help was delicious, and her father was very happy. It was a real success.",
+    "After dinner, Mika gave her father a short poem. He said, \"This is the best present in my life.\" Mika will remember that day for a long time. Now she cooks dinner for her family every Sunday. She wants to learn more dishes from her grandmother because she hopes to cook for her own children in the future."
+  ],
+  "targets": [
+    { "marked": "One day last month, Mika wanted to do something special because her father's birthday was coming soon." },
+    { "marked": "When Mika cut vegetables for the first time, she was very slow." },
+    { "marked": "The dinner that Mika made without any help was delicious, and her father was very happy." },
+    { "marked": "She wants to learn more dishes from her grandmother because she hopes to cook for her own children in the future." }
+  ],
+  "summaries": [
+    { "text": "先月、（{A}）がもうすぐだったので、ミカは何か特別なことをしたいと思った。", "blanks": { "A": "父親の誕生日" } },
+    { "text": "ミカが（{B}）とき、彼女はとても（{C}）。", "blanks": { "B": "初めて野菜を切った", "C": "ゆっくりだった（遅かった）" } },
+    { "text": "ミカが（{D}）作った夕食はとてもおいしく、（{E}）はとても喜んだ。", "blanks": { "D": "だれの助けも借りずに（ひとりで）", "E": "父親" } },
+    { "text": "ミカは将来（{F}）に料理をしたいので、（{G}）からもっと料理を習いたいと思っている。", "blanks": { "F": "自分の子どもたちのため", "G": "祖母" } }
+  ],
+  "ja": [
+    "ミカは中学生です。彼女は両親と祖母といっしょに住んでいます。祖母は料理がとても上手で、祖母のみそ汁は家族の中で人気があります。先月のある日、父親の誕生日がもうすぐだったので、ミカは何か特別なことをしたいと思いました。そして、よい計画を思いつきました。（①は4番目の文）",
+    "ミカは祖母に「料理のしかたを教えてくれる？お父さんに夕食を作りたいの」とたのみました。祖母は笑って「もちろん」と言いました。毎日放課後、2人は台所で料理をし、祖母はひとつひとつの手順を説明しました。ミカが初めて野菜を切ったとき、彼女はとてもゆっくりでした。祖母は、注意して切って、急がないようにと言いました。（②は4番目の文）",
+    "父親の誕生日、ミカは早く起きて買い物に行きました。スーパーマーケットで魚と卵と少しの砂糖を買って、家に持ち帰りました。夕方、彼女はごはんとみそ汁と魚を料理しました。今回、祖母は見ているだけでした。ミカがだれの助けも借りずに作った夕食はとてもおいしく、父親はとても喜びました。それは本当に大成功でした。（③は5番目の文）",
+    "夕食のあと、ミカは父親に短い詩をわたしました。父親は「これは人生で最高のプレゼントだよ」と言いました。ミカはその日のことを長い間おぼえているでしょう。今、彼女は毎週日曜日に家族のために夕食を作っています。将来、自分の子どもたちのために料理をしたいので、ミカは祖母からもっと料理を習いたいと思っています。（④は最後の文）"
+  ],
+  "questions": [
+    {
+      "q": "Why did Mika want to do something special last month?",
+      "qja": "先月、ミカはなぜ何か特別なことをしたいと思ったのですか。",
+      "correct": { "en": "Because her father's birthday was coming soon.", "ja": "父親の誕生日がもうすぐだったから。" },
+      "wrong": [
+        { "en": "Because her grandmother was in the hospital.", "ja": "祖母が入院していたから。" },
+        { "en": "Because she finished her homework early.", "ja": "宿題を早く終えたから。" },
+        { "en": "Because her mother asked her to cook.", "ja": "母親に料理をするようたのまれたから。" }
+      ],
+      "basis": "①の文",
+      "expl": "①「父親の誕生日がもうすぐだったので、何か特別なことをしたいと思った」が根拠。because のあとに理由が書かれている。"
+    },
+    {
+      "q": "What happened when Mika cut vegetables for the first time?",
+      "qja": "ミカが初めて野菜を切ったとき、どうなりましたか。",
+      "correct": { "en": "She was very slow.", "ja": "とてもゆっくりだった。" },
+      "wrong": [
+        { "en": "She was faster than her grandmother.", "ja": "祖母より速かった。" },
+        { "en": "She forgot to wash them.", "ja": "野菜を洗うのを忘れた。" },
+        { "en": "She did not like them.", "ja": "野菜が好きではなかった。" }
+      ],
+      "basis": "②の文",
+      "expl": "②「ミカが初めて野菜を切ったとき、とてもゆっくりだった」が根拠。"
+    },
+    {
+      "q": "How was the dinner that Mika made?",
+      "qja": "ミカが作った夕食はどうでしたか。",
+      "correct": { "en": "It was delicious.", "ja": "とてもおいしかった。" },
+      "wrong": [
+        { "en": "It was too cold.", "ja": "冷たすぎた。" },
+        { "en": "Her grandmother made most of it.", "ja": "ほとんどを祖母が作った。" },
+        { "en": "Her father did not eat it.", "ja": "父親は食べなかった。" }
+      ],
+      "basis": "③の文",
+      "expl": "③「ミカがだれの助けも借りずに作った夕食はとてもおいしかった」が根拠。The dinner that Mika made without any help までが主語のまとまり。祖母は見ていただけなので「ほとんどを祖母が作った」はまちがい。"
+    },
+    {
+      "q": "Why does Mika want to learn more dishes from her grandmother?",
+      "qja": "ミカはなぜ祖母からもっと料理を習いたいのですか。",
+      "correct": { "en": "Because she hopes to cook for her own children in the future.", "ja": "将来、自分の子どもたちのために料理をしたいから。" },
+      "wrong": [
+        { "en": "Because she wants to work at a restaurant.", "ja": "レストランで働きたいから。" },
+        { "en": "Because her father does not like fish.", "ja": "父親が魚を好きではないから。" },
+        { "en": "Because her mother is too busy to cook.", "ja": "母親がいそがしくて料理ができないから。" }
+      ],
+      "basis": "④の文",
+      "expl": "④の because のあと「将来、自分の子どもたちのために料理をしたい」が理由。"
+    }
+  ]
+}},
+{"id":"reading_4_b","src":"en-reading","data":{
+  "title": "長文ワーク 4級 ②",
+  "level": "4級",
+  "topic": "中学生が動物園で3日間の職場体験をして、飼育員になりたいと思った話",
+  "category": "職業・動物",
+  "grade": "中学生",
+  "levelFile": "e4",
+  "ignore": ["kenta", "ono", "mr", "zookeeper"],
+  "notes": ["＊ zookeeper：動物園の飼育員"],
+  "paragraphs": [
+    "Kenta is a second-year student at a junior high school. Every year, the students at his school go to work at different places for three days. Kenta wanted to work for the city zoo because he likes animals very much. The zoo is popular with families.",
+    "On the first day, a zookeeper, Mr. Ono, met Kenta in front of the gate. Kenta thought he could play with the animals, so he was a little surprised. But the first job that Mr. Ono gave him was cleaning the elephant house. The elephants were big and loud. Kenta had to carry a lot of water, and it took two hours. He began to get tired, but he did not give up.",
+    "On the second day, Kenta helped Mr. Ono make food for the monkeys. They washed fruit and vegetables and cut them into small pieces. Mr. Ono explained that baby monkeys can't eat food if it is too big. Kenta learned that each animal needs different food. Some animals eat meat, and others eat grass. He wrote the important points in his notebook.",
+    "On the last day, Kenta was sad because he had to leave the zoo. He wanted to spend more time there. He said to Mr. Ono, \"Your job is hard, but it is wonderful. I will remember these three days.\" Now Kenta hopes to become a zookeeper when he grows up. He wants to take care of animals in the future. Last week, he sent a letter to Mr. Ono."
+  ],
+  "targets": [
+    { "marked": "Kenta wanted to work for the city zoo because he likes animals very much." },
+    { "marked": "But the first job that Mr. Ono gave him was cleaning the elephant house." },
+    { "marked": "Mr. Ono explained that baby monkeys can't eat food if it is too big." },
+    { "marked": "Now Kenta hopes to become a zookeeper when he grows up." }
+  ],
+  "summaries": [
+    { "text": "ケンタは（{A}）ので、市の動物園で働きたいと思った。", "blanks": { "A": "動物がとても好きだ" } },
+    { "text": "オノさんがケンタにあたえた最初の仕事は、（{B}）ことだった。", "blanks": { "B": "ゾウの家をそうじする" } },
+    { "text": "オノさんは、食べ物が（{C}）と（{D}）はそれを食べられないと説明した。", "blanks": { "C": "大きすぎる", "D": "赤ちゃんのサル" } },
+    { "text": "今ケンタは、（{E}）ら（{F}）になりたいと思っている。", "blanks": { "E": "大人になった", "F": "動物園の飼育員" } }
+  ],
+  "ja": [
+    "ケンタは中学2年生です。毎年、彼の学校の生徒たちは3日間、いろいろな場所へ働きに行きます。ケンタは動物がとても好きなので、市の動物園で働きたいと思いました。その動物園は家族連れに人気があります。（①は3番目の文）",
+    "1日目、飼育員のオノさんが門の前でケンタをむかえました。ケンタは動物と遊べると思っていたので、少しおどろきました。しかし、オノさんがケンタにあたえた最初の仕事は、ゾウの家をそうじすることでした。ゾウたちは大きくて、鳴き声も大きかったです。ケンタはたくさんの水を運ばなければならず、2時間かかりました。彼はつかれ始めましたが、あきらめませんでした。（②は3番目の文）",
+    "2日目、ケンタはオノさんがサルのえさを作るのを手伝いました。2人は果物と野菜を洗って、小さく切りました。オノさんは、食べ物が大きすぎると赤ちゃんのサルは食べられないと説明しました。ケンタは、それぞれの動物には別の食べ物が必要だと学びました。肉を食べる動物もいれば、草を食べる動物もいます。彼は大切な点をノートに書きました。（③は3番目の文）",
+    "最終日、動物園を去らなければならないので、ケンタは悲しくなりました。もっとそこで時間を過ごしたかったのです。彼はオノさんに「あなたの仕事は大変ですが、すばらしいです。この3日間をおぼえておきます」と言いました。今ケンタは、大人になったら動物園の飼育員になりたいと思っています。将来、動物の世話をしたいのです。先週、彼はオノさんに手紙を送りました。（④は4番目の文）"
+  ],
+  "questions": [
+    {
+      "q": "Why did Kenta want to work for the city zoo?",
+      "qja": "ケンタはなぜ市の動物園で働きたいと思ったのですか。",
+      "correct": { "en": "Because he likes animals very much.", "ja": "動物がとても好きだから。" },
+      "wrong": [
+        { "en": "Because it was near his house.", "ja": "家の近くにあったから。" },
+        { "en": "Because his friend worked there.", "ja": "友だちがそこで働いていたから。" },
+        { "en": "Because his teacher told him to go there.", "ja": "先生にそこへ行くように言われたから。" }
+      ],
+      "basis": "①の文",
+      "expl": "①の because のあと「動物がとても好きだ」が理由。"
+    },
+    {
+      "q": "What was Kenta's first job at the zoo?",
+      "qja": "動物園でのケンタの最初の仕事は何でしたか。",
+      "correct": { "en": "Cleaning the elephant house.", "ja": "ゾウの家をそうじすること。" },
+      "wrong": [
+        { "en": "Playing with the animals.", "ja": "動物と遊ぶこと。" },
+        { "en": "Making food for the monkeys.", "ja": "サルのえさを作ること。" },
+        { "en": "Working at the zoo shop.", "ja": "動物園の売店で働くこと。" }
+      ],
+      "basis": "②の文",
+      "expl": "②「オノさんがあたえた最初の仕事は、ゾウの家をそうじすることだった」が根拠。the first job that Mr. Ono gave him までが主語。サルのえさ作りは2日目の仕事。"
+    },
+    {
+      "q": "What did Mr. Ono explain to Kenta?",
+      "qja": "オノさんはケンタに何を説明しましたか。",
+      "correct": { "en": "Baby monkeys can't eat food that is too big.", "ja": "赤ちゃんのサルは大きすぎる食べ物を食べられない。" },
+      "wrong": [
+        { "en": "Monkeys do not like vegetables.", "ja": "サルは野菜が好きではない。" },
+        { "en": "Kenta should buy fruit for the monkeys.", "ja": "ケンタはサルのために果物を買うべきだ。" },
+        { "en": "Elephants need a lot of food.", "ja": "ゾウはたくさんの食べ物が必要だ。" }
+      ],
+      "basis": "③の文",
+      "expl": "③「食べ物が大きすぎると、赤ちゃんのサルは食べられない」が根拠。"
+    },
+    {
+      "q": "What does Kenta want to do in the future?",
+      "qja": "ケンタは将来何をしたいと思っていますか。",
+      "correct": { "en": "He wants to work at a zoo and take care of animals.", "ja": "動物園で働いて、動物の世話をしたい。" },
+      "wrong": [
+        { "en": "He wants to be a teacher at his school.", "ja": "自分の学校の先生になりたい。" },
+        { "en": "He wants to visit zoos in other countries.", "ja": "外国の動物園を訪れたい。" },
+        { "en": "He wants to have a monkey as a pet.", "ja": "サルをペットとして飼いたい。" }
+      ],
+      "basis": "④の文",
+      "expl": "④「大人になったら動物園の飼育員になりたい」が根拠。zookeeper を「動物園で働いて動物の世話をする」と言いかえている。"
+    }
+  ]
+}},
+{"id":"reading_4_c","src":"en-reading","data":{
+  "title": "長文ワーク 4級 ③",
+  "level": "4級",
+  "topic": "オーストラリアから来たホームステイの生徒が、日本で初めて雪を見てスキーをした話",
+  "category": "国際交流・季節",
+  "grade": "中学生",
+  "levelFile": "e4",
+  "ignore": ["yuta", "emma"],
+  "notes": [],
+  "paragraphs": [
+    "Last winter, a girl from Australia stayed with Yuta's family for two weeks. Her name was Emma, and she was fifteen years old. Before she came to Japan, she lived in a small town near the sea. Because it is summer in Australia in December, Emma brought only a light jacket.",
+    "One morning, Emma looked out of the window and shouted, \"Everything is white!\" Snow was falling from gray clouds. It was her first time to see snow, and she was very excited. When Yuta's mother saw Emma's light jacket, she gave her an old winter coat. Emma put on the coat, ran out of the house, and began to throw snow at Yuta.",
+    "On the weekend, the family took Emma to the mountains to ski. The sun was bright, and the snow was beautiful. At first, Emma could not stand on her skis, but she laughed and tried again. After Yuta taught her how to stop, she could ski down the hill slowly. The wind was cold, but she enjoyed it very much. In the evening, she studied Japanese with Yuta and learned about Japanese culture. She wanted to spend more time in Japan.",
+    "Before Emma went back to Australia, she wrote a letter to her host family. In the letter, she said, \"Thank you for the wonderful winter. I will remember it for a long time. Please come to Australia in December. Let's swim in the sea together!\" Yuta is now saving money because he hopes to visit her next winter. He wants to go abroad for the first time."
+  ],
+  "targets": [
+    { "marked": "Because it is summer in Australia in December, Emma brought only a light jacket." },
+    { "marked": "When Yuta's mother saw Emma's light jacket, she gave her an old winter coat." },
+    { "marked": "After Yuta taught her how to stop, she could ski down the hill slowly." },
+    { "marked": "Yuta is now saving money because he hopes to visit her next winter." }
+  ],
+  "summaries": [
+    { "text": "12月のオーストラリアは（{A}）なので、エマは（{B}）しか持ってこなかった。", "blanks": { "A": "夏", "B": "軽い上着" } },
+    { "text": "ユウタの母はエマの軽い上着を見ると、エマに（{C}）をあげた。", "blanks": { "C": "古い冬用のコート" } },
+    { "text": "ユウタが（{D}）を教えたあと、エマはゆっくり（{E}）ことができた。", "blanks": { "D": "止まり方", "E": "坂をスキーですべり下りる" } },
+    { "text": "ユウタは（{F}）ので、今お金を（{G}）いる。", "blanks": { "F": "次の冬にエマをたずねたい", "G": "ためて" } }
+  ],
+  "ja": [
+    "去年の冬、オーストラリアから来た女の子が2週間ユウタの家族の家にとまりました。彼女の名前はエマで、15歳でした。日本に来る前、彼女は海の近くの小さな町に住んでいました。12月のオーストラリアは夏なので、エマは軽い上着しか持ってきていませんでした。（①は最後の文）",
+    "ある朝、エマは窓の外を見て「何もかも真っ白！」とさけびました。灰色の雲から雪が降っていたのです。エマが雪を見るのは初めてで、彼女はとてもわくわくしていました。ユウタの母はエマの軽い上着を見ると、エマに古い冬用のコートをあげました。エマはコートを着て家から走り出し、ユウタに雪を投げ始めました。（②は4番目の文）",
+    "週末、家族はエマをスキーをしに山へ連れて行きました。太陽が明るく、雪は美しかったです。最初、エマはスキー板の上に立つことができませんでしたが、笑ってもう一度やってみました。ユウタが止まり方を教えたあと、エマはゆっくり坂をすべり下りることができました。風は冷たかったですが、エマはとても楽しみました。夕方には、エマはユウタといっしょに日本語を勉強し、日本の文化について学びました。彼女は日本でもっと時間を過ごしたいと思いました。（③は4番目の文）",
+    "オーストラリアに帰る前に、エマはホストファミリーに手紙を書きました。手紙には「すばらしい冬をありがとう。長い間おぼえておきます。12月にオーストラリアに来てください。いっしょに海で泳ぎましょう！」と書いてありました。ユウタは次の冬にエマをたずねたいので、今お金をためています。初めて外国に行きたいのです。（④は最後から2番目の文）"
+  ],
+  "questions": [
+    {
+      "q": "Why did Emma bring only a light jacket?",
+      "qja": "エマはなぜ軽い上着しか持ってこなかったのですか。",
+      "correct": { "en": "Because it is summer in Australia in December.", "ja": "12月のオーストラリアは夏だから。" },
+      "wrong": [
+        { "en": "Because she left her coat at home.", "ja": "コートを家に置いてきたから。" },
+        { "en": "Because she wanted to buy a coat in Japan.", "ja": "日本でコートを買いたかったから。" },
+        { "en": "Because her bag was too small.", "ja": "かばんが小さすぎたから。" }
+      ],
+      "basis": "①の文",
+      "expl": "①の Because ～, の部分「12月のオーストラリアは夏なので」が理由。"
+    },
+    {
+      "q": "What did Yuta's mother do when she saw Emma's jacket?",
+      "qja": "ユウタの母はエマの上着を見たとき、何をしましたか。",
+      "correct": { "en": "She gave Emma a winter coat.", "ja": "エマに冬用のコートをあげた。" },
+      "wrong": [
+        { "en": "She bought Emma a new jacket.", "ja": "エマに新しい上着を買った。" },
+        { "en": "She told Emma to stay home.", "ja": "エマに家にいるように言った。" },
+        { "en": "She took Emma to a shop.", "ja": "エマを店に連れて行った。" }
+      ],
+      "basis": "②の文",
+      "expl": "②「ユウタの母はエマの軽い上着を見ると、古い冬用のコートをあげた」が根拠。"
+    },
+    {
+      "q": "What could Emma do after Yuta taught her how to stop?",
+      "qja": "ユウタが止まり方を教えたあと、エマは何ができましたか。",
+      "correct": { "en": "She could ski down the hill slowly.", "ja": "ゆっくり坂をすべり下りることができた。" },
+      "wrong": [
+        { "en": "She could ski faster than Yuta.", "ja": "ユウタより速くすべることができた。" },
+        { "en": "She could teach skiing to her friends.", "ja": "友だちにスキーを教えることができた。" },
+        { "en": "She could climb the mountain alone.", "ja": "ひとりで山に登ることができた。" }
+      ],
+      "basis": "③の文",
+      "expl": "③「ユウタが止まり方を教えたあと、ゆっくり坂をすべり下りることができた」が根拠。"
+    },
+    {
+      "q": "Why is Yuta saving money now?",
+      "qja": "ユウタはなぜ今お金をためているのですか。",
+      "correct": { "en": "Because he hopes to visit Emma next winter.", "ja": "次の冬にエマをたずねたいから。" },
+      "wrong": [
+        { "en": "Because he wants to buy new skis.", "ja": "新しいスキー板を買いたいから。" },
+        { "en": "Because he wants to buy a present for Emma.", "ja": "エマにプレゼントを買いたいから。" },
+        { "en": "Because he wants to study in Australia for a year.", "ja": "オーストラリアで1年間勉強したいから。" }
+      ],
+      "basis": "④の文",
+      "expl": "④の because のあと「次の冬にエマをたずねたい」が理由。"
+    }
+  ]
+}},
+{"id":"reading_4_d","src":"en-reading","data":{
+  "title": "長文ワーク 4級 ④",
+  "level": "4級",
+  "topic": "中学校のサッカー部が練習前に公園のごみ拾いを始め、チームも強くなった話",
+  "category": "地域・部活動",
+  "grade": "中学生",
+  "levelFile": "e4",
+  "ignore": ["sakura", "riku"],
+  "notes": [],
+  "paragraphs": [
+    "There is a big park with a pond near Sakura Junior High School. It is popular with people in the town, and many people walk their dogs there in the morning. Last spring, the students on the soccer team found a lot of garbage in the park when they ran there before practice. Some people left bottles there. The captain, Riku, was worried about it.",
+    "Riku said to the other members, \"Let's clean the park before we run. It is important for our town.\" At first, some members did not want to do it because they were too busy. But Riku started to pick up garbage every morning without them. He brought a big bag and some gloves from home.",
+    "One week later, the other members decided to help Riku. People who walked in the park thanked the students. One day, an old man gave them some bags for the garbage. Everyone enjoyed working together, and they laughed a lot. They usually finished in thirty minutes. Later, the members invited their friends, too.",
+    "Now the park is clean, and more families come to play there on weekends. Children enjoy playing near the pond. The soccer team also changed. They won more games this year. Riku believes that the team became stronger because the members learned to work together. He hopes to keep the park clean in the future, so the team planned a big cleaning event for the town. It was a real success."
+  ],
+  "targets": [
+    { "marked": "Last spring, the students on the soccer team found a lot of garbage in the park when they ran there before practice." },
+    { "marked": "At first, some members did not want to do it because they were too busy." },
+    { "marked": "People who walked in the park thanked the students." },
+    { "marked": "Riku believes that the team became stronger because the members learned to work together." }
+  ],
+  "summaries": [
+    { "text": "去年の春、サッカー部の生徒たちは、練習の前に（{A}）とき、公園で（{B}）を見つけた。", "blanks": { "A": "公園を走った", "B": "たくさんのごみ" } },
+    { "text": "最初、何人かの部員は（{C}）ので、それをやりたがらなかった。", "blanks": { "C": "忙しすぎた" } },
+    { "text": "公園を（{D}）人々は、生徒たちに（{E}）。", "blanks": { "D": "歩いていた", "E": "お礼を言った（感謝した）" } },
+    { "text": "リクは、部員たちが（{F}）ことを学んだので、チームが（{G}）と信じている。", "blanks": { "F": "協力する（いっしょに取り組む）", "G": "強くなった" } }
+  ],
+  "ja": [
+    "さくら中学校の近くに、池のある大きな公園があります。町の人々に人気があり、朝は多くの人がそこで犬の散歩をします。去年の春、サッカー部の生徒たちは、練習の前に公園を走ったとき、公園でたくさんのごみを見つけました。そこにびんを置いていく人もいたのです。キャプテンのリクはそのことが心配になりました。（①は3番目の文）",
+    "リクはほかの部員に「走る前に公園をそうじしよう。ぼくたちの町にとって大切なことだよ」と言いました。最初、何人かの部員は忙しすぎるので、それをやりたがりませんでした。でもリクは、みんながいなくても、毎朝ごみを拾い始めました。彼は家から大きなふくろと手ぶくろを持ってきました。（②は2番目の文）",
+    "1週間後、ほかの部員たちもリクを手伝うことに決めました。公園を歩いていた人々は生徒たちにお礼を言いました。ある日、おじいさんがごみを入れるふくろをくれました。みんな、いっしょに作業するのを楽しみ、たくさん笑いました。たいてい30分で終わりました。そのあと、部員たちは友だちもさそいました。（③は2番目の文）",
+    "今、公園はきれいで、週末にはより多くの家族が遊びに来ます。子どもたちは池の近くで遊ぶのを楽しんでいます。サッカー部も変わりました。今年はより多くの試合に勝ったのです。リクは、部員たちが協力することを学んだので、チームが強くなったと信じています。彼はこれからも公園をきれいにしておきたいと思い、チームは町のための大きなそうじのイベントを計画しました。それは本当に大成功でした。（④は5番目の文）"
+  ],
+  "questions": [
+    {
+      "q": "What did the soccer team find in the park last spring?",
+      "qja": "去年の春、サッカー部は公園で何を見つけましたか。",
+      "correct": { "en": "A lot of garbage.", "ja": "たくさんのごみ。" },
+      "wrong": [
+        { "en": "A lost dog.", "ja": "迷子の犬。" },
+        { "en": "A new soccer field.", "ja": "新しいサッカー場。" },
+        { "en": "Some bags for their practice.", "ja": "練習用のふくろ。" }
+      ],
+      "basis": "①の文",
+      "expl": "①「練習の前に公園を走ったとき、たくさんのごみを見つけた」が根拠。"
+    },
+    {
+      "q": "Why did some members not want to clean the park at first?",
+      "qja": "最初、何人かの部員はなぜ公園をそうじしたがらなかったのですか。",
+      "correct": { "en": "Because they were too busy.", "ja": "忙しすぎたから。" },
+      "wrong": [
+        { "en": "Because the park was too far.", "ja": "公園が遠すぎたから。" },
+        { "en": "Because Riku was not their captain.", "ja": "リクはキャプテンではなかったから。" },
+        { "en": "Because they did not like dogs.", "ja": "犬が好きではなかったから。" }
+      ],
+      "basis": "②の文",
+      "expl": "②の because のあと「忙しすぎた」が理由。"
+    },
+    {
+      "q": "Who thanked the students?",
+      "qja": "だれが生徒たちにお礼を言いましたか。",
+      "correct": { "en": "People who walked in the park.", "ja": "公園を歩いていた人々。" },
+      "wrong": [
+        { "en": "Their teachers at school.", "ja": "学校の先生たち。" },
+        { "en": "The members' parents.", "ja": "部員の親たち。" },
+        { "en": "Children from an elementary school.", "ja": "小学校の子どもたち。" }
+      ],
+      "basis": "③の文",
+      "expl": "③「公園を歩いていた人々が生徒たちにお礼を言った」が根拠。People who walked in the park までが主語。"
+    },
+    {
+      "q": "Why does Riku believe the team became stronger?",
+      "qja": "リクはなぜチームが強くなったと信じているのですか。",
+      "correct": { "en": "Because the members learned to work together.", "ja": "部員たちが協力することを学んだから。" },
+      "wrong": [
+        { "en": "Because they practiced for a longer time.", "ja": "より長い時間練習したから。" },
+        { "en": "Because they got a new coach.", "ja": "新しいコーチが来たから。" },
+        { "en": "Because they ran in the park every evening.", "ja": "毎晩公園を走ったから。" }
+      ],
+      "basis": "④の文",
+      "expl": "④の because のあと「部員たちが協力することを学んだ」が理由。"
+    }
+  ]
+}},
+{"id":"reading_4_e","src":"en-reading","data":{
+  "title": "長文ワーク 4級 ⑤",
+  "level": "4級",
+  "topic": "家族で山へキャンプに行き、3日間スマートフォンを使わずに過ごした話",
+  "category": "自然・くらし",
+  "grade": "中学生",
+  "levelFile": "e4",
+  "ignore": ["aoi"],
+  "notes": [],
+  "paragraphs": [
+    "Last summer, Aoi went camping in the mountains with her family. They found a good place near a river and built their tent there. Her father said, \"We will not use our smartphones for three days.\" Aoi was not happy because she usually uses her phone every day. She uses it to talk to her friends.",
+    "On the first day, Aoi had nothing to do, and she was a little sad. There was no TV and no Internet. Then her mother asked her to help with dinner. They made curry over a fire. Aoi carried wood for the fire, and her mother added salt and sugar to the curry. The curry that they cooked in the mountains was more delicious than the curry at home.",
+    "That night, the family sat on the grass and looked up at the sky. It was very dark, but the stars were bright. Aoi was surprised because she could see so many stars. Her father knew the names of some stars and told her about them.",
+    "On the way home, Aoi did not look at her phone. She talked with her family about the stars and the curry. She learned that time with her family is more important than her phone. She will remember this trip for a long time. She hopes to go camping again next summer."
+  ],
+  "targets": [
+    { "marked": "Aoi was not happy because she usually uses her phone every day." },
+    { "marked": "The curry that they cooked in the mountains was more delicious than the curry at home." },
+    { "marked": "Aoi was surprised because she could see so many stars." },
+    { "marked": "She learned that time with her family is more important than her phone." }
+  ],
+  "summaries": [
+    { "text": "アオイは（{A}）ので、うれしくなかった。", "blanks": { "A": "ふだん毎日スマートフォンを使っている" } },
+    { "text": "家族が（{B}）作ったカレーは、（{C}）よりおいしかった。", "blanks": { "B": "山で", "C": "家のカレー" } },
+    { "text": "アオイは（{D}）ので、おどろいた。", "blanks": { "D": "とてもたくさんの星が見えた" } },
+    { "text": "アオイは、（{E}）は（{F}）より大切だということを学んだ。", "blanks": { "E": "家族との時間", "F": "スマートフォン" } }
+  ],
+  "ja": [
+    "去年の夏、アオイは家族と山へキャンプに行きました。家族は川の近くによい場所を見つけて、そこにテントを立てました。父親は「3日間スマートフォンを使わないよ」と言いました。アオイはふだん毎日スマートフォンを使っているので、うれしくありませんでした。彼女はそれを使って友だちと話すのです。（①は4番目の文）",
+    "1日目、アオイは何もすることがなく、少し悲しい気持ちでした。テレビもインターネットもありませんでした。そのとき、母親が夕食を手伝ってとたのみました。2人は火でカレーを作りました。アオイは火のための木を運び、母親はカレーに塩と砂糖を加えました。山で作ったカレーは、家のカレーよりおいしかったです。（②は最後の文）",
+    "その夜、家族は草の上にすわって空を見上げました。とても暗かったですが、星は明るくかがやいていました。とてもたくさんの星が見えたので、アオイはおどろきました。父親はいくつかの星の名前を知っていて、アオイにその話をしてくれました。（③は3番目の文）",
+    "帰り道、アオイはスマートフォンを見ませんでした。彼女は家族と星やカレーの話をしました。アオイは、家族との時間はスマートフォンより大切だということを学びました。彼女はこの旅行を長い間おぼえているでしょう。来年の夏も、またキャンプに行きたいと思っています。（④は3番目の文）"
+  ],
+  "questions": [
+    {
+      "q": "Why was Aoi not happy at first?",
+      "qja": "最初、アオイはなぜうれしくなかったのですか。",
+      "correct": { "en": "Because she usually uses her phone every day.", "ja": "ふだん毎日スマートフォンを使っているから。" },
+      "wrong": [
+        { "en": "Because she did not like the mountains.", "ja": "山が好きではなかったから。" },
+        { "en": "Because her father was tired.", "ja": "父親がつかれていたから。" },
+        { "en": "Because it was raining.", "ja": "雨が降っていたから。" }
+      ],
+      "basis": "①の文",
+      "expl": "①の because のあと「ふだん毎日スマートフォンを使っている」が理由。"
+    },
+    {
+      "q": "How was the curry that the family cooked in the mountains?",
+      "qja": "家族が山で作ったカレーはどうでしたか。",
+      "correct": { "en": "It was more delicious than the curry at home.", "ja": "家のカレーよりおいしかった。" },
+      "wrong": [
+        { "en": "It was too hot to eat.", "ja": "からすぎて食べられなかった。" },
+        { "en": "Aoi's father cooked it alone.", "ja": "父親がひとりで作った。" },
+        { "en": "They bought it at a store.", "ja": "店で買った。" }
+      ],
+      "basis": "②の文",
+      "expl": "②「山で作ったカレーは、家のカレーよりおいしかった」が根拠。The curry that they cooked in the mountains までが主語。カレーはアオイと母親が作った。"
+    },
+    {
+      "q": "Why was Aoi surprised that night?",
+      "qja": "その夜、アオイはなぜおどろいたのですか。",
+      "correct": { "en": "Because she could see so many stars.", "ja": "とてもたくさんの星が見えたから。" },
+      "wrong": [
+        { "en": "Because her father went to bed early.", "ja": "父親が早くねたから。" },
+        { "en": "Because she saw a big animal.", "ja": "大きな動物を見たから。" },
+        { "en": "Because it was very cold.", "ja": "とても寒かったから。" }
+      ],
+      "basis": "③の文",
+      "expl": "③の because のあと「とてもたくさんの星が見えた」が理由。"
+    },
+    {
+      "q": "What did Aoi learn?",
+      "qja": "アオイは何を学びましたか。",
+      "correct": { "en": "Time with her family is more important than her phone.", "ja": "家族との時間はスマートフォンより大切だ。" },
+      "wrong": [
+        { "en": "Camping is too hard for her.", "ja": "キャンプは彼女には大変すぎる。" },
+        { "en": "She needs a new phone.", "ja": "新しいスマートフォンが必要だ。" },
+        { "en": "Making curry is very difficult.", "ja": "カレーを作るのはとても難しい。" }
+      ],
+      "basis": "④の文",
+      "expl": "④「家族との時間はスマートフォンより大切だと学んだ」が根拠。"
+    }
+  ]
+}},
+{"id":"reading_5_a","src":"en-reading","data":{
+  "title": "長文ワーク 5級 ①",
+  "level": "5級",
+  "topic": "日曜日に家族で公園に行き、お父さんと夕ごはんを作る男の子の話",
+  "category": "家族・くらし",
+  "grade": "小学生",
+  "levelFile": "e5",
+  "ignore": ["ken", "curry"],
+  "notes": ["＊ curry：カレー"],
+  "paragraphs": [
+    "My name is Ken. I am eleven years old, and I live in a small town with my father, my mother, and my sister. My family is very busy from Monday to Friday, but on Sundays we always have a lot of fun together.",
+    "On Sunday mornings, we usually go to the park near our house. My sister and I play tennis there, and my mother walks with our dog. When it is rainy, we play games at home and watch movies on TV.",
+    "In the afternoon, my father and I cook dinner for the family. My father is a good cook, and he teaches me how to make curry and salad. My favorite food is his chicken curry.",
+    "At dinner, everyone says, \"This is delicious!\" I am very happy when my family likes my food. I want to be a cook in the future."
+  ],
+  "targets": [
+    { "marked": "My family is very busy from Monday to Friday, but on Sundays we always have a lot of fun together." },
+    { "marked": "When it is rainy, we play games at home and watch movies on TV." },
+    { "marked": "My father is a good cook, and he teaches me how to make curry and salad." },
+    { "marked": "I am very happy when my family likes my food." }
+  ],
+  "summaries": [
+    { "text": "月曜日から金曜日まで家族はみんな（{A}）が、日曜日はいつも（{B}）とても楽しく過ごす。", "blanks": { "A": "とても忙しい", "B": "いっしょに" } },
+    { "text": "雨の日は、家で（{C}）をしたり、テレビで（{D}）を見たりする。", "blanks": { "C": "ゲーム", "D": "映画" } },
+    { "text": "お父さんは料理が上手で、ケンに（{E}）の作り方を教えてくれる。", "blanks": { "E": "カレーとサラダ" } },
+    { "text": "ケンは、家族が（{F}）とき、とてもうれしい。", "blanks": { "F": "自分の料理を気に入ってくれる" } }
+  ],
+  "ja": [
+    "ぼくの名前はケンです。11才で、小さな町に父と母と姉（妹）といっしょに住んでいます。ぼくの家族は月曜日から金曜日までとても忙しいですが、日曜日はいつもみんなでとても楽しく過ごします。（①は最後の文）",
+    "日曜日の朝は、たいてい家の近くの公園に行きます。姉（妹）とぼくはそこでテニスをして、母は犬と散歩をします。雨の日は、家でゲームをしたり、テレビで映画を見たりします。（②は最後の文）",
+    "午後は、父とぼくで家族のために夕ごはんを作ります。父は料理が上手で、カレーとサラダの作り方を教えてくれます。ぼくのいちばん好きな食べ物は、父のチキンカレーです。（③は2番目の文）",
+    "夕ごはんのとき、みんなが「これ、おいしい！」と言います。家族がぼくの料理を気に入ってくれると、ぼくはとてもうれしいです。ぼくは将来、料理人になりたいです。（④は2番目の文）"
+  ],
+  "questions": [
+    {
+      "q": "When does Ken's family have a lot of fun together?",
+      "qja": "ケンの家族は、いつみんなでとても楽しく過ごしますか。",
+      "correct": { "en": "On Sundays.", "ja": "日曜日に。" },
+      "wrong": [
+        { "en": "On Mondays.", "ja": "月曜日に。" },
+        { "en": "On Fridays.", "ja": "金曜日に。" },
+        { "en": "On rainy days.", "ja": "雨の日に。" }
+      ],
+      "basis": "①の文",
+      "expl": "①「日曜日はいつもみんなでとても楽しく過ごす」から、On Sundays. が正解。月曜日から金曜日は「とても忙しい」。"
+    },
+    {
+      "q": "What does Ken's family do when it is rainy?",
+      "qja": "雨の日に、ケンの家族は何をしますか。",
+      "correct": { "en": "They play games and watch movies at home.", "ja": "家でゲームをしたり映画を見たりする。" },
+      "wrong": [
+        { "en": "They play tennis in the park.", "ja": "公園でテニスをする。" },
+        { "en": "They walk with their dog.", "ja": "犬と散歩をする。" },
+        { "en": "They go to the library.", "ja": "図書館に行く。" }
+      ],
+      "basis": "②の文",
+      "expl": "②「雨の日は、家でゲームをしたり、テレビで映画を見たりする」が根拠。テニスと犬の散歩は、晴れた日曜日の朝にすること。"
+    },
+    {
+      "q": "What does Ken's father teach him?",
+      "qja": "ケンのお父さんは、ケンに何を教えますか。",
+      "correct": { "en": "How to make curry and salad.", "ja": "カレーとサラダの作り方。" },
+      "wrong": [
+        { "en": "How to play tennis.", "ja": "テニスのやり方。" },
+        { "en": "How to draw pictures.", "ja": "絵のかき方。" },
+        { "en": "How to swim.", "ja": "泳ぎ方。" }
+      ],
+      "basis": "③の文",
+      "expl": "③「カレーとサラダの作り方を教えてくれる」が根拠。"
+    },
+    {
+      "q": "When is Ken very happy?",
+      "qja": "ケンは、どんなときにとてもうれしいですか。",
+      "correct": { "en": "When his family likes his food.", "ja": "家族が自分の料理を気に入ってくれるとき。" },
+      "wrong": [
+        { "en": "When it is rainy.", "ja": "雨がふっているとき。" },
+        { "en": "When he plays games.", "ja": "ゲームをしているとき。" },
+        { "en": "When his sister cooks dinner.", "ja": "姉（妹）が夕ごはんを作るとき。" }
+      ],
+      "basis": "④の文",
+      "expl": "④「家族がぼくの料理を気に入ってくれると、とてもうれしい」が根拠。"
+    }
+  ]
+}},
+{"id":"reading_5_b","src":"en-reading","data":{
+  "title": "長文ワーク 5級 ②",
+  "level": "5級",
+  "topic": "冬が大好きな女の子が、雪の日に友だちと遊び、おばあちゃんの家でスキーをする話",
+  "category": "季節・遊び",
+  "grade": "小学生",
+  "levelFile": "e5",
+  "ignore": ["yumi", "snowman"],
+  "notes": ["＊ snowman：雪だるま"],
+  "paragraphs": [
+    "Hello. I am Yumi. I like all four seasons, but my favorite season is winter. It is very cold in my city in winter, and it is usually snowy in January and February.",
+    "When it is snowy, my friends and I play in the park and make a big snowman after school. Sometimes my brother comes with us. We are very cold, but we have a lot of fun.",
+    "In December, my family visits my grandmother. Her house is near a big mountain, so we can ski there every day. My grandmother cannot ski, but she makes hot soup for us in the evening.",
+    "Winter has many fun events, too. We eat a big cake at Christmas, and on New Year's Day, my uncle and aunt give me some money. Winter is cold, but I love it."
+  ],
+  "targets": [
+    { "marked": "It is very cold in my city in winter, and it is usually snowy in January and February." },
+    { "marked": "When it is snowy, my friends and I play in the park and make a big snowman after school." },
+    { "marked": "My grandmother cannot ski, but she makes hot soup for us in the evening." },
+    { "marked": "We eat a big cake at Christmas, and on New Year's Day, my uncle and aunt give me some money." }
+  ],
+  "summaries": [
+    { "text": "ユミの町は冬にとても（{A}）、1月と2月には（{B}）がよくふる。", "blanks": { "A": "寒く", "B": "雪" } },
+    { "text": "雪の日は、放課後に友だちと（{C}）で遊び、大きな（{D}）を作る。", "blanks": { "C": "公園", "D": "雪だるま" } },
+    { "text": "おばあちゃんは（{E}）ができないが、夜に（{F}）を作ってくれる。", "blanks": { "E": "スキー", "F": "温かいスープ" } },
+    { "text": "お正月には、おじとおばが（{G}）をくれる。", "blanks": { "G": "お金（お年玉）" } }
+  ],
+  "ja": [
+    "こんにちは。私はユミです。私は4つの季節が全部好きですが、いちばん好きな季節は冬です。私の町は冬はとても寒く、1月と2月にはよく雪がふります。（①は最後の文）",
+    "雪の日は、放課後に友だちと公園で遊んで、大きな雪だるまを作ります。ときどき兄（弟）もいっしょに来ます。とても寒いけれど、とても楽しいです。（②は最初の文）",
+    "12月には、家族でおばあちゃんの家に行きます。おばあちゃんの家は大きな山の近くにあるので、そこで毎日スキーができます。おばあちゃんはスキーができませんが、夜に温かいスープを作ってくれます。（③は最後の文）",
+    "冬には楽しい行事もたくさんあります。クリスマスには大きなケーキを食べ、お正月にはおじとおばがお金（お年玉）をくれます。冬は寒いけれど、私は冬が大好きです。（④は2番目の文）"
+  ],
+  "questions": [
+    {
+      "q": "When is it usually snowy in Yumi's city?",
+      "qja": "ユミの町では、いつよく雪がふりますか。",
+      "correct": { "en": "In January and February.", "ja": "1月と2月。" },
+      "wrong": [
+        { "en": "In March and April.", "ja": "3月と4月。" },
+        { "en": "In July and August.", "ja": "7月と8月。" },
+        { "en": "In October and November.", "ja": "10月と11月。" }
+      ],
+      "basis": "①の文",
+      "expl": "①「1月と2月にはよく雪がふる」が根拠。"
+    },
+    {
+      "q": "What do Yumi and her friends make in the park?",
+      "qja": "ユミと友だちは、公園で何を作りますか。",
+      "correct": { "en": "A big snowman.", "ja": "大きな雪だるま。" },
+      "wrong": [
+        { "en": "A big cake.", "ja": "大きなケーキ。" },
+        { "en": "Hot soup.", "ja": "温かいスープ。" },
+        { "en": "A small house.", "ja": "小さな家。" }
+      ],
+      "basis": "②の文",
+      "expl": "②「公園で遊んで、大きな雪だるまを作る」が根拠。ケーキはクリスマスに食べるもの、スープはおばあちゃんが作るもの。"
+    },
+    {
+      "q": "What does Yumi's grandmother do in the evening?",
+      "qja": "ユミのおばあちゃんは、夜に何をしますか。",
+      "correct": { "en": "She makes hot soup.", "ja": "温かいスープを作る。" },
+      "wrong": [
+        { "en": "She skis on the mountain.", "ja": "山でスキーをする。" },
+        { "en": "She plays in the park.", "ja": "公園で遊ぶ。" },
+        { "en": "She eats a big cake.", "ja": "大きなケーキを食べる。" }
+      ],
+      "basis": "③の文",
+      "expl": "③「おばあちゃんはスキーができないが、夜に温かいスープを作ってくれる」が根拠。"
+    },
+    {
+      "q": "What do Yumi's uncle and aunt give her on New Year's Day?",
+      "qja": "お正月に、ユミのおじとおばはユミに何をくれますか。",
+      "correct": { "en": "Some money.", "ja": "お金。" },
+      "wrong": [
+        { "en": "A big cake.", "ja": "大きなケーキ。" },
+        { "en": "A new bike.", "ja": "新しい自転車。" },
+        { "en": "Some books.", "ja": "何冊かの本。" }
+      ],
+      "basis": "④の文",
+      "expl": "④「お正月にはおじとおばがお金をくれる」が根拠。大きなケーキはクリスマスに食べるもの。"
+    }
+  ]
+}},
+{"id":"reading_5_c","src":"en-reading","data":{
+  "title": "長文ワーク 5級 ③",
+  "level": "5級",
+  "topic": "カナダから来た転校生と友だちになり、日本語と英語を教え合う話",
+  "category": "学校・友だち",
+  "grade": "小学生",
+  "levelFile": "e5",
+  "ignore": ["emma", "comics", "sushi"],
+  "notes": ["＊ comic：まんが　　sushi：すし"],
+  "paragraphs": [
+    "There is a new student in my class this month. Her name is Emma, and she is from Canada. She has long brown hair, and she always talks to everyone with a smile.",
+    "Emma speaks English, but she cannot speak Japanese well. At lunch, I help her with Japanese, and she teaches me English. We are good friends now.",
+    "Emma likes Japan very much. When we go to the bookstore after school, she always buys Japanese comics. Her favorite food is sushi, and she can eat it very well.",
+    "Next month, we have a school festival. Emma and I want to sing an English song together at the festival. We practice it every day after school."
+  ],
+  "targets": [
+    { "marked": "She has long brown hair, and she always talks to everyone with a smile." },
+    { "marked": "At lunch, I help her with Japanese, and she teaches me English." },
+    { "marked": "When we go to the bookstore after school, she always buys Japanese comics." },
+    { "marked": "Emma and I want to sing an English song together at the festival." }
+  ],
+  "summaries": [
+    { "text": "エマは（{A}）髪をしていて、いつも笑顔でみんなと話す。", "blanks": { "A": "長い茶色の" } },
+    { "text": "昼休みに「私」はエマの（{B}）を手伝い、エマは「私」に（{C}）を教えてくれる。", "blanks": { "B": "日本語", "C": "英語" } },
+    { "text": "放課後に（{D}）に行くと、エマはいつも（{E}）を買う。", "blanks": { "D": "本屋", "E": "日本のまんが" } },
+    { "text": "「私」とエマは、学校のお祭りでいっしょに（{F}）を歌いたいと思っている。", "blanks": { "F": "英語の歌" } }
+  ],
+  "ja": [
+    "今月、私のクラスに新しい生徒が来ました。彼女の名前はエマで、カナダの出身です。長い茶色の髪をしていて、いつも笑顔でみんなと話します。（①は最後の文）",
+    "エマは英語を話しますが、日本語はあまり上手に話せません。昼休みに私はエマの日本語を手伝い、エマは私に英語を教えてくれます。今では私たちは仲よしです。（②は2番目の文）",
+    "エマは日本が大好きです。放課後にいっしょに本屋に行くと、エマはいつも日本のまんがを買います。エマのいちばん好きな食べ物はすしで、とても上手に食べられます。（③は2番目の文）",
+    "来月、学校のお祭りがあります。エマと私は、お祭りでいっしょに英語の歌を歌いたいと思っています。私たちは毎日放課後に練習しています。（④は2番目の文）"
+  ],
+  "questions": [
+    {
+      "q": "What does Emma have?",
+      "qja": "エマはどんな髪をしていますか。（エマは何を持っていますか。）",
+      "correct": { "en": "Long brown hair.", "ja": "長い茶色の髪。" },
+      "wrong": [
+        { "en": "Short black hair.", "ja": "短い黒い髪。" },
+        { "en": "Long black hair.", "ja": "長い黒い髪。" },
+        { "en": "Short brown hair.", "ja": "短い茶色の髪。" }
+      ],
+      "basis": "①の文",
+      "expl": "①「長い茶色の髪をしている」が根拠。long と brown の両方が合うのは1つだけ。"
+    },
+    {
+      "q": "What does Emma teach the writer at lunch?",
+      "qja": "昼休みに、エマは筆者に何を教えますか。",
+      "correct": { "en": "English.", "ja": "英語。" },
+      "wrong": [
+        { "en": "Japanese.", "ja": "日本語。" },
+        { "en": "Math.", "ja": "算数。" },
+        { "en": "Tennis.", "ja": "テニス。" }
+      ],
+      "basis": "②の文",
+      "expl": "②「エマは私に英語を教えてくれる」が根拠。日本語は筆者がエマに手伝っているもの。"
+    },
+    {
+      "q": "What does Emma buy at the bookstore?",
+      "qja": "エマは本屋で何を買いますか。",
+      "correct": { "en": "Japanese comics.", "ja": "日本のまんが。" },
+      "wrong": [
+        { "en": "English textbooks.", "ja": "英語の教科書。" },
+        { "en": "Pencils and pens.", "ja": "えんぴつとペン。" },
+        { "en": "A map of Canada.", "ja": "カナダの地図。" }
+      ],
+      "basis": "③の文",
+      "expl": "③「本屋に行くと、エマはいつも日本のまんがを買う」が根拠。"
+    },
+    {
+      "q": "What do Emma and the writer want to do at the festival?",
+      "qja": "エマと筆者は、お祭りで何をしたいと思っていますか。",
+      "correct": { "en": "Sing an English song together.", "ja": "いっしょに英語の歌を歌う。" },
+      "wrong": [
+        { "en": "Eat sushi together.", "ja": "いっしょにすしを食べる。" },
+        { "en": "Play the piano.", "ja": "ピアノをひく。" },
+        { "en": "Sing a Japanese song.", "ja": "日本語の歌を歌う。" }
+      ],
+      "basis": "④の文",
+      "expl": "④「お祭りでいっしょに英語の歌を歌いたい」が根拠。歌うのは日本語ではなく英語の歌。"
+    }
+  ]
+}},
+{"id":"reading_5_d","src":"en-reading","data":{
+  "title": "長文ワーク 5級 ④",
+  "level": "5級",
+  "topic": "毎週おじいさんと図書館で動物の本を読む男の子が、動物のお医者さんを夢見る話",
+  "category": "本・将来の夢",
+  "grade": "小学生",
+  "levelFile": "e5",
+  "ignore": ["taro", "momo"],
+  "notes": [],
+  "paragraphs": [
+    "Taro likes books very much. Every Saturday, he goes to the library near the station with his grandfather. The library is very big, and it has many books about animals, science, and the world.",
+    "Taro's favorite books are about animals. When Taro reads books about animals, he sits by the window and reads for two hours. His grandfather reads the newspaper there.",
+    "Taro has a small dog at home. Her name is Momo. Every morning, Taro walks with Momo in the park, and he gives her food and water.",
+    "Taro loves animals. He wants to be an animal doctor in the future, so he studies science very hard at school. He wants to help many animals."
+  ],
+  "targets": [
+    { "marked": "Every Saturday, he goes to the library near the station with his grandfather." },
+    { "marked": "When Taro reads books about animals, he sits by the window and reads for two hours." },
+    { "marked": "Every morning, Taro walks with Momo in the park, and he gives her food and water." },
+    { "marked": "He wants to be an animal doctor in the future, so he studies science very hard at school." }
+  ],
+  "summaries": [
+    { "text": "毎週（{A}）に、タロウはおじいさんと（{B}）の近くの図書館に行く。", "blanks": { "A": "土曜日", "B": "駅" } },
+    { "text": "動物の本を読むとき、タロウは（{C}）のそばに座って（{D}）読む。", "blanks": { "C": "窓", "D": "2時間" } },
+    { "text": "毎朝、タロウはモモと（{E}）を散歩し、えさと水をあげる。", "blanks": { "E": "公園" } },
+    { "text": "タロウは将来（{F}）になりたいので、学校で（{G}）を一生けんめい勉強している。", "blanks": { "F": "動物のお医者さん", "G": "理科" } }
+  ],
+  "ja": [
+    "タロウは本が大好きです。毎週土曜日、タロウはおじいさんといっしょに駅の近くの図書館に行きます。図書館はとても大きくて、動物や理科や世界についての本がたくさんあります。（①は2番目の文）",
+    "タロウのいちばん好きな本は、動物の本です。動物の本を読むとき、タロウは窓のそばに座って2時間読みます。おじいさんはそこで新聞を読みます。（②は2番目の文）",
+    "タロウは家で小さな犬をかっています。名前はモモです。毎朝、タロウはモモと公園を散歩し、えさと水をあげます。（③は最後の文）",
+    "タロウは動物が大好きです。将来は動物のお医者さんになりたいので、学校で理科をとても一生けんめい勉強しています。たくさんの動物を助けたいと思っています。（④は2番目の文）"
+  ],
+  "questions": [
+    {
+      "q": "Who goes to the library with Taro?",
+      "qja": "だれがタロウといっしょに図書館に行きますか。",
+      "correct": { "en": "His grandfather.", "ja": "おじいさん。" },
+      "wrong": [
+        { "en": "His sister.", "ja": "お姉さん（妹）。" },
+        { "en": "His teacher.", "ja": "先生。" },
+        { "en": "His friends.", "ja": "友だち。" }
+      ],
+      "basis": "①の文",
+      "expl": "①「おじいさんといっしょに駅の近くの図書館に行く」が根拠。"
+    },
+    {
+      "q": "Where does Taro sit when he reads books about animals?",
+      "qja": "動物の本を読むとき、タロウはどこに座りますか。",
+      "correct": { "en": "By the window.", "ja": "窓のそば。" },
+      "wrong": [
+        { "en": "Near the door.", "ja": "ドアの近く。" },
+        { "en": "In the kitchen.", "ja": "台所。" },
+        { "en": "Under a tree.", "ja": "木の下。" }
+      ],
+      "basis": "②の文",
+      "expl": "②「窓のそばに座って2時間読む」が根拠。"
+    },
+    {
+      "q": "What does Taro do every morning?",
+      "qja": "タロウは毎朝何をしますか。",
+      "correct": { "en": "He walks with Momo in the park.", "ja": "公園でモモと散歩をする。" },
+      "wrong": [
+        { "en": "He goes to the library.", "ja": "図書館に行く。" },
+        { "en": "He reads the newspaper.", "ja": "新聞を読む。" },
+        { "en": "He studies science at home.", "ja": "家で理科を勉強する。" }
+      ],
+      "basis": "③の文",
+      "expl": "③「毎朝、タロウはモモと公園を散歩する」が根拠。図書館は毎週土曜日、新聞を読むのはおじいさん。"
+    },
+    {
+      "q": "Why does Taro study science very hard?",
+      "qja": "タロウはなぜ理科をとても一生けんめい勉強するのですか。",
+      "correct": { "en": "He wants to be an animal doctor.", "ja": "動物のお医者さんになりたいから。" },
+      "wrong": [
+        { "en": "He has a science test tomorrow.", "ja": "明日、理科のテストがあるから。" },
+        { "en": "His grandfather is a scientist.", "ja": "おじいさんが科学者だから。" },
+        { "en": "He wants to be a teacher.", "ja": "先生になりたいから。" }
+      ],
+      "basis": "④の文",
+      "expl": "④「将来は動物のお医者さんになりたいので、理科を一生けんめい勉強している」が根拠。so の前が理由。"
+    }
+  ]
+}},
+{"id":"reading_5_e","src":"en-reading","data":{
+  "title": "長文ワーク 5級 ⑤",
+  "level": "5級",
+  "topic": "町の野球チームで練習する男の子が、やさしいコーチに支えられて大きな試合をめざす話",
+  "category": "スポーツ",
+  "grade": "小学生",
+  "levelFile": "e5",
+  "ignore": ["sho", "sato"],
+  "notes": ["＊ hit：打つ　　far：遠くに　　win：勝つ"],
+  "paragraphs": [
+    "Sho is twelve years old, and he plays on a baseball team in his town. The team has fifteen players, and they practice at the park near the river every Saturday and Sunday.",
+    "Sho cannot run fast, but he is a strong player. When Sho hits the ball far, everyone on the team says, \"Great!\" He is very happy then.",
+    "The team's coach is Mr. Sato. Mr. Sato is very kind, and he always says to the players, \"Don't give up, and do your best.\" After practice, he sometimes buys juice for the team.",
+    "Next Sunday, Sho's team has a big game. Sho wants to win the game, so he practices with his father in the park every evening. His mother and sister want to watch the game, too."
+  ],
+  "targets": [
+    { "marked": "The team has fifteen players, and they practice at the park near the river every Saturday and Sunday." },
+    { "marked": "When Sho hits the ball far, everyone on the team says, \"Great!\"" },
+    { "marked": "Mr. Sato is very kind, and he always says to the players, \"Don't give up, and do your best.\"" },
+    { "marked": "Sho wants to win the game, so he practices with his father in the park every evening." }
+  ],
+  "summaries": [
+    { "text": "チームには（{A}）人の選手がいて、毎週（{B}）に川の近くの公園で練習する。", "blanks": { "A": "15", "B": "土曜日と日曜日" } },
+    { "text": "ショウがボールを（{C}）と、チームのみんなが「すごい！」と言う。", "blanks": { "C": "遠くまで打つ" } },
+    { "text": "サトウコーチはとてもやさしく、いつも選手に「（{D}）、ベストをつくそう」と言う。", "blanks": { "D": "あきらめないで" } },
+    { "text": "ショウは（{E}）たいので、毎晩（{F}）と公園で練習している。", "blanks": { "E": "試合に勝ち", "F": "お父さん" } }
+  ],
+  "ja": [
+    "ショウは12才で、町の野球チームでプレーしています。チームには15人の選手がいて、毎週土曜日と日曜日に川の近くの公園で練習しています。（①は最後の文）",
+    "ショウは速く走れませんが、力の強い選手です。ショウがボールを遠くまで打つと、チームのみんなが「すごい！」と言います。そのとき、ショウはとてもうれしいです。（②は2番目の文）",
+    "チームのコーチはサトウさんです。サトウさんはとてもやさしく、いつも選手たちに「あきらめないで、ベストをつくそう」と言います。練習のあと、ときどきチームにジュースを買ってくれます。（③は2番目の文）",
+    "次の日曜日、ショウのチームは大きな試合があります。ショウは試合に勝ちたいので、毎晩お父さんと公園で練習しています。お母さんと姉（妹）も試合を見たいと思っています。（④は2番目の文）"
+  ],
+  "questions": [
+    {
+      "q": "When does Sho's team practice?",
+      "qja": "ショウのチームはいつ練習しますか。",
+      "correct": { "en": "Every Saturday and Sunday.", "ja": "毎週土曜日と日曜日。" },
+      "wrong": [
+        { "en": "Every Monday and Tuesday.", "ja": "毎週月曜日と火曜日。" },
+        { "en": "Every Friday evening.", "ja": "毎週金曜日の夜。" },
+        { "en": "Every morning before school.", "ja": "毎朝、学校の前。" }
+      ],
+      "basis": "①の文",
+      "expl": "①「毎週土曜日と日曜日に川の近くの公園で練習している」が根拠。"
+    },
+    {
+      "q": "What does everyone on the team say when Sho hits the ball far?",
+      "qja": "ショウがボールを遠くまで打つと、チームのみんなは何と言いますか。",
+      "correct": { "en": "\"Great!\"", "ja": "「すごい！」" },
+      "wrong": [
+        { "en": "\"Hurry up!\"", "ja": "「急いで！」" },
+        { "en": "\"Be quiet!\"", "ja": "「静かにして！」" },
+        { "en": "\"Watch out!\"", "ja": "「気をつけて！」" }
+      ],
+      "basis": "②の文",
+      "expl": "②「ボールを遠くまで打つと、チームのみんなが『すごい！』と言う」が根拠。"
+    },
+    {
+      "q": "What does Mr. Sato always say to the players?",
+      "qja": "サトウコーチはいつも選手たちに何と言いますか。",
+      "correct": { "en": "\"Don't give up, and do your best.\"", "ja": "「あきらめないで、ベストをつくそう。」" },
+      "wrong": [
+        { "en": "\"Let's go home early.\"", "ja": "「早く家に帰ろう。」" },
+        { "en": "\"Clean the park, please.\"", "ja": "「公園をそうじしてください。」" },
+        { "en": "\"Don't eat in the park.\"", "ja": "「公園で食べないで。」" }
+      ],
+      "basis": "③の文",
+      "expl": "③「いつも選手たちに『あきらめないで、ベストをつくそう』と言う」が根拠。"
+    },
+    {
+      "q": "Who does Sho practice with every evening?",
+      "qja": "ショウは毎晩だれと練習しますか。",
+      "correct": { "en": "His father.", "ja": "お父さん。" },
+      "wrong": [
+        { "en": "His mother.", "ja": "お母さん。" },
+        { "en": "Mr. Sato.", "ja": "サトウコーチ。" },
+        { "en": "His sister.", "ja": "姉（妹）。" }
+      ],
+      "basis": "④の文",
+      "expl": "④「毎晩お父さんと公園で練習している」が根拠。お母さんと姉（妹）は試合を見たいと思っている人。"
+    }
+  ]
+}},
 {"id":"reading_p1_a","src":"en-reading","data":{
   "title": "長文ワーク 準1級 ④",
   "level": "準1級",
@@ -15734,6 +16995,466 @@ const WORKS = [{"id":"fr_delfa1_01","src":"app","data":{
         "辞書がどのように作られるか、考えたことはありますか。出版社、つまり本を作る会社で、あるチームの人たちが働いています。彼らは何千もの単語を編集します、つまり集めてまとめます。1冊の辞書を作るのに10年以上かかることもあります。",
         "それぞれの単語について、チームは意味を書き、どう発音する、つまり言うのかを示します。あいまいな単語、つまり2つ以上の意味をもつ単語もあります。そのような単語には、読む人が分かるように、はっきりした例文を書きます。",
         "言葉は毎年変わるので、辞書は改訂され、つまり手を加えてよりよくされなければなりません。新しい単語が出てきたり、古い単語が新しい意味をもったりします。子ども向けの辞書の中には、学ぶ助けになるように、鮮やかな、つまり明るくてはっきりした絵がのっているものもあります。"
+    ]
+}},
+{"id":"vocab_e5_01","src":"en-vocab","dict":{"zoo":"動物園","tiger":"トラ","monkey":"猿","rabbit":"うさぎ","bear":"クマ","snake":"ヘビ","horse":"馬","sheep":"羊","mouse":"ねずみ","frog":"カエル"},"data":{
+    "level": "5級",
+    "grade": "小学生",
+    "levelFile": "e5",
+    "lowerFiles": [
+        "e5"
+    ],
+    "words": [
+        "zoo",
+        "tiger",
+        "monkey",
+        "rabbit",
+        "bear",
+        "snake",
+        "horse",
+        "sheep",
+        "mouse",
+        "frog"
+    ],
+    "passage": [
+        "Nana's family is at the zoo today. Nana is looking at a big tiger and a funny monkey. Her sister likes the small rabbit. A bear is sleeping under a tree."
+    ],
+    "translation": [
+        "ナナの家族は今日、動物園にいます。ナナは大きなトラとおかしな猿を見ています。妹は小さなうさぎが好きです。クマは木の下で眠っています。"
+    ],
+    "questions": [
+        {
+            "q": "What does Nana's sister like?",
+            "correct": "The small rabbit.",
+            "wrong": [
+                "The big bear.",
+                "The white horse.",
+                "The funny snake."
+            ]
+        },
+        {
+            "q": "Where is Nana's family today?",
+            "correct": "At the zoo.",
+            "wrong": [
+                "At the park.",
+                "At the station.",
+                "At the library."
+            ]
+        }
+    ]
+}},
+{"id":"vocab_e5_02","src":"en-vocab","dict":{"breakfast":"朝食","bread":"パン","apple":"りんご","salad":"サラダ","soup":"スープ","grape":"ぶどう","cake":"ケーキ","delicious":"とてもおいしい","hungry":"空腹の","vegetable":"野菜"},"data":{
+    "level": "5級",
+    "grade": "小学生",
+    "levelFile": "e5",
+    "lowerFiles": [
+        "e5"
+    ],
+    "words": [
+        "breakfast",
+        "bread",
+        "apple",
+        "salad",
+        "soup",
+        "grape",
+        "cake",
+        "delicious",
+        "hungry",
+        "vegetable"
+    ],
+    "passage": [
+        "Ken is always hungry in the morning. His mother makes breakfast every day. Ken eats bread, salad, and soup. They are delicious!"
+    ],
+    "translation": [
+        "ケンは朝、いつもおなかがすいています。お母さんが毎日朝食を作ります。ケンはパンとサラダとスープを食べます。どれもとてもおいしいです！"
+    ],
+    "questions": [
+        {
+            "q": "Who makes breakfast?",
+            "correct": "His mother.",
+            "wrong": [
+                "His father.",
+                "His sister.",
+                "His friend."
+            ]
+        },
+        {
+            "q": "What does Ken eat?",
+            "correct": "Bread, salad, and soup.",
+            "wrong": [
+                "Cake and apples.",
+                "Fish and eggs.",
+                "Grapes and bananas."
+            ]
+        }
+    ]
+}},
+{"id":"vocab_e5_03","src":"en-vocab","dict":{"school":"学校","teacher":"先生","classroom":"教室","textbook":"教科書","pencil":"鉛筆","ruler":"定規","dictionary":"辞書","homework":"宿題","science":"理科","math":"数学、算数"},"data":{
+    "level": "5級",
+    "grade": "小学生",
+    "levelFile": "e5",
+    "lowerFiles": [
+        "e5"
+    ],
+    "words": [
+        "school",
+        "teacher",
+        "classroom",
+        "textbook",
+        "pencil",
+        "ruler",
+        "dictionary",
+        "homework",
+        "science",
+        "math"
+    ],
+    "passage": [
+        "Yumi likes math very much. She does her math homework in the classroom. She uses a pencil and a ruler. Her friend helps her."
+    ],
+    "translation": [
+        "ユミは算数がとても好きです。ユミは教室で算数の宿題をします。ユミは鉛筆と定規を使います。友だちがユミを手伝います。"
+    ],
+    "questions": [
+        {
+            "q": "What subject does Yumi like?",
+            "correct": "Math.",
+            "wrong": [
+                "Science.",
+                "English.",
+                "Music."
+            ]
+        },
+        {
+            "q": "Where does Yumi do her math homework?",
+            "correct": "In the classroom.",
+            "wrong": [
+                "In the library.",
+                "In the park.",
+                "In the kitchen."
+            ]
+        }
+    ]
+}},
+{"id":"vocab_e5_04","src":"en-vocab","dict":{"father":"父","mother":"母","sister":"姉、妹","brother":"兄、弟","grandmother":"祖母","grandfather":"祖父","family":"家族","house":"家、家屋","window":"窓","dinner":"夕食"},"data":{
+    "level": "5級",
+    "grade": "小学生",
+    "levelFile": "e5",
+    "lowerFiles": [
+        "e5"
+    ],
+    "words": [
+        "father",
+        "mother",
+        "sister",
+        "brother",
+        "grandmother",
+        "grandfather",
+        "family",
+        "house",
+        "window",
+        "dinner"
+    ],
+    "passage": [
+        "Tom's grandmother and grandfather live in a big house. Tom's family visits them on Saturdays. They eat dinner together."
+    ],
+    "translation": [
+        "トムの祖母と祖父は大きな家に住んでいます。トムの家族は土曜日に二人を訪れます。みんなで一緒に夕食を食べます。"
+    ],
+    "questions": [
+        {
+            "q": "Where do Tom's grandmother and grandfather live?",
+            "correct": "In a big house.",
+            "wrong": [
+                "In a small house.",
+                "In a hospital.",
+                "In a library."
+            ]
+        },
+        {
+            "q": "When does Tom's family visit them?",
+            "correct": "On Saturdays.",
+            "wrong": [
+                "On Mondays.",
+                "On Fridays.",
+                "On Sundays."
+            ]
+        }
+    ]
+}},
+{"id":"vocab_e5_05","src":"en-vocab","dict":{"weather":"天気","sunny":"晴れの","rainy":"雨の","cloudy":"くもりの","snowy":"雪の降る","umbrella":"傘","spring":"春","summer":"夏","winter":"冬","cold":"寒い、冷たい"},"data":{
+    "level": "5級",
+    "grade": "小学生",
+    "levelFile": "e5",
+    "lowerFiles": [
+        "e5"
+    ],
+    "words": [
+        "weather",
+        "sunny",
+        "rainy",
+        "cloudy",
+        "snowy",
+        "umbrella",
+        "spring",
+        "summer",
+        "winter",
+        "cold"
+    ],
+    "passage": [
+        "It is rainy this morning, so Emi takes her umbrella. Emi likes summer, but her brother likes winter. He likes snowy days."
+    ],
+    "translation": [
+        "今朝は雨なので、エミは傘を持って行きます。エミは夏が好きですが、お兄さんは冬が好きです。お兄さんは雪の降る日が好きです。"
+    ],
+    "questions": [
+        {
+            "q": "How is the weather this morning?",
+            "correct": "It is rainy.",
+            "wrong": [
+                "It is sunny.",
+                "It is snowy.",
+                "It is cloudy."
+            ]
+        },
+        {
+            "q": "What season does Emi's brother like?",
+            "correct": "Winter.",
+            "wrong": [
+                "Summer.",
+                "Spring.",
+                "Autumn."
+            ]
+        }
+    ]
+}},
+{"id":"vocab_e5_06","src":"en-vocab","dict":{"station":"駅","library":"図書館","hospital":"病院","bookstore":"書店","supermarket":"スーパーマーケット","museum":"博物館、美術館","street":"通り","bridge":"橋","park":"公園","train":"電車、列車"},"data":{
+    "level": "5級",
+    "grade": "小学生",
+    "levelFile": "e5",
+    "lowerFiles": [
+        "e5"
+    ],
+    "words": [
+        "station",
+        "library",
+        "hospital",
+        "bookstore",
+        "supermarket",
+        "museum",
+        "street",
+        "bridge",
+        "park",
+        "train"
+    ],
+    "passage": [
+        "On Sundays, Mike goes to the library by train. Next, he walks to the bookstore and buys a book. After that, he visits the museum near the station."
+    ],
+    "translation": [
+        "日曜日、マイクは電車で図書館へ行きます。次に、書店まで歩いて行き、本を1冊買います。そのあと、駅の近くの博物館を訪れます。"
+    ],
+    "questions": [
+        {
+            "q": "How does Mike go to the library?",
+            "correct": "By train.",
+            "wrong": [
+                "By bus.",
+                "By bike.",
+                "By car."
+            ]
+        },
+        {
+            "q": "What does Mike buy?",
+            "correct": "A book.",
+            "wrong": [
+                "A pencil.",
+                "A cake.",
+                "An umbrella."
+            ]
+        }
+    ]
+}},
+{"id":"vocab_e5_07","src":"en-vocab","dict":{"head":"頭","face":"顔","nose":"鼻","mouth":"口","ear":"耳","eye":"目","hand":"手","shoulder":"肩","knee":"ひざ","tooth":"歯"},"data":{
+    "level": "5級",
+    "grade": "小学生",
+    "levelFile": "e5",
+    "lowerFiles": [
+        "e5"
+    ],
+    "words": [
+        "head",
+        "face",
+        "nose",
+        "mouth",
+        "ear",
+        "eye",
+        "hand",
+        "shoulder",
+        "knee",
+        "tooth"
+    ],
+    "passage": [
+        "Lisa has a cute dog. It has big eyes, long ears, and a black nose. When Lisa sits down, the dog puts its head on her knee."
+    ],
+    "translation": [
+        "リサはかわいい犬を飼っています。その犬は大きな目と長い耳と黒い鼻をしています。リサが座ると、犬はリサのひざに頭をのせます。"
+    ],
+    "questions": [
+        {
+            "q": "What color is the dog's nose?",
+            "correct": "Black.",
+            "wrong": [
+                "White.",
+                "Brown.",
+                "Red."
+            ]
+        },
+        {
+            "q": "Where does the dog put its head?",
+            "correct": "On Lisa's knee.",
+            "wrong": [
+                "On Lisa's shoulder.",
+                "On the table.",
+                "On the chair."
+            ]
+        }
+    ]
+}},
+{"id":"vocab_e5_08","src":"en-vocab","dict":{"baseball":"野球","player":"選手、演奏者","practice":"練習する","sport":"スポーツ","swim":"泳ぐ","jump":"跳ぶ","fast":"速い、速く","strong":"強い","enjoy":"楽しむ","favorite":"いちばん好きな"},"data":{
+    "level": "5級",
+    "grade": "小学生",
+    "levelFile": "e5",
+    "lowerFiles": [
+        "e5"
+    ],
+    "words": [
+        "baseball",
+        "player",
+        "practice",
+        "sport",
+        "swim",
+        "jump",
+        "fast",
+        "strong",
+        "enjoy",
+        "favorite"
+    ],
+    "passage": [
+        "Sam's favorite sport is baseball. He practices every Sunday. He can run very fast. He wants to be a famous player."
+    ],
+    "translation": [
+        "サムのいちばん好きなスポーツは野球です。サムは毎週日曜日に練習します。サムはとても速く走ることができます。サムは有名な選手になりたいと思っています。"
+    ],
+    "questions": [
+        {
+            "q": "What is Sam's favorite sport?",
+            "correct": "Baseball.",
+            "wrong": [
+                "Tennis.",
+                "Soccer.",
+                "Basketball."
+            ]
+        },
+        {
+            "q": "When does Sam practice?",
+            "correct": "Every Sunday.",
+            "wrong": [
+                "Every Monday.",
+                "Every Friday.",
+                "Every Saturday."
+            ]
+        }
+    ]
+}},
+{"id":"vocab_e5_09","src":"en-vocab","dict":{"Monday":"月曜日","Tuesday":"火曜日","Wednesday":"水曜日","Thursday":"木曜日","Friday":"金曜日","Saturday":"土曜日","Sunday":"日曜日","morning":"朝、午前","afternoon":"午後","evening":"夕方、晩"},"data":{
+    "level": "5級",
+    "grade": "小学生",
+    "levelFile": "e5",
+    "lowerFiles": [
+        "e5"
+    ],
+    "words": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday",
+        "morning",
+        "afternoon",
+        "evening"
+    ],
+    "passage": [
+        "On Monday, Aya goes to the library in the afternoon. On Wednesday, she plays the piano in the evening. On Saturday morning, she cleans her room."
+    ],
+    "translation": [
+        "月曜日、アヤは午後に図書館へ行きます。水曜日は、夕方にピアノをひきます。土曜日の朝は、自分の部屋を掃除します。"
+    ],
+    "questions": [
+        {
+            "q": "What does Aya do on Wednesday?",
+            "correct": "She plays the piano.",
+            "wrong": [
+                "She cleans her room.",
+                "She goes to the library.",
+                "She swims in the sea."
+            ]
+        },
+        {
+            "q": "When does Aya clean her room?",
+            "correct": "On Saturday morning.",
+            "wrong": [
+                "On Monday afternoon.",
+                "On Wednesday evening.",
+                "On Sunday morning."
+            ]
+        }
+    ]
+}},
+{"id":"vocab_e5_10","src":"en-vocab","dict":{"mountain":"山","river":"川","lake":"湖","beach":"浜辺、ビーチ","island":"島","sea":"海","flower":"花","tree":"木","trip":"旅行","vacation":"休暇、長い休み"},"data":{
+    "level": "5級",
+    "grade": "小学生",
+    "levelFile": "e5",
+    "lowerFiles": [
+        "e5"
+    ],
+    "words": [
+        "mountain",
+        "river",
+        "lake",
+        "beach",
+        "island",
+        "sea",
+        "flower",
+        "tree",
+        "trip",
+        "vacation"
+    ],
+    "passage": [
+        "Meg is on a trip to an island now. She swims in the sea every day. She can see many beautiful flowers there. Her vacation is wonderful."
+    ],
+    "translation": [
+        "メグは今、島へ旅行に来ています。メグは毎日海で泳ぎます。そこではたくさんの美しい花を見ることができます。メグの休暇はすばらしいです。"
+    ],
+    "questions": [
+        {
+            "q": "Where is Meg now?",
+            "correct": "On an island.",
+            "wrong": [
+                "On a mountain.",
+                "At a zoo.",
+                "At a station."
+            ]
+        },
+        {
+            "q": "What can Meg see there?",
+            "correct": "Many beautiful flowers.",
+            "wrong": [
+                "Many tigers.",
+                "Many trains.",
+                "Many big ships."
+            ]
+        }
     ]
 }},
 {"id":"vocab_g3_1","src":"en-vocab","dict":{"cave":"洞窟","flashlight":"懐中電灯","ladder":"はしご","treasure":"宝物","brave":"勇敢な","strange":"奇妙な","shadow":"影","notice":"気づく","dig":"掘る","ancient":"古代の"},"data":{
@@ -37484,11 +39205,12 @@ WORKS.forEach((w, i) => {
 });
 for (const b of BOOKS.values()) b.units.sort((a, c) => WORKS[a].no - WORKS[c].no);
 const unitName = w => `第${w.no}回`;
-const totalOf = w => w.kind === 'lesson' ? ['words','grammarQs','questions','compose'].reduce((n, k) => n + (w.data[k] || []).length, 0) : w.kind === 'vocab' ? (w.data.words || []).length + (w.data.questions || []).length : (w.data.questions || []).length + (w.data.expressions || []).length;
+const totalOf = w => w.kind === 'lesson' ? ['words','grammarQs','questions','compose'].reduce((n, k) => n + (w.data[k] || []).length, 0) : w.kind === 'vocab' ? (w.data.words || []).length + (w.data.questions || []).length
+  : (w.data.questions || []).length + (S.deep ? (w.data.expressions || []).length + (w.data.summaries || []).reduce((n, s) => n + Object.keys(s.blanks || {}).length, 0) : 0);
 
 // ---------- 設定・保存 ----------
 const SKEY = 'wp-settings';
-const S = Object.assign({py:false, ja:false, rate:0.9, vzh:'', vko:''}, JSON.parse(localStorage.getItem(SKEY) || '{}'));
+const S = Object.assign({py:false, ja:false, rate:0.9, vzh:'', vko:'', deep:true},JSON.parse(localStorage.getItem(SKEY) || '{}'));
 const saveS = () => localStorage.setItem(SKEY, JSON.stringify(S));
 let W = null, st = null, page = 0, vOnly = false, view = {k:'shelf'};
 const loadSt = id => JSON.parse(localStorage.getItem('wp-work-' + id) || '{"ans":{},"chk":{}}');
@@ -37726,10 +39448,12 @@ function items(){
         choices: shuffled(blk.map(y => ({t:y.meaning, ok:y.word === x.word})), W.id+'m'+b)}));
     }
   }
-  (d.expressions || []).forEach((e, i) => list.push({id:'s2-'+i, step:2, n:i+1, src:e,
+  // 長文の「読解のみ」(S.deep=false)：Step 2(表現・意味の確認)を出さず、内容の問題だけ
+  const deep = W.kind !== 'reading' || S.deep;
+  (deep ? d.expressions || [] : []).forEach((e, i) => list.push({id:'s2-'+i, step:2, n:i+1, src:e,
     choices: shuffled([{t:e.correct, py:e.correctPy, ja:e.correctJa, ok:true}, ...e.wrong.map((t,k) => ({t, py:(e.wrongPy||[])[k], ja:(e.wrongJa||[])[k]}))], W.id+'s2'+i)}));
   // 英語の長文 Step 2：①〜④の要約の空所(A〜)に入る語句を、同じ回のほかの空所の語句から選ぶ
-  const allBlanks = []; (d.summaries || []).forEach((s, si) => Object.entries(s.blanks || {}).forEach(([k, v]) => allBlanks.push({k, v, si})));
+  const allBlanks = []; (deep ? d.summaries || [] : []).forEach((s, si) => Object.entries(s.blanks || {}).forEach(([k, v]) => allBlanks.push({k, v, si})));
   allBlanks.forEach((b, i) => {
     const others = shuffled(allBlanks.filter(o => o.v !== b.v), W.id+'bo'+i).slice(0, 3);
     list.push({id:'b-'+i, step:2, n:b.k, src:{...b, text:d.summaries[b.si].text, target:(d._targets||[])[b.si]},
@@ -37737,7 +39461,7 @@ function items(){
   });
   (d.grammarQs || []).forEach((q, i) => list.push({id:'g-'+i, step:2, n:i+1, src:q,
     choices: shuffled([{...q.correct, ok:true}, ...q.wrong], W.id+'g'+i)}));
-  (d.questions || []).forEach((q, i) => list.push({id:'s3-'+i, step:(W.kind === 'lesson' || d.expressions || allBlanks.length) ? 3 : 2, n:i+1, src:q,
+  (d.questions || []).forEach((q, i) => list.push({id:'s3-'+i, step:(W.kind === 'lesson' || deep && d.expressions || allBlanks.length) ? 3 : 2, n:i+1, src:q,
     choices: shuffled([{...q.correct, ok:true}, ...q.wrong], W.id+'s3'+i)}));
   // 自作文(レッスン)：order＝語カードを並べる、choice＝正しい文を選ぶ、listen＝聞こえた語を選ぶ
   (d.compose || []).forEach((c, i) => {
@@ -37747,7 +39471,8 @@ function items(){
   return W._items = list;
 }
 const orderOk = (it, a) => Array.isArray(a) && a.map(k => it.cards[k]).join(' ') === it.src.answer.join(' ');
-const answered = it => it.order ? (st.ans[it.id] || []).length === it.src.answer.length : st.ans[it.id] !== undefined;
+// 並べる問題：正解の語数以上を並べたか、カードを全部使ったら答え合わせできる(使わない語をまぜて並べても・まちがえていても丸つけできるように)
+const answered = it => { if (!it.order) return st.ans[it.id] !== undefined; const n = (st.ans[it.id] || []).length; return n >= it.src.answer.length || n === it.cards.length; };
 const okOf = it => st.chk[it.id] && (it.order ? orderOk(it, st.ans[it.id]) : it.choices[st.ans[it.id]]?.ok);
 
 // ---------- ページ ----------
@@ -37839,13 +39564,13 @@ function pageHTML(p){
   const d = W.data;
   if (p.k === 'cover') return `<div class="cover"><div class="ex">${esc(W.book.title)}</div><div class="tt">${unitName(W)}</div>
     <div class="tp">${esc(d.topic||'')}</div>
-    <div class="tips">・選択肢の番号をクリックすると○がつきます<br>・ページの下の「答え合わせ」で丸つけ<br>・本文の語をクリックすると読み上げ${L()==='zh'?'<br>・上の「ピンイン」「訳」で表示を切りかえ':''}${L()==='tl'?'<br>・タガログ語の声はEdgeの「Filipino」の声。ない環境では別の言語の声で読まれます':''}<br>・←→キーでもページをめくれます</div></div>`;
+    <div class="tips">・選択肢の番号をクリックすると○がつきます<br>・ページの下の「答え合わせ」で丸つけ<br>・本文の語をクリックすると読み上げ${L()==='zh'?'<br>・上の「ピンイン」「訳」で表示を切りかえ':''}${L()==='tl'?'<br>・タガログ語の声はEdgeの「Filipino」の声。ない環境では別の言語の声で読まれます':''}${W.kind === 'reading' && (d.expressions || d.summaries) ? `<br>・上の「${S.deep ? '詳しく読み解く' : '読解のみ'}」で切りかえ：詳しく＝${d.summaries ? '意味' : '表現'}を確認する問題も出す／読解のみ＝内容の問題だけ` : ''}<br>・←→キーでもページをめくれます</div></div>`;
   if (p.k === 'text') return passageHTML();
   if (p.k === 'q'){
     const all = p.list.every(answered), done = p.list.every(it => st.chk[it.id]);
     return `<h2>${stepName(p.kind, p.step)}</h2>${p.kind === 'm-' ? '<p class="note" style="margin:-6px 0 14px">単語の意味を選ぼう</p>' : p.kind === 's3' || W.kind !== 'lesson' ? '<button class="chip mobile-only" data-drawer="1" style="margin-bottom:14px">📖 本文を見る</button>' : ''}`
       + p.list.map(qHTML).join('')
-      + (done ? '' : `<button class="check" data-check="${p.list.map(i=>i.id).join(',')}" ${all?'':'disabled'}>答え合わせ</button>${all?'':'<p class="note" style="text-align:center">全部選ぶと答え合わせできます</p>'}`);
+      + (done ? (page < pages().length - 1 ? '<p class="note" style="text-align:center;margin-top:10px">ページをクリックすると次へ進みます</p>' : '') : `<button class="check" data-check="${p.list.map(i=>i.id).join(',')}" ${all?'':'disabled'}>答え合わせ</button>${all?'':'<p class="note" style="text-align:center">全部選ぶと答え合わせできます</p>'}`);
   }
   if (p.k === 'gram'){
     const g = d.grammar;
@@ -37882,8 +39607,9 @@ function tocHTML(){
   const b = BOOKS.get(view.book);
   return `<div class="cover" style="min-height:0;height:auto;margin:10px 0 24px"><div class="ex">${esc(LANGNAME[b.lang])}｜${esc(b.genre)}</div><div class="tt">${esc(b.title)}</div></div>
     <h2>目次</h2>` + b.units.map(i => {
-      const w = WORKS[i], s = loadSt(w.id), n = Object.keys(s.chk).length, tot = totalOf(w);
-      const its = n ? (() => { const keep = [W, st]; W = w; st = s; const r = items().filter(okOf).length; [W, st] = keep; return r; })() : 0;
+      const w = WORKS[i], s = loadSt(w.id);
+      // 今の設定(読解のみ／詳しく)で出る問題だけを数える
+      const [n, tot, its] = (() => { const keep = [W, st]; W = w; st = s; const all = items(); const r = [all.filter(it => s.chk[it.id]).length, all.length, all.filter(okOf).length]; [W, st] = keep; return r; })();
       return `<button class="toc-row" data-open="${i}"><span class="tn">${unitName(w)}</span><span class="tt2">${esc(w.data.topic || '')}</span><span class="ts">${n ? (n >= tot ? `${its} / ${tot}` : `途中 ${n}/${tot}`) : ''}</span></button>`;
     }).join('') + `<div class="btns"><button class="btn" id="backShelf">本棚にもどる</button></div>`;
 }
@@ -38464,7 +40190,7 @@ function render(){
   if (view.k !== 'rec' && spinning){ speechSynthesis.cancel(); spinning = false; }
   if (!W){
     pg.style.visibility = 'hidden';
-    for (const b of ['#bPy','#bJa']) $(b).style.display = 'none';
+    for (const b of ['#bPy','#bJa','#bDeep']) $(b).style.display = 'none';
     const sameRec = view.k === 'rec' && render._k === 'rec:' + view.rec + ':' + view.qi, y0 = scrollY;
     render._k = view.k === 'rec' ? 'rec:' + view.rec + ':' + view.qi : null;
     if (view.k === 'rec'){
@@ -38487,6 +40213,7 @@ function render(){
   $('#ttl').textContent = `${W.book.title}　${unitName(W)}`;
   $('#bShelf').textContent = '目次';
   $('#bPy').style.display = L()==='zh' ? '' : 'none'; $('#bJa').style.display = '';
+  $('#bDeep').style.display = W.kind === 'reading' && (W.data.expressions || W.data.summaries) ? '' : 'none';
   const ps = pages(); page = Math.max(0, Math.min(page, ps.length - 1));
   const p = ps[page];
   // 同じページを描き直すとき(選択肢を選んだ・答え合わせをした)は、スクロールの位置をそのまま残す
@@ -38550,7 +40277,12 @@ $('#main').addEventListener('click', e => {
   if (t.id === 'retry'){ const its = items(); let first = null;
     its.forEach(it => { if (st.chk[it.id] && !okOf(it)){ delete st.chk[it.id]; delete st.ans[it.id]; first ??= it.id; } });
     saveSt(); page = pages().findIndex(p => p.k === 'q' && p.list.some(i => i.id === first)); render(); return; }
-  if (t.id === 'toShelf'){ W = null; view = {k:'shelf'}; render(); }
+  if (t.id === 'toShelf'){ W = null; view = {k:'shelf'}; render(); return; }
+  // 答え合わせが済んだ問題ページは、ボタン・語・リンク以外のところをクリックすると次のページへ
+  if (W && !t.closest('button, a, input, select, .w, [data-say], [data-sent] .w') && t.closest('.book.spread .page.right, .book.single .page')){
+    const p = pages()[page];
+    if (p && p.k === 'q' && p.list.every(it => st.chk[it.id]) && !$('#next').disabled && !getSelection().toString()) go(1);
+  }
 });
 $('#drawer').addEventListener('click', e => { const say = e.target.closest('[data-say]'); if (say) speak(say.dataset.say); if (e.target.id === 'drawer') $('#drawer').style.display = 'none'; });
 $('#prev').onclick = () => go(-1); $('#next').onclick = () => go(1);
@@ -38561,9 +40293,12 @@ $('#main').addEventListener('touchstart', e => tx = e.touches[0].clientX, {passi
 $('#main').addEventListener('touchend', e => { if (tx === null || !W) return; const dx = e.changedTouches[0].clientX - tx; tx = null;
   if (Math.abs(dx) > 70){ if (dx < 0 && !$('#next').disabled) go(1); if (dx > 0 && !$('#prev').disabled) go(-1); } });
 
-function syncChips(){ $('#bPy').classList.toggle('on', S.py); $('#bJa').classList.toggle('on', S.ja); $('#rate').value = S.rate; $('#rateV').textContent = S.rate.toFixed(1); }
+function syncChips(){ $('#bPy').classList.toggle('on', S.py); $('#bJa').classList.toggle('on', S.ja);
+  $('#bDeep').textContent = S.deep ? '📖 詳しく読み解く' : '📗 読解のみ'; $('#bDeep').classList.toggle('on', S.deep);$('#rate').value = S.rate; $('#rateV').textContent = S.rate.toFixed(1); }
 $('#bPy').onclick = () => { S.py = !S.py; saveS(); syncChips(); render(); };
 $('#bJa').onclick = () => { S.ja = !S.ja; saveS(); syncChips(); render(); };
+$('#bDeep').onclick = () => { // 読解のみ ⇔ 詳しく読み解く(全部の長文ワークに効く)。問題の並びが変わるので表紙にもどる
+  S.deep = !S.deep; saveS(); WORKS.forEach(w => w._items = null); page = 0; syncChips(); render(); };
 $('#bSet').onclick = () => { const s = $('#set'); s.style.display = s.style.display === 'block' ? 'none' : 'block'; };
 $('#rate').oninput = e => { S.rate = +e.target.value; saveS(); syncChips(); };
 $('#vzh').onchange = e => { S.vzh = e.target.value; saveS(); };
